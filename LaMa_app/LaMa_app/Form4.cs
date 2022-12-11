@@ -69,7 +69,7 @@ namespace LaMa_app
             int ivir_uj = Convert.ToInt32(ivirTB3.Text);
             string knev = knevTB2.Text;
             string vnev = vnevTB2.Text;
-            string pwd = jelszoTB2.Text;
+            string pwdM = jelszoTB2.Text;
             int vas = 0;
             if (vasCB2.Checked)
             {
@@ -85,10 +85,10 @@ namespace LaMa_app
             {
                 zala = 1;
             }
-            int admin = 0;
+            int adminM = 0;
             if (adminCB2.Checked)
             {
-                admin = 1;
+                adminM = 1;
             }
             int aktiv = 0;
             if (aktivCB.Checked)
@@ -96,19 +96,77 @@ namespace LaMa_app
                 aktiv = 1;
             }
 
+            string pwdUj = "";
+
+
+
             string connStr = "server=localhost;user=root;database=lamafelhasznalok;port=3306";
 
             MySqlConnection conn = new MySqlConnection(connStr);
             
             conn.Open();
 
-            string sql = "update users set IVIR = " + ivir_uj + ", Vezetek_nev = '" + vnev + "', Kereszt_nev = '" + knev + "', Jelszo = '" + pwd + "', Vas = " + vas + ",  Gyor = " + gyor + ", Zala = " + zala + ", Admin = " + admin + ", Aktiv = " + aktiv + " where IVIR = " + ivir + "";
+            if (TitkosPwd(pwdM) != pwd)
+            {
+                pwdUj = TitkosPwd(pwdM);
+
+                if (adminM == 1)
+                {
+                    string sql_adminPwd = "update admin set IVIR = " + ivir_uj + ", Password = '" + pwdUj + "' where IVIR = " + ivir + "";
+                    MySqlCommand cmd_adminPwd = new MySqlCommand(sql_adminPwd, conn);
+
+                    cmd_adminPwd.ExecuteNonQuery();
+                }
+            }
+            else
+            {
+                pwdUj = pwd;
+            }
+
+
+
+            string sql = "update users set IVIR = " + ivir_uj + ", Vezetek_nev = '" + vnev + "', Kereszt_nev = '" + knev + "', Jelszo = '" + pwdUj + "', Vas = " + vas + ",  Gyor = " + gyor + ", Zala = " + zala + ", Admin = " + adminM + ", Aktiv = " + aktiv + " where IVIR = " + ivir + "";
 
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             
             cmd.ExecuteNonQuery();
 
+            string sql_torles = "delete from admin where IVIR = " + ivir + "";
             
+            string sql_admintabla = "select * from admin";
+
+            bool van = false;
+
+            if (adminM != admin)
+            {
+                if (adminM == 1)
+                {
+                    string sql_admin = "insert into admin (IVIR, Password) values ('" + ivir + "','" + pwdUj + "')";
+                    MySqlCommand cmd_admin = new MySqlCommand(sql_admin, conn);
+                    cmd_admin.ExecuteNonQuery();
+                }
+                else
+                {
+                    MySqlCommand cmd_admin = new MySqlCommand(sql_admintabla, conn);
+                    MySqlDataReader rdr = cmd_admin.ExecuteReader();
+
+                    while (rdr.Read())
+                    {
+                        if (Convert.ToInt32(rdr[0]) == ivir)
+                        {
+                            van = true;
+                        }
+                    }
+
+                    rdr.Close();
+                }
+            }
+        
+
+            if (van) {
+                MySqlCommand cmd_admin_torles = new MySqlCommand(sql_torles, conn);
+                cmd_admin_torles.ExecuteNonQuery();
+            }
             conn.Close();
 
             this.Visible = false;
@@ -117,6 +175,24 @@ namespace LaMa_app
         private void bezarasB_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+        }
+
+        public string TitkosPwd(string jelszo)
+        {
+            try
+            {
+                byte[] titkos_pw = new byte[jelszo.Length];
+
+                titkos_pw = System.Text.Encoding.UTF8.GetBytes(jelszo);
+                string tpwd = Convert.ToBase64String(titkos_pw);
+
+                return tpwd;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

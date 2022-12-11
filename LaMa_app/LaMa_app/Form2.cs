@@ -34,6 +34,8 @@ namespace LaMa_app
             string vnev = vnevTb.Text;
             string knev = knevTB.Text;
             string jelszo = jelszoTB.Text;
+
+            string titkos_jelszo = TitkosPwd(jelszo);
             int vas = 0;
             int zala = 0;
             int gyor = 0;
@@ -63,13 +65,13 @@ namespace LaMa_app
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
 
-            string sql = "insert into users (IVIR, Vezetek_nev, Kereszt_nev, Jelszo, Vas, Gyor, Zala, Admin) values ('" + ivir + "','" + vnev + "','" + knev + "','" + jelszo + "','" + vas + "','" + gyor + "','" + zala + "','" + admin + "')";
+            string sql = "insert into users (IVIR, Vezetek_nev, Kereszt_nev, Jelszo, Vas, Gyor, Zala, Admin) values ('" + ivir + "','" + vnev + "','" + knev + "','" + titkos_jelszo + "','" + vas + "','" + gyor + "','" + zala + "','" + admin + "')";
 
             if (admin == 1) {
-                string sql_admin = "insert into admin (IVIR, Password) values ('" + ivir + "','" + jelszo + "')";
+                string sql_admin = "insert into admin (IVIR, Password) values ('" + ivir + "','" + titkos_jelszo + "')";
                 MySqlCommand cmd_admin = new MySqlCommand(sql_admin, conn);
                 cmd_admin.ExecuteNonQuery();
-            }
+            }   
             
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
@@ -236,6 +238,24 @@ namespace LaMa_app
         private void bezarEgyebB_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        public string TitkosPwd(string jelszo)
+        {
+            try
+            {
+                byte[] titkos_pw = new byte[jelszo.Length];
+
+                titkos_pw = System.Text.Encoding.UTF8.GetBytes(jelszo);
+                string tpwd = Convert.ToBase64String(titkos_pw);
+                
+                return tpwd;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

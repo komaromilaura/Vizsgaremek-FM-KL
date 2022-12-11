@@ -59,7 +59,7 @@ namespace LaMa_app
 
                         while (rdr.Read())
                         {
-                            dataGridView1.Rows.Add(Convert.ToString(rdr[0]), Convert.ToString(rdr[1]), Convert.ToString(rdr[2]), Convert.ToString(rdr[3]), Convert.ToString(rdr[4]), Convert.ToString(rdr[5]), Convert.ToString(rdr[6]),Convert.ToString(rdr[7]), Convert.ToString(rdr[8]));
+                           dataGridView1.Rows.Add(Convert.ToString(rdr[0]), Convert.ToString(rdr[1]), Convert.ToString(rdr[2]), Convert.ToString(rdr[3]), Convert.ToString(rdr[4]), Convert.ToString(rdr[5]), Convert.ToString(rdr[6]),Convert.ToString(rdr[7]), Convert.ToString(rdr[8]));
                         }
 
                         rdr.Close();
@@ -375,7 +375,26 @@ namespace LaMa_app
 
             }
         }
+
+        public string Pwd(string titkosJelszo)
+        {
+            System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();
+            System.Text.Decoder utf8decoder = encoder.GetDecoder();
+
+            byte[] decode_byte = Convert.FromBase64String(titkosJelszo);
+
+            int karakterDB = utf8decoder.GetCharCount(decode_byte, 0, decode_byte.Length);
+
+            char[] decode_char = new char[karakterDB];
+
+            utf8decoder.GetChars(decode_byte, 0, decode_byte.Length, decode_char, 0);
+
+            string jelszo = new string(decode_char);
+
+            return jelszo;
+        }
     }
+    
 
     public class Megyek
     { 

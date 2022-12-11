@@ -87,8 +87,10 @@ namespace LaMa_app
             // 
             this.jelszoTB2.Location = new System.Drawing.Point(150, 303);
             this.jelszoTB2.Name = "jelszoTB2";
+            this.jelszoTB2.PasswordChar = '*';
             this.jelszoTB2.Size = new System.Drawing.Size(292, 27);
             this.jelszoTB2.TabIndex = 30;
+            this.jelszoTB2.UseSystemPasswordChar = true;
             // 
             // label12
             // 

@@ -847,11 +847,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Vizsgaremek_v3\\LaMa_app\\LaMa_app\\LaMa_app.csproj",
+      "projectUniqueName": "E:\\Vizsgaremek_v3\\Vizsgaremek_FM_KL\\LaMa_app\\LaMa_app\\LaMa_app.csproj",
       "projectName": "LaMa_app",
-      "projectPath": "E:\\Vizsgaremek_v3\\LaMa_app\\LaMa_app\\LaMa_app.csproj",
+      "projectPath": "E:\\Vizsgaremek_v3\\Vizsgaremek_FM_KL\\LaMa_app\\LaMa_app\\LaMa_app.csproj",
       "packagesPath": "C:\\Users\\foldh\\.nuget\\packages\\",
-      "outputPath": "E:\\Vizsgaremek_v3\\LaMa_app\\LaMa_app\\obj\\",
+      "outputPath": "E:\\Vizsgaremek_v3\\Vizsgaremek_FM_KL\\LaMa_app\\LaMa_app\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
