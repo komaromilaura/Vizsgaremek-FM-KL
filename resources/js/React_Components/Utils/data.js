@@ -151,5 +151,11 @@ module.exports = {
             tipus: "TBE",
             ktg: 300
         }
-    ]
+    ],
+
+    megyek: [
+        "Győr-Moson-Sopron",
+        "Vas",
+        "Zala"
+    ],
 }

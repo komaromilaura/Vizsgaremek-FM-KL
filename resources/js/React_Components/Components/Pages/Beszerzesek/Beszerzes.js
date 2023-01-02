@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import { Alert, Button, Col, Form, Row, Table } from "react-bootstrap";
 import { PencilFill, Trash3Fill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
-import { megyek } from "../../../Utils/data.js";
 
 function Beszerzes(props){
     const [beszerzesek, setBeszerzesek] = useState([]);
     const [partnerek, setParnerek] = useState([]);
+    const [megyek, setMegyek] = useState([]);
     const [success, setSuccess] = useState(false);
     const [deleted, setDeleted] = useState(false);
     const [modified, setModified] = useState(false);
@@ -126,6 +126,17 @@ function Beszerzes(props){
 
     useEffect(() => {
         getPartnerek();
+    }, []);
+
+    const getMegyek = async() => {
+        const response = await axios.get('/api/megye');
+        if (response.status === 200) {
+            setMegyek(response.data);
+        }
+    }
+
+    useEffect(() => {
+        getMegyek();
     }, []);
 
     const updateBeszerzes = (megrendelo_sz) => {
@@ -263,13 +274,13 @@ function Beszerzes(props){
                 </Col>
                 <Col lg={12} className="justify-content-center d-flex mb-3">
                     {/*Adatbázisból xls / csv - be ?? kilistázza a felvitt beszerzéseket.*/}                           
-                    {megyek.map((megye) => {
+                    {megyek && megyek.map((megye) => {
                         return(
-                            <Button variant="info" className="text-white text-uppercase fw-bold mx-2" key={megye}>
-                                {megye} megye adatai
+                            <Button variant="info" className="text-white text-uppercase fw-bold mx-2" key={megye.ID}>
+                                {megye.megye_nev} megye adatai
                             </Button>
                         )
-                    })}                                
+                    })}                                  
                 </Col>
                 {success && (
                     <Alert variant="success" className="mt-3">
