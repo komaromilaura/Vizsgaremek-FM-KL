@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'partner'], function() {
+    Route::get('/', [\App\Http\Controllers\PartnerController::class, 'getAll'])->name("getPatnerek");
+    Route::get('/{partner}', [\App\Http\Controllers\PartnerController::class, 'get'])->name("getPatner");
+    Route::post('/', [\App\Http\Controllers\PartnerController::class, 'addPartner'])->name('addPartner');
+    Route::put('/{partner}', [\App\Http\Controllers\PartnerController::class, 'updatePartner'])->name('updatePartner');
+    Route::delete('/{partner}', [\App\Http\Controllers\PartnerController::class, 'deletePartner'])->name('deletePartner');
+});
+
+Route::group(['prefix' => 'beszerzes'], function() {
+    Route::get("/", [\App\Http\Controllers\BeszerzesController::class, 'getAll'])->name("getBeszerzesek");
+    Route::get("/{beszerzes}", [\App\Http\Controllers\BeszerzesController::class, 'get'])->name("getBeszerzes");
+    Route::post("/", [\App\Http\Controllers\BeszerzesController::class, 'addBeszerzes'])->name('addBeszerzes');
+    Route::put('/{beszerzes}', [\App\Http\Controllers\BeszerzesController::class, 'updateBeszerzes'])->name('updateBeszerzes');
+    Route::delete('/{beszerzes}', [\App\Http\Controllers\BeszerzesController::class, 'deleteBeszerzes'])->name('deleteBeszerzes');
 });

@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "bf6fda0f-04e1-4dd5-8b00-55032d1c7146",
+		"name": "Vizsgaremek_postman_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21881605"
+	},
+	"item": [
+		{
+			"name": "Partnerek",
+			"item": [
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{API_URL}}/partner",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"partner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/partner/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"partner",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPartner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nev",
+									"value": "Gyógyszertár Depó Kft.",
+									"type": "text"
+								},
+								{
+									"key": "ir_szam",
+									"value": "4400",
+									"type": "text"
+								},
+								{
+									"key": "varos",
+									"value": "Nyíregyháza",
+									"type": "text"
+								},
+								{
+									"key": "kozterulet",
+									"value": "Csaló",
+									"type": "text"
+								},
+								{
+									"key": "kozt_jellege",
+									"value": "köz",
+									"type": "text"
+								},
+								{
+									"key": "hazszam",
+									"value": "2.",
+									"type": "text"
+								},
+								{
+									"key": "epulet_emelet_ajto",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "helyrazi_szam",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gorgenyi.jan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "telefon",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "adoszam",
+									"value": "24338165-2-15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/partner",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"partner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePartner",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nev",
+									"value": "Gyógyszertár Depó Kft.",
+									"type": "text"
+								},
+								{
+									"key": "ir_szam",
+									"value": "4400",
+									"type": "text"
+								},
+								{
+									"key": "varos",
+									"value": "Nyíregyháza",
+									"type": "text"
+								},
+								{
+									"key": "kozterulet",
+									"value": "Csaló",
+									"type": "text"
+								},
+								{
+									"key": "kozt_jellege",
+									"value": "köz",
+									"type": "text"
+								},
+								{
+									"key": "hazszam",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "epulet_emelet_ajto",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "helyrazi_szam",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gorgenyi.jan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "telefon",
+									"value": "06 30 303 3589",
+									"type": "text"
+								},
+								{
+									"key": "adoszam",
+									"value": "24338165-2-15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/partner/3/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"partner",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePartner",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/partner/8/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"partner",
+								"8",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Beszerzesek",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/beszerzes",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"beszerzes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/beszerzes/1-2022",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"beszerzes",
+								"1-2022"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBeszerzes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "partnerID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "megrendelo_szama",
+									"value": "5-2022",
+									"type": "text"
+								},
+								{
+									"key": "megrend_alairasra_tovabbitva",
+									"value": "2022-12-18",
+									"type": "text"
+								},
+								{
+									"key": "alairt_megrend_beerkezese",
+									"value": "2022-12-19",
+									"type": "text"
+								},
+								{
+									"key": "dijbekero_tovabbitasa",
+									"value": "2022-12-20",
+									"type": "text"
+								},
+								{
+									"key": "munkalap_kiallitasa",
+									"value": "2022-12-20",
+									"type": "text"
+								},
+								{
+									"key": "szamla_kiallitasa",
+									"value": "2022-12-22",
+									"type": "text"
+								},
+								{
+									"key": "szamla_tovább_pu_nek_utalasra",
+									"value": "2022-12-23",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/beszerzes",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"beszerzes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBeszerzes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "partnerID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "megrendelo_szama",
+									"value": "5-2022",
+									"type": "text"
+								},
+								{
+									"key": "megrend_alairasra_tovabbitva",
+									"value": "2022-12-18",
+									"type": "text"
+								},
+								{
+									"key": "alairt_megrend_beerkezese",
+									"value": "2022-12-19",
+									"type": "text"
+								},
+								{
+									"key": "dijbekero_tovabbitasa",
+									"value": "2022-12-20",
+									"type": "text"
+								},
+								{
+									"key": "munkalap_kiallitasa",
+									"value": "2022-12-20",
+									"type": "text"
+								},
+								{
+									"key": "szamla_kiallitasa",
+									"value": "2022-12-21",
+									"type": "text"
+								},
+								{
+									"key": "szamla_tovább_pu_nek_utalasra",
+									"value": "2022-12-22",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/beszerzes/5-2022",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"beszerzes",
+								"5-2022"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBeszerzes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/beszerzes/5-2022",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"beszerzes",
+								"5-2022"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://vizsgaremek.loc/api",
+			"type": "string"
+		}
+	]
+}
