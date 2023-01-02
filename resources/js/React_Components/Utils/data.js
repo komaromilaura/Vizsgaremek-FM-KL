@@ -107,12 +107,6 @@ module.exports = {
         "betegszállítás irányításban dolgozó"
     ],
 
-    megyek: [
-        "Győr-Moson-Sopron",
-        "Vas",
-        "Zala"
-    ],
-
     oraBerek: [
         {
             munkakor: "orvos",

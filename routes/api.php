@@ -29,3 +29,18 @@ Route::group(['prefix' => 'beszerzes'], function() {
     Route::put('/{beszerzes}', [\App\Http\Controllers\BeszerzesController::class, 'updateBeszerzes'])->name('updateBeszerzes');
     Route::delete('/{beszerzes}', [\App\Http\Controllers\BeszerzesController::class, 'deleteBeszerzes'])->name('deleteBeszerzes');
 });
+
+Route::group(['prefix' => 'migrans'], function() {
+    Route::get("/", [\App\Http\Controllers\MigransEllatasController::class, 'getAll'])->name("getMigransEllatasok");
+    Route::get("/{migransEllatas}", [\App\Http\Controllers\MigransEllatasController::class, 'get'])->name("getMigransEllatas");
+    Route::post("/", [\App\Http\Controllers\MigransEllatasController::class, 'addMigransEllatas'])->name('addMigransEllatas');
+    Route::put('/{migransEllatas}', [\App\Http\Controllers\MigransEllatasController::class, 'updateMigransEllatas'])->name('updateMigransEllatas');
+    Route::delete('/{migransEllatas}', [\App\Http\Controllers\MigransEllatasController::class, 'deleteMigransEllatas'])->name('deleteMigransEllatas');
+});
+
+Route::group(['prefix' => 'megye'], function() {
+    Route::get("/", [\App\Http\Controllers\MegyeController::class, 'getAll'])->name("getMegyek");
+    Route::get("/{megye}", [\App\Http\Controllers\MegyeController::class, 'get'])->name("getMegye");
+});
+
+

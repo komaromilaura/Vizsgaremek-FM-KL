@@ -410,6 +410,205 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Megyek",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/megye",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"megye"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/megye/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"megye",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MigransEllatasok",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/migrans",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"migrans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/migrans/3",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"migrans",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMigransEllatas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "megyeID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "ev",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "honap",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "fo",
+									"value": "42",
+									"type": "text"
+								},
+								{
+									"key": "megtett_km",
+									"value": "3898",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/migrans",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"migrans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMigransEllatas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "megyeID",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "ev",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "honap",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "fo",
+									"value": "45",
+									"type": "text"
+								},
+								{
+									"key": "megtett_km",
+									"value": "2999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/migrans/3",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"migrans",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMigransEllatas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/migrans/3",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"migrans",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [

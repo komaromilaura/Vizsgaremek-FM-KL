@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   PRIMARY KEY (`IVIR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.admin: ~1 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.admin: ~0 rows (hozzávetőleg)
 INSERT INTO `admin` (`IVIR`, `Password`, `Admin`) VALUES
 	(101301, '1212', 1);
 
@@ -201,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `beszerzesek` (
   CONSTRAINT `FK_beszerzesek_partnerek` FOREIGN KEY (`partnerID`) REFERENCES `partnerek` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.beszerzesek: ~9 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.beszerzesek: ~4 rows (hozzávetőleg)
 INSERT INTO `beszerzesek` (`partnerID`, `megrendelo_szama`, `megrend_alairasra_tovabbitva`, `alairt_megrend_beerkezese`, `dijbekero_tovabbitasa`, `munkalap_kiallitasa`, `szamla_kiallitasa`, `szamla_tovább_pu_nek_utalasra`) VALUES
 	(1, '1-2022', '2022-12-10', '2022-12-12', '2022-12-13', '2022-12-14', '2022-12-16', '2022-12-17'),
 	(2, '15/2022', '2022-12-27', '2022-12-27', '2022-12-28', '2022-12-28', '2022-12-29', '2022-12-29'),
@@ -357,16 +357,28 @@ INSERT INTO `megyek` (`ID`, `megye_nev`) VALUES
 -- Struktúra mentése tábla lamafelhasznalok. migransellatas
 DROP TABLE IF EXISTS `migransellatas`;
 CREATE TABLE IF NOT EXISTS `migransellatas` (
+  `ID` int NOT NULL AUTO_INCREMENT,
   `megyeID` int NOT NULL,
   `ev` year NOT NULL,
   `honap` int unsigned NOT NULL,
   `fo` int unsigned NOT NULL,
   `megtett_km` int unsigned NOT NULL,
-  PRIMARY KEY (`megyeID`,`ev`,`honap`) USING BTREE,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `megyeID` (`megyeID`,`ev`,`honap`),
   CONSTRAINT `FK_migrans_ellatas_megyek` FOREIGN KEY (`megyeID`) REFERENCES `megyek` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.migransellatas: ~0 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.migransellatas: ~6 rows (hozzávetőleg)
+INSERT INTO `migransellatas` (`ID`, `megyeID`, `ev`, `honap`, `fo`, `megtett_km`) VALUES
+	(1, 1, '2022', 1, 20, 2000),
+	(2, 2, '2022', 1, 30, 2500),
+	(3, 3, '2022', 1, 45, 2999),
+	(4, 1, '2022', 2, 35, 3000),
+	(5, 2, '2022', 2, 44, 2898),
+	(6, 3, '2022', 2, 45, 3898),
+	(10, 2, '2022', 3, 58, 7021),
+	(11, 3, '2023', 3, 78, 5714),
+	(12, 1, '2022', 3, 89, 7899);
 
 -- Struktúra mentése tábla lamafelhasznalok. mozgoorseg
 DROP TABLE IF EXISTS `mozgoorseg`;
@@ -429,7 +441,7 @@ CREATE TABLE IF NOT EXISTS `partnerek` (
   `adoszam` varchar(13) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `adoszam` (`adoszam`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3;
 
 -- Tábla adatainak mentése lamafelhasznalok.partnerek: ~3 rows (hozzávetőleg)
 INSERT INTO `partnerek` (`ID`, `nev`, `ir_szam`, `varos`, `kozterulet`, `kozt_jellege`, `hazszam`, `epulet_emelet_ajto`, `helyrazi_szam`, `email`, `telefon`, `adoszam`) VALUES

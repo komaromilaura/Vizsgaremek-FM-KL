@@ -35,7 +35,7 @@ class PartnerController extends Controller
 
         $partner->save();
 
-        return response()->json(["id" => $partner->id], 201);
+        return response()->json(["id" => $partner->ID], 201);
     }
 
     public function updatePartner(Partner $partner, PartnerRequest $request)
