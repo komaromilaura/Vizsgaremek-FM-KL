@@ -18,6 +18,15 @@ function Migrans(props) {
     const fo = useRef();
     const megtett_km = useRef();
 
+    const clearForm = () => {
+        ID.current.value = "";
+        megyeID.current.value = "-1";
+        ev.current.value = "2023";
+        honap.current.value = "";
+        fo.current.value = "";
+        megtett_km.current.value = "";
+}
+
     const sendForm = () => {
         if (mode === "create") {                        
             axios.post('/api/migrans', {
@@ -28,12 +37,7 @@ function Migrans(props) {
                 megtett_km: megtett_km.current.value,
             }).then(data => {
                 if (data.status === 201){
-                    ID.current.value = "";
-                    megyeID.current.value = "-1";
-                    ev.current.value = "2023";
-                    honap.current.value = "";
-                    fo.current.value = "";
-                    megtett_km.current.value = "";
+                    clearForm();
                     setSuccess(true);
                     getMigransEllatas();
                 }
@@ -58,12 +62,7 @@ function Migrans(props) {
                 megtett_km: megtett_km.current.value,
             }).then(data => {
                 if (data.status === 200){
-                    ID.current.value = "";
-                    megyeID.current.value = "-1";
-                    ev.current.value = "2023";
-                    honap.current.value = "";
-                    fo.current.value = "";
-                    megtett_km.current.value = "";
+                    clearForm();
                     setModified(true);
                     getMigransEllatas();
                     setMode("create");
@@ -127,6 +126,11 @@ function Migrans(props) {
         honap.current.value = migransData.honap;
         fo.current.value = migransData.fo;
         megtett_km.current.value = migransData.megtett_km;     
+    }
+
+    const cancelUpdate = () => {
+        setMode("create")
+        clearForm();
     }
 
     const deleteMigransEllatas = (id) => {
@@ -250,6 +254,15 @@ function Migrans(props) {
                     >
                         Migránsellátás {mode === "create" ? "felvitele" : "módosítása"}
                     </Button>
+                    {mode === 'update' && (
+                        <Button 
+                            variant="warning" 
+                            className="text-white text-uppercase fw-bold mx-2"
+                            onClick={cancelUpdate}
+                        >
+                            Mégsem
+                        </Button>
+                    )}
                     <Button variant="info" className="text-white text-uppercase fw-bold mx-2">
                         Migránsellátások listázása
                     </Button>

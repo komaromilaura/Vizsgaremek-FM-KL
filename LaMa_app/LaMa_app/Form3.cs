@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using Microsoft.Office;
+//using Microsoft.Office;
 
 namespace LaMa_app
 {
@@ -183,7 +183,7 @@ namespace LaMa_app
 
         private void excelB_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
                 Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
@@ -211,7 +211,7 @@ namespace LaMa_app
             catch (Exception ex)
             {
                 MessageBox.Show("Hiba történt!\n{0}", Convert.ToString(ex));
-            }
+            }*/
         }
 
         private void modositB_Click(object sender, EventArgs e)

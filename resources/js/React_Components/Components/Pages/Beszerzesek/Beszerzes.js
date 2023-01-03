@@ -23,6 +23,17 @@ function Beszerzes(props){
     const szamla_kiallitasa = useRef();
     const szamla_tovább_pu_nek_utalasra = useRef();
 
+    const clearForm = () => {
+        partnerID.current.value = "-1";
+        megrendelo_szama.current.value = "";
+        megrend_alairasra_tovabbitva.current.value = "";
+        alairt_megrend_beerkezese.current.value = "";
+        dijbekero_tovabbitasa.current.value = "";
+        munkalap_kiallitasa.current.value = "";
+        szamla_kiallitasa.current.value = "";
+        szamla_tovább_pu_nek_utalasra.current.value = "";
+    }
+
     const sendForm = () => {
         if (mode === "create") {                        
             axios.post('/api/beszerzes', {
@@ -36,14 +47,7 @@ function Beszerzes(props){
                 szamla_tovább_pu_nek_utalasra: szamla_tovább_pu_nek_utalasra.current.value,
             }).then(data => {
                 if (data.status === 201){
-                    partnerID.current.value = "-1";
-                    megrendelo_szama.current.value = "";
-                    megrend_alairasra_tovabbitva.current.value = "";
-                    alairt_megrend_beerkezese.current.value = "";
-                    dijbekero_tovabbitasa.current.value = "";
-                    munkalap_kiallitasa.current.value = "";
-                    szamla_kiallitasa.current.value = "";
-                    szamla_tovább_pu_nek_utalasra.current.value = "";
+                    clearForm();
                     setSuccess(true);
                     getBeszerzesek();
                 }
@@ -69,14 +73,7 @@ function Beszerzes(props){
                 szamla_tovább_pu_nek_utalasra: szamla_tovább_pu_nek_utalasra.current.value,
             }).then(data => {
                 if (data.status === 200){
-                    partnerID.current.value = "-1";
-                    megrendelo_szama.current.value = "";
-                    megrend_alairasra_tovabbitva.current.value = "";
-                    alairt_megrend_beerkezese.current.value = "";
-                    dijbekero_tovabbitasa.current.value = "";
-                    munkalap_kiallitasa.current.value = "";
-                    szamla_kiallitasa.current.value = "";
-                    szamla_tovább_pu_nek_utalasra.current.value = "";
+                    clearForm();
                     setModified(true);
                     getBeszerzesek();
                     setMode("create");
@@ -154,6 +151,11 @@ function Beszerzes(props){
         szamla_tovább_pu_nek_utalasra.current.value = beszerzesData.szamla_tovább_pu_nek_utalasra;      
     }
 
+    const cancelUpdate = () => {
+        setMode("create")
+        clearForm();
+    }
+
     const deleteBeszerzes = (megrendelo_szama) => {
         axios.delete("/api/beszerzes/"+megrendelo_szama)
         .then(data => {
@@ -169,8 +171,7 @@ function Beszerzes(props){
                 alert("A beszerzés törlése sikertelen.")
             }            
         })
-    }
-   
+    }  
 
     return(
         <Form className="p-3 min-vh-100">
@@ -268,6 +269,15 @@ function Beszerzes(props){
                     >
                         Beszerzés {mode === "create" ? "felvitele" : "módosítása"}
                     </Button>
+                    {mode === 'update' && (
+                        <Button 
+                            variant="warning" 
+                            className="text-white text-uppercase fw-bold mx-2"
+                            onClick={cancelUpdate}
+                        >
+                            Mégsem
+                        </Button>
+                    )}
                     <Button variant="info" className="text-white text-uppercase fw-bold mx-2">
                         Beszerzések listázása
                     </Button>

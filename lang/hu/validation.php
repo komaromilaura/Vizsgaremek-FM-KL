@@ -31,7 +31,7 @@ return [
         'numeric' => 'The :attribute must be between :min and :max.',
         'string' => 'The :attribute must be between :min and :max characters.',
     ],
-    'boolean' => 'The :attribute field must be true or false.',
+    'boolean' => 'A(z) :attribute mező értéke igaz vagy hamis lehet.',
     'confirmed' => 'The :attribute confirmation does not match.',
     'current_password' => 'The password is incorrect.',
     'date' => 'A(z) :attribute mező értéke dátum kell, hogy legyen.',

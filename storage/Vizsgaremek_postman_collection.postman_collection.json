@@ -609,6 +609,733 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Allomasok",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/allomas",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"allomas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/allomas/Sárvár",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"allomas",
+								"Sárvár"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Munkakorok",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/munkakor",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"munkakor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/munkakor/2",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"munkakor",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/user/654321",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"654321"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IVIR",
+									"value": "654321",
+									"type": "text"
+								},
+								{
+									"key": "Vezetek_nev",
+									"value": "Nagy",
+									"type": "text"
+								},
+								{
+									"key": "Kereszt_nev",
+									"value": "Hanna",
+									"type": "text"
+								},
+								{
+									"key": "Jelszo",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "Vas",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "Gyor",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "Zala",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Admin",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/user/654321",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"654321"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dolgozok",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/dolgozo",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"dolgozo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/dolgozo/333332",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"dolgozo",
+								"333332"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addDolgozo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vezetek_nev",
+									"value": "Fehér",
+									"type": "text"
+								},
+								{
+									"key": "kereszt_nev",
+									"value": "Péter",
+									"type": "text"
+								},
+								{
+									"key": "IVIR",
+									"value": "333333",
+									"type": "text"
+								},
+								{
+									"key": "torzsszam",
+									"value": "541236941",
+									"type": "text"
+								},
+								{
+									"key": "adoazonosito",
+									"value": "8455237897",
+									"type": "text"
+								},
+								{
+									"key": "ir_szam",
+									"value": "9023",
+									"type": "text"
+								},
+								{
+									"key": "varos",
+									"value": "Győr",
+									"type": "text"
+								},
+								{
+									"key": "kozterulet",
+									"value": "Kodály Zoltán",
+									"type": "text"
+								},
+								{
+									"key": "kozterulet_jellege",
+									"value": "utca",
+									"type": "text"
+								},
+								{
+									"key": "hazszam",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "epulet_emelet_ajto",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ceges_email",
+									"value": "peter@c.hu",
+									"type": "text"
+								},
+								{
+									"key": "telefon",
+									"value": "06 20 478 36 14",
+									"type": "text"
+								},
+								{
+									"key": "allomas",
+									"value": "Győr",
+									"type": "text"
+								},
+								{
+									"key": "munkakorID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/dolgozo",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"dolgozo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteDolgozo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/dolgozo/333333",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"dolgozo",
+								"333333"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateDolgozo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "vezetek_nev",
+									"value": "Vajda"
+								},
+								{
+									"key": "kereszt_nev",
+									"value": "Adrienn"
+								},
+								{
+									"key": "IVIR",
+									"value": "333332"
+								},
+								{
+									"key": "torzsszam",
+									"value": "271236941"
+								},
+								{
+									"key": "adoazonosito",
+									"value": "8451237897"
+								},
+								{
+									"key": "ir_szam",
+									"value": "9700"
+								},
+								{
+									"key": "varos",
+									"value": "Szombathely"
+								},
+								{
+									"key": "kozterulet",
+									"value": "Kodály Zoltán"
+								},
+								{
+									"key": "kozterulet_jellege",
+									"value": "utca"
+								},
+								{
+									"key": "hazszam",
+									"value": "10"
+								},
+								{
+									"key": "epulet_emelet_ajto",
+									"value": ""
+								},
+								{
+									"key": "ceges_email",
+									"value": "adrienn@ceg.hu"
+								},
+								{
+									"key": "telefon",
+									"value": "06 30 488 26 88"
+								},
+								{
+									"key": "allomas",
+									"value": "Szombathely"
+								},
+								{
+									"key": "munkakorID",
+									"value": "6"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/dolgozo/333332",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"dolgozo",
+								"333332"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BelsoEllenorzesek",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/belso_ell",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"belso_ell"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/belso_ell/2022-1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"belso_ell",
+								"2022-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBelsoEllenorzes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ell_azon",
+									"value": "2022-1",
+									"type": "text"
+								},
+								{
+									"key": "ell_iktszam",
+									"value": "1-1/2022",
+									"type": "text"
+								},
+								{
+									"key": "ell_szerv",
+									"value": "Szombathely",
+									"type": "text"
+								},
+								{
+									"key": "ell_targya",
+									"value": "teszt tárgy",
+									"type": "text"
+								},
+								{
+									"key": "intezkedest_igenylo_megall",
+									"value": "teszt megállapítás",
+									"type": "text"
+								},
+								{
+									"key": "ell_javaslat",
+									"value": "teszt javaslat",
+									"type": "text"
+								},
+								{
+									"key": "javaslat_alapjan_eloirt_int",
+									"value": "teszt intézkedés",
+									"type": "text"
+								},
+								{
+									"key": "int_terv_iktszama",
+									"value": "1-2/2022",
+									"type": "text"
+								},
+								{
+									"key": "int_terv_jovahagyas_datuma",
+									"value": "2022-04-05",
+									"type": "text"
+								},
+								{
+									"key": "felelos_beosztas",
+									"value": "állomásvezető",
+									"type": "text"
+								},
+								{
+									"key": "felelos_szerv_egyseg",
+									"value": "Szombathely",
+									"type": "text"
+								},
+								{
+									"key": "int_vegrehajt_hatarido",
+									"value": "2022-06-30",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_2",
+									"value": "2022-08-31",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_2",
+									"value": "teszt módosítás",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_2",
+									"value": "2022-08-25",
+									"type": "text"
+								},
+								{
+									"key": "megtett_int",
+									"value": "teszt intézkedés",
+									"type": "text"
+								},
+								{
+									"key": "hatidoben_vegre_nem_hajt_int_oka",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nem_telj_kapcsan_tett_lepesek",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "megjegyzes",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/belso_ell",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"belso_ell"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBelsoEllenorzes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ell_azon",
+									"value": "2022-1",
+									"type": "text"
+								},
+								{
+									"key": "ell_iktszam",
+									"value": "1-1/2022",
+									"type": "text"
+								},
+								{
+									"key": "ell_szerv",
+									"value": "Szombathely",
+									"type": "text"
+								},
+								{
+									"key": "ell_targya",
+									"value": "teszt tárgy",
+									"type": "text"
+								},
+								{
+									"key": "intezkedest_igenylo_megall",
+									"value": "teszt megállapítás",
+									"type": "text"
+								},
+								{
+									"key": "ell_javaslat",
+									"value": "teszt javaslat",
+									"type": "text"
+								},
+								{
+									"key": "javaslat_alapjan_eloirt_int",
+									"value": "teszt intézkedés",
+									"type": "text"
+								},
+								{
+									"key": "int_terv_iktszama",
+									"value": "1-2/2022",
+									"type": "text"
+								},
+								{
+									"key": "int_terv_jovahagyas_datuma",
+									"value": "2022-04-05",
+									"type": "text"
+								},
+								{
+									"key": "felelos_beosztas",
+									"value": "állomásvezető",
+									"type": "text"
+								},
+								{
+									"key": "felelos_szerv_egyseg",
+									"value": "Szombathely",
+									"type": "text"
+								},
+								{
+									"key": "int_vegrehajt_hatarido",
+									"value": "2022-06-30",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_2",
+									"value": "2022-08-31",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_2",
+									"value": "teszt módosítás",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_2",
+									"value": "2022-08-25",
+									"type": "text"
+								},
+								{
+									"key": "megtett_int",
+									"value": "teszt intézkedés",
+									"type": "text"
+								},
+								{
+									"key": "hatidoben_vegre_nem_hajt_int_oka",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nem_telj_kapcsan_tett_lepesek",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "megjegyzes",
+									"value": "teszt megjegyzés",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/belso_ell/2022-1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"belso_ell",
+								"2022-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBelsoEllenorzes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/belso_ell/2022-111",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"belso_ell",
+								"2022-111"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [

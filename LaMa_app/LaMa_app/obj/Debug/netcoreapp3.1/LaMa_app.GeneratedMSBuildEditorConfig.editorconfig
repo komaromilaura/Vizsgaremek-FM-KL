@@ -1,3 +1,9 @@
 is_global = true
+build_property.ApplicationManifest = 
+build_property.StartupObject = 
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
 build_property.RootNamespace = LaMa_app
-build_property.ProjectDir = E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\
+build_property.ProjectDir = C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\LaMa_app\LaMa_app\

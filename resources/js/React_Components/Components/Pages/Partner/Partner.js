@@ -22,6 +22,21 @@ function Partner(props){
     const email = useRef();
     const telefon = useRef();
     const adoszam = useRef(); 
+
+    const clearForm = () => {
+        ID.current.value = "";
+        nev.current.value = "";
+        ir_szam.current.value = "";
+        varos.current.value = "";
+        kozterulet.current.value = "";
+        kozt_jellege.current.value = "";
+        hazszam.current.value = "";
+        epulet_emelet_ajto.current.value = "";
+        helyrazi_szam.current.value = "";
+        email.current.value = "";
+        telefon.current.value = "";
+        adoszam.current.value = "";
+	}
     
     const sendForm = () => {
         if (mode === "create") {
@@ -39,18 +54,7 @@ function Partner(props){
                 adoszam: adoszam.current.value,
             }).then(data => {
                 if (data.status === 201){
-                    ID.current.value = "";
-                    nev.current.value = "";
-                    ir_szam.current.value = "";
-                    varos.current.value = "";
-                    kozterulet.current.value = "";
-                    kozt_jellege.current.value = "";
-                    hazszam.current.value = "";
-                    epulet_emelet_ajto.current.value = "";
-                    helyrazi_szam.current.value = "";
-                    email.current.value = "";
-                    telefon.current.value = "";
-                    adoszam.current.value = "";
+                    clearForm();
                     setSuccess(true);
                     getPartnerek();
                 }
@@ -79,18 +83,7 @@ function Partner(props){
                 adoszam: adoszam.current.value,
             }).then(data => {
                 if (data.status === 200){
-                    ID.current.value = "";
-                    nev.current.value = "";
-                    ir_szam.current.value = "";
-                    varos.current.value = "";
-                    kozterulet.current.value = "";
-                    kozt_jellege.current.value = "";
-                    hazszam.current.value = "";
-                    epulet_emelet_ajto.current.value = "";
-                    helyrazi_szam.current.value = "";
-                    email.current.value = "";
-                    telefon.current.value = "";
-                    adoszam.current.value = "";
+                    clearForm();
                     setModified(true);
                     getPartnerek();
                     setMode("create");
@@ -147,6 +140,11 @@ function Partner(props){
         email.current.value = partnerData.email;
         telefon.current.value = partnerData.telefon;
         adoszam.current.value = partnerData.adoszam;        
+    }
+
+    const cancelUpdate = () => {
+        setMode("create")
+        clearForm();
     }
 
     const deletePartner = (id) => {
@@ -328,6 +326,15 @@ function Partner(props){
                     >
                         Partner {mode === "create" ? "felvitele" : "módosítása"}
                     </Button>
+                    {mode === 'update' && (
+                        <Button 
+                            variant="warning" 
+                            className="text-white text-uppercase fw-bold mx-2"
+                            onClick={cancelUpdate}
+                        >
+                            Mégsem
+                        </Button>
+                    )}
                     <Button variant="info" className="text-white text-uppercase fw-bold mx-3">
                         Partnerek listázása
                     </Button>

@@ -24,4 +24,9 @@ class Megye extends Model
     {
         return $this->hasMany(MigransEllatas::class, "megyeID", "ID");
     }
+
+    public function allomas()
+    {
+        return $this->hasMany(Megye::class, "megye_id", "ID");
+    }
 }
