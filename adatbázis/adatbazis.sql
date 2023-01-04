@@ -122,7 +122,8 @@ CREATE TABLE IF NOT EXISTS `allashelyek` (
   `betoltott_allashely_osszesen` float unsigned NOT NULL DEFAULT '0',
   `ures_allashely_osszesen` float unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`),
-  UNIQUE KEY `mentoallomas` (`mentoallomas`,`ev`,`ho`)
+  UNIQUE KEY `mentoallomas` (`mentoallomas`,`ev`,`ho`),
+  CONSTRAINT `FK_allashelyek_allomasok` FOREIGN KEY (`mentoallomas`) REFERENCES `allomasok` (`nev`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
 -- Tábla adatainak mentése lamafelhasznalok.allashelyek: ~0 rows (hozzávetőleg)
