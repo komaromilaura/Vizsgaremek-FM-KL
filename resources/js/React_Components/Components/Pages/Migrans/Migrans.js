@@ -158,7 +158,6 @@ function Migrans(props) {
         }
         return options;
     }
-
    
     return(
         <Form className="p-3 min-vh-100">

@@ -58,6 +58,14 @@ Route::group(['prefix' => 'belso_ell'], function() {
     Route::delete('/{belsoEllenorzes}', [\App\Http\Controllers\BelsoEllenorzesController::class, 'deleteBelsoEllenorzes'])->name('deleteBelsoEllenorzes');
 });
 
+Route::group(['prefix' => 'kulso_ell'], function() {
+    Route::get("/", [\App\Http\Controllers\KulsoEllenorzesController::class, 'getAll'])->name("getKulsoEllenorzesek");
+    Route::get("/{kulsoEllenorzes}", [\App\Http\Controllers\KulsoEllenorzesController::class, 'get'])->name("getKulsoEllenorzes");
+    Route::post("/", [\App\Http\Controllers\KulsoEllenorzesController::class, 'addKulsoEllenorzes'])->name('addKulsoEllenorzes');
+    Route::put('/{kulsoEllenorzes}', [\App\Http\Controllers\KulsoEllenorzesController::class, 'updateKulsoEllenorzes'])->name('updateKulsoEllenorzes');
+    Route::delete('/{kulsoEllenorzes}', [\App\Http\Controllers\KulsoEllenorzesController::class, 'deleteKulsoEllenorzes'])->name('deleteKulsoEllenorzes');
+});
+
 Route::group(['prefix' => 'user'], function() {    
     Route::get("/{user}", [\App\Http\Controllers\UserController::class, 'get'])->name("getUser");
     Route::put('/{user}', [\App\Http\Controllers\UserController::class, 'updateUser'])->name('updateUser');
@@ -71,6 +79,14 @@ Route::group(['prefix' => 'allomas'], function() {
 Route::group(['prefix' => 'munkakor'], function() {
     Route::get("/", [\App\Http\Controllers\MunkakorController::class, 'getAll'])->name("getMunkakorok");
     Route::get("/{munkakor}", [\App\Http\Controllers\MunkakorController::class, 'get'])->name("getMunkakor");
+});
+
+Route::group(['prefix' => 'ellenor'], function() {
+    Route::get('/', [\App\Http\Controllers\EllenorController::class, 'getAll'])->name("getEllenorok");
+    Route::get('/{ellenor}', [\App\Http\Controllers\EllenorController::class, 'get'])->name("getEllenor");
+    Route::post('/', [\App\Http\Controllers\EllenorController::class, 'addEllenor'])->name('addEllenor');
+    Route::put('/{ellenor}', [\App\Http\Controllers\EllenorController::class, 'updateEllenor'])->name('updateEllenor');
+    Route::delete('/{ellenor}', [\App\Http\Controllers\EllenorController::class, 'deleteEllenor'])->name('deleteEllenor');
 });
 
 

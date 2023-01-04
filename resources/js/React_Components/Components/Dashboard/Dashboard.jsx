@@ -41,7 +41,7 @@ class Dashboard extends Component {
                                 <Route path="/dolgozo" element={<Dolgozok />} />
                                 <Route path="/partner" element={<Partner />}/> 
                                 <Route path="/" element={<Partner />}/>
-                                <Route path="/ellenorzo" element={<Ellenorzo />}/> 
+                                <Route path="/ellenor" element={<Ellenorzo />}/> 
                                 <Route path="/beszerzes" element={<Beszerzes />}/> 
                                 <Route path="/belso_ell" element={<BelsoEllenorzes />}/> 
                                 <Route path="/kulso_ell" element={<KulsoEllenorzes />}/> 

@@ -25,7 +25,7 @@ class PartnerRequest extends FormRequest
     {
         return [
             'nev' => 'required|string',
-            'ir_szam' => 'required|numeric|min:1111|max:9999',
+            'ir_szam' => 'required|numeric|min:1000|max:9999',
             'varos' => 'required|string',
             'kozterulet' => 'nullable|string',
             'kozt_jellege' => 'nullable|string',

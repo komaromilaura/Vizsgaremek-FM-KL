@@ -36,6 +36,7 @@ INSERT INTO `admin` (`IVIR`, `Password`, `Admin`) VALUES
 -- Struktúra mentése tábla lamafelhasznalok. allashelyek
 DROP TABLE IF EXISTS `allashelyek`;
 CREATE TABLE IF NOT EXISTS `allashelyek` (
+  `ID` int NOT NULL AUTO_INCREMENT,
   `mentoallomas` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
   `ev` year NOT NULL,
   `ho` int unsigned NOT NULL,
@@ -120,7 +121,8 @@ CREATE TABLE IF NOT EXISTS `allashelyek` (
   `szervezett_allashely_osszesen` int unsigned NOT NULL,
   `betoltott_allashely_osszesen` int unsigned NOT NULL,
   `ures_allashely_osszesen` int unsigned NOT NULL,
-  PRIMARY KEY (`mentoallomas`,`ev`,`ho`)
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `mentoallomas` (`mentoallomas`,`ev`,`ho`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
 -- Tábla adatainak mentése lamafelhasznalok.allashelyek: ~0 rows (hozzávetőleg)
@@ -139,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `allomasok` (
   CONSTRAINT `vezeto_ivir` FOREIGN KEY (`vezeto`) REFERENCES `users` (`IVIR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.allomasok: ~9 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.allomasok: ~23 rows (hozzávetőleg)
 INSERT INTO `allomasok` (`sorszam`, `nev`, `megye_id`, `vezeto`) VALUES
 	(9, 'Bük', 1, 121313),
 	(10, 'Celldömölk', 1, 123456),
@@ -221,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `beszerzesek` (
   CONSTRAINT `FK_beszerzesek_partnerek` FOREIGN KEY (`partnerID`) REFERENCES `partnerek` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.beszerzesek: ~4 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.beszerzesek: ~9 rows (hozzávetőleg)
 INSERT INTO `beszerzesek` (`partnerID`, `megrendelo_szama`, `megrend_alairasra_tovabbitva`, `alairt_megrend_beerkezese`, `dijbekero_tovabbitasa`, `munkalap_kiallitasa`, `szamla_kiallitasa`, `szamla_tovább_pu_nek_utalasra`) VALUES
 	(1, '1-2022', '2022-12-10', '2022-12-12', '2022-12-13', '2022-12-14', '2022-12-16', '2022-12-17'),
 	(2, '15/2022', '2022-12-27', '2022-12-27', '2022-12-28', '2022-12-28', '2022-12-29', '2022-12-29'),
@@ -260,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `dolgozok` (
   CONSTRAINT `FK_dolgozok_munkakorok` FOREIGN KEY (`munkakorID`) REFERENCES `munkakorok` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.dolgozok: ~3 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.dolgozok: ~5 rows (hozzávetőleg)
 INSERT INTO `dolgozok` (`vezetek_nev`, `kereszt_nev`, `IVIR`, `torzsszam`, `adoazonosito`, `ir_szam`, `varos`, `kozterulet`, `kozterulet_jellege`, `hazszam`, `epulet_emelet_ajto`, `ceges_email`, `telefon`, `allomas`, `munkakorID`) VALUES
 	('Takács', 'Zsófia', 123123, 145236789, 8987654321, 9500, 'Celldömölk', 'Dr. Géfin Lajos', 'tér', '20.', '1. em. 3.ajtó', 'zsofia@ceg.hu', '06 70 123 45 97', 'Celldömölk', 5),
 	('Fehér', 'Péter', 222222, 541236947, 8455123789, 9023, 'Győr', 'Kodály Zoltán', 'utca', '12', 'B. ép. 1. em. 15. ajtó', 'peter@ceg.hu', '06 20 478 36 14', 'Győr', 1),
@@ -321,12 +323,15 @@ CREATE TABLE IF NOT EXISTS `kulso_ell` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
 -- Tábla adatainak mentése lamafelhasznalok.kulso_ell: ~0 rows (hozzávetőleg)
+INSERT INTO `kulso_ell` (`ellenorzest_vegzoID`, `ell_azon`, `ell_iktszam`, `ell_szerv`, `kapcsolattarto_neve`, `kapcsolattarto_tel`, `ell_targya`, `intezkedest_igenylo_megall`, `ell_javaslat`, `javaslat_alapjan_eloirt_int`, `int_terv_iktszama`, `int_terv_jovahagyas_datuma`, `felelos_beosztas`, `felelos_szerv_egyseg`, `int_vegrehajt_hatarido`, `hatarido_mod_1`, `hatarido_mod_2`, `feladat_mod_1`, `feladat_mod_2`, `int_teljesites_1`, `int_teljesites_2`, `megtett_int`, `hatidoben_vegre_nem_hajt_int_oka`, `nem_telj_kapcsan_tett_lepesek`, `megjegyzes`) VALUES
+	(1, '2022-1', '1-1/2022', 'Győr', 'Oszkó Dominik', '06 94 415 257', 'teszt tárgy', 'teszt megállapítás', 'teszt javaslat', 'teszt intézkedés', '1-2/2022', '2022-04-05', 'állomásvezető', 'Győr', '2022-06-30', 1, '2022-08-31', 1, 'teszt módosítás', 1, '2022-08-25', 'teszt intézkedés', NULL, NULL, 'teszt megjegyzés'),
+	(3, '2022-2', '2-1/2022', 'Pacsa', 'Kiss Zoé', '06 92 125 599', 'cím', 'megállapítás', 'javaslat', 'intézkedés', '2-2/2022', '2022-01-19', 'vezető', 'Pacsa', '2022-04-13', 1, '2022-04-30', 1, 'feladat módosítás', 1, '2022-04-27', 'megtett intézkedések', 'ok', NULL, 'megjegyzés');
 
 -- Struktúra mentése tábla lamafelhasznalok. kulso_ellenorok
 DROP TABLE IF EXISTS `kulso_ellenorok`;
 CREATE TABLE IF NOT EXISTS `kulso_ellenorok` (
   `ID` int NOT NULL AUTO_INCREMENT,
-  `nev` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
+  `nev` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
   `ir_szam` int unsigned DEFAULT NULL,
   `varos` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci DEFAULT NULL,
   `kozterulet` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci DEFAULT NULL,
@@ -338,13 +343,17 @@ CREATE TABLE IF NOT EXISTS `kulso_ellenorok` (
   `telefon` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci DEFAULT NULL,
   `kontakt_szemely` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
 -- Tábla adatainak mentése lamafelhasznalok.kulso_ellenorok: ~0 rows (hozzávetőleg)
+INSERT INTO `kulso_ellenorok` (`ID`, `nev`, `ir_szam`, `varos`, `kozterulet`, `kozt_jellege`, `hazszam`, `epulet_emelet_ajto`, `helyrazi_szam`, `email`, `telefon`, `kontakt_szemely`) VALUES
+	(1, 'Vas Megyei Kormányhivatal Sárvári Járási Hivatal Járási Népegészségügyi Intézete', 9600, 'Sárvár', 'Várkerület', NULL, '4.', NULL, NULL, 'titkarsag.sarvar@nydr.antsz.hu', '06 95 320 277', 'Szalai Márton'),
+	(3, 'Állami Számvevőszék', 1052, 'Budapest', 'Apáczai Cs. J.', 'utca', '10.', NULL, NULL, 'szamvevoszek@asz.hu', '06 1 484 9100', 'Takács Bence');
 
 -- Struktúra mentése tábla lamafelhasznalok. letszam
 DROP TABLE IF EXISTS `letszam`;
 CREATE TABLE IF NOT EXISTS `letszam` (
+  `ID` int NOT NULL AUTO_INCREMENT,
   `mentoallomas` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
   `ev` year NOT NULL,
   `negyedev` int unsigned NOT NULL,
@@ -359,7 +368,8 @@ CREATE TABLE IF NOT EXISTS `letszam` (
   `mentesiranyitasban_dolg` int unsigned NOT NULL,
   `mentogkvezeto` int unsigned NOT NULL,
   `betegszall_iranyitasban_dolg` int unsigned NOT NULL,
-  PRIMARY KEY (`mentoallomas`,`ev`,`negyedev`),
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `mentoallomas` (`mentoallomas`,`ev`,`negyedev`),
   CONSTRAINT `FK_letszam_allomasok` FOREIGN KEY (`mentoallomas`) REFERENCES `allomasok` (`nev`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
@@ -393,7 +403,7 @@ CREATE TABLE IF NOT EXISTS `migransellatas` (
   CONSTRAINT `FK_migrans_ellatas_megyek` FOREIGN KEY (`megyeID`) REFERENCES `megyek` (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.migransellatas: ~0 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.migransellatas: ~9 rows (hozzávetőleg)
 INSERT INTO `migransellatas` (`ID`, `megyeID`, `ev`, `honap`, `fo`, `megtett_km`) VALUES
 	(1, 1, '2022', 1, 20, 2000),
 	(2, 2, '2022', 1, 30, 2500),
@@ -439,7 +449,7 @@ CREATE TABLE IF NOT EXISTS `munkakorok` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.munkakorok: ~7 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.munkakorok: ~9 rows (hozzávetőleg)
 INSERT INTO `munkakorok` (`ID`, `munkakor`, `alapber`) VALUES
 	(1, 'mentőtechnikus', 350000),
 	(2, 'mentőgépkocsi vezető', 310000),
@@ -513,6 +523,7 @@ CREATE TABLE IF NOT EXISTS `terites_nelkuli_rend` (
 -- Struktúra mentése tábla lamafelhasznalok. tulorak
 DROP TABLE IF EXISTS `tulorak`;
 CREATE TABLE IF NOT EXISTS `tulorak` (
+  `ID` int NOT NULL AUTO_INCREMENT,
   `mentoallomas` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
   `ev` year NOT NULL,
   `honap` int unsigned NOT NULL,
@@ -523,7 +534,8 @@ CREATE TABLE IF NOT EXISTS `tulorak` (
   `mentesiranyitasban_dolg` int unsigned NOT NULL,
   `mentogkvezeto` int unsigned NOT NULL,
   `betegszall_iranyitasban_dolg` int unsigned NOT NULL,
-  PRIMARY KEY (`mentoallomas`,`ev`,`honap`),
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `mentoallomas` (`mentoallomas`,`ev`,`honap`),
   CONSTRAINT `FK_tulorak_allomasok` FOREIGN KEY (`mentoallomas`) REFERENCES `allomasok` (`nev`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
@@ -543,7 +555,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`IVIR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.users: ~4 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.users: ~3 rows (hozzávetőleg)
 INSERT INTO `users` (`IVIR`, `Vezetek_nev`, `Kereszt_nev`, `Jelszo`, `Vas`, `Gyor`, `Zala`, `Admin`) VALUES
 	(121212, 'Horváth', 'Máté', 'sf', 0, 1, 0, 0),
 	(121313, 'Kovács', 'Anita', 'cvv', 1, 0, 0, 1),

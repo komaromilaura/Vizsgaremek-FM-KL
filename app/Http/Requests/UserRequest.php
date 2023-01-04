@@ -24,7 +24,7 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'IVIR' => 'required|numeric|min:111111|max:999999',
+            'IVIR' => 'required|numeric|min:100000|max:999999',
             'Vezetek_nev' => 'required|string',
             'Kereszt_nev' => 'required|string',
             'Jelszo' => 'required|string',

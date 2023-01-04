@@ -26,10 +26,10 @@ class DolgozoRequest extends FormRequest
         return [            
             'vezetek_nev' => 'required|string',
             'kereszt_nev' => 'required|string',
-            'IVIR' => 'required|numeric|min:111111|max:999999',
+            'IVIR' => 'required|numeric|min:100000|max:999999',
             'torzsszam' => 'required|numeric|min:0',
             'adoazonosito' => 'required|numeric|min:8000000000|max:8999999999',
-            'ir_szam' => 'required|numeric|min:1111|max:9999',
+            'ir_szam' => 'required|numeric|min:1000|max:9999',
             'varos' => 'required|string',
             'kozterulet' => 'required|string',
             'kozterulet_jellege' => 'required|string',

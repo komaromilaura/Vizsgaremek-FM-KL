@@ -6,7 +6,7 @@ module.exports = {
         },
         {
             name: "Külső ellenőrzést végzők felvitele",
-            link: "/ellenorzo"
+            link: "/ellenor"
         },
         {
             name: "Dolgozók felvitele",

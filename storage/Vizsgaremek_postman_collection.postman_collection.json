@@ -1336,6 +1336,573 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Ellenorok",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/ellenor",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"ellenor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/ellenor/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"ellenor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addEllenor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nev",
+									"value": "Vas Megyei Kormányhivatal Sárvári Járási Hivatal Járási Népegészségügyi\n Intézete",
+									"type": "text"
+								},
+								{
+									"key": "ir_szam",
+									"value": "9600",
+									"type": "text"
+								},
+								{
+									"key": "varos",
+									"value": "Sárvár",
+									"type": "text"
+								},
+								{
+									"key": "kozterulet",
+									"value": "Várkerület",
+									"type": "text"
+								},
+								{
+									"key": "kozt_jellege",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "hazszam",
+									"value": "4.",
+									"type": "text"
+								},
+								{
+									"key": "epulet_emelet_ajto",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "helyrazi_szam",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "titkarsag.sarvar@nydr.antsz.hu ",
+									"type": "text"
+								},
+								{
+									"key": "telefon",
+									"value": "06 95 320-277",
+									"type": "text"
+								},
+								{
+									"key": "kontakt_szemely",
+									"value": "Szalai Kitti",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/ellenor",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"ellenor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEllenor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/ellenor/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"ellenor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEllenor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/ellenor/2",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"ellenor",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "KulsoEllenorzesek",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/kulso_ell",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"kulso_ell"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/kulso_ell/2022-1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"kulso_ell",
+								"2022-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addKulsoEllenorzesek",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ellenorzest_vegzoID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ell_azon",
+									"value": "2022-1",
+									"type": "text"
+								},
+								{
+									"key": "ell_iktszam",
+									"value": "1-1/2022",
+									"type": "text"
+								},
+								{
+									"key": "ell_szerv",
+									"value": "Győr",
+									"type": "text"
+								},
+								{
+									"key": "kapcsolattarto_neve",
+									"value": "Oszkó Levente",
+									"type": "text"
+								},
+								{
+									"key": "kapcsolattarto_tel",
+									"value": "06 94 415 257",
+									"type": "text"
+								},
+								{
+									"key": "ell_targya",
+									"value": "teszt tárgy",
+									"type": "text"
+								},
+								{
+									"key": "intezkedest_igenylo_megall",
+									"value": "teszt megállapítás",
+									"type": "text"
+								},
+								{
+									"key": "ell_javaslat",
+									"value": "teszt javaslat",
+									"type": "text"
+								},
+								{
+									"key": "javaslat_alapjan_eloirt_int",
+									"value": "teszt intézkedés",
+									"type": "text"
+								},
+								{
+									"key": "int_terv_iktszama",
+									"value": "1-2/2022",
+									"type": "text"
+								},
+								{
+									"key": "int_terv_jovahagyas_datuma",
+									"value": "2022-04-05",
+									"type": "text"
+								},
+								{
+									"key": "felelos_beosztas",
+									"value": "állomásvezető",
+									"type": "text"
+								},
+								{
+									"key": "felelos_szerv_egyseg",
+									"value": "Győr",
+									"type": "text"
+								},
+								{
+									"key": "int_vegrehajt_hatarido",
+									"value": "2022-06-30",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_2",
+									"value": "2022-08-31",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_2",
+									"value": "teszt módosítás",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_2",
+									"value": "2022-08-25",
+									"type": "text"
+								},
+								{
+									"key": "megtett_int",
+									"value": "teszt intézkedés",
+									"type": "text"
+								},
+								{
+									"key": "hatidoben_vegre_nem_hajt_int_oka",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nem_telj_kapcsan_tett_lepesek",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "megjegyzes",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/kulso_ell/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"kulso_ell",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateKulsoEllenorzesek",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ellenorzest_vegzoID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ell_azon",
+									"value": "2022-1",
+									"type": "text"
+								},
+								{
+									"key": "ell_iktszam",
+									"value": "1-1/2022",
+									"type": "text"
+								},
+								{
+									"key": "ell_szerv",
+									"value": "Győr",
+									"type": "text"
+								},
+								{
+									"key": "kapcsolattarto_neve",
+									"value": "Oszkó Dominik",
+									"type": "text"
+								},
+								{
+									"key": "kapcsolattarto_tel",
+									"value": "06 94 415 257",
+									"type": "text"
+								},
+								{
+									"key": "ell_targya",
+									"value": "teszt tárgy",
+									"type": "text"
+								},
+								{
+									"key": "intezkedest_igenylo_megall",
+									"value": "teszt megállapítás",
+									"type": "text"
+								},
+								{
+									"key": "ell_javaslat",
+									"value": "teszt javaslat",
+									"type": "text"
+								},
+								{
+									"key": "javaslat_alapjan_eloirt_int",
+									"value": "teszt intézkedés",
+									"type": "text"
+								},
+								{
+									"key": "int_terv_iktszama",
+									"value": "1-2/2022",
+									"type": "text"
+								},
+								{
+									"key": "int_terv_jovahagyas_datuma",
+									"value": "2022-04-05",
+									"type": "text"
+								},
+								{
+									"key": "felelos_beosztas",
+									"value": "állomásvezető",
+									"type": "text"
+								},
+								{
+									"key": "felelos_szerv_egyseg",
+									"value": "Győr",
+									"type": "text"
+								},
+								{
+									"key": "int_vegrehajt_hatarido",
+									"value": "2022-06-30",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_2",
+									"value": "2022-08-31",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_2",
+									"value": "teszt módosítás",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_2",
+									"value": "2022-08-25",
+									"type": "text"
+								},
+								{
+									"key": "megtett_int",
+									"value": "teszt intézkedés",
+									"type": "text"
+								},
+								{
+									"key": "hatidoben_vegre_nem_hajt_int_oka",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nem_telj_kapcsan_tett_lepesek",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "felelos_beosztas",
+									"value": "állomásvezető",
+									"type": "text"
+								},
+								{
+									"key": "felelos_szerv_egyseg",
+									"value": "Győr",
+									"type": "text"
+								},
+								{
+									"key": "int_vegrehajt_hatarido",
+									"value": "2022-06-30",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hatarido_mod_2",
+									"value": "2022-08-31",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "feladat_mod_2",
+									"value": "teszt módosítás",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "int_teljesites_2",
+									"value": "2022-08-25",
+									"type": "text"
+								},
+								{
+									"key": "megtett_int",
+									"value": "teszt intézkedés",
+									"type": "text"
+								},
+								{
+									"key": "hatidoben_vegre_nem_hajt_int_oka",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nem_telj_kapcsan_tett_lepesek",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "megjegyzes",
+									"value": "teszt megjegyzés",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/kulso_ell/2022-1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"kulso_ell",
+								"2022-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteKulsoEllenorzesek",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/kulso_ell/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"kulso_ell",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [

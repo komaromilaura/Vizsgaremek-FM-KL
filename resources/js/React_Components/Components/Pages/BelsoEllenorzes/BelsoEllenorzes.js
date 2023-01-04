@@ -291,7 +291,8 @@ function BelsoEllenorzes(props) {
                             rows={3} 
                             name="ell_javaslat" 
                             value={formData.ell_javaslat} 
-                            onChange={changeData} />
+                            onChange={changeData} 
+                        />
                     </Form.Group>
                 </Col>
                 <Col lg={4} md={6} className="py-2">
@@ -304,7 +305,8 @@ function BelsoEllenorzes(props) {
                             rows={3} 
                             name="javaslat_alapjan_eloirt_int"
                             value={formData.javaslat_alapjan_eloirt_int} 
-                            onChange={changeData} />
+                            onChange={changeData} 
+                        />
                     </Form.Group>
                 </Col>
                 <Col lg={4} md={6} className="py-2">

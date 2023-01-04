@@ -215,7 +215,7 @@ function Partner(props){
                         <Form.Label>
                             Város
                         </Form.Label>
-                        <Form.Control type="text" ref={varos} onChange={resetSucess}/>
+                        <Form.Control type="text" ref={varos} onChange={resetSucess} />
                     </Form.Group>
                 </Col>
                 <Col lg={4} md={6} className="py-2">
@@ -231,7 +231,7 @@ function Partner(props){
                         <Form.Label>
                             Közterület jellege
                         </Form.Label>
-                        <Form.Control type="text" ref={kozt_jellege} onChange={resetSucess}/>
+                        <Form.Control type="text" ref={kozt_jellege} onChange={resetSucess} />
                     </Form.Group>
                 </Col>
                 <Col lg={4} md={6} className="py-2">

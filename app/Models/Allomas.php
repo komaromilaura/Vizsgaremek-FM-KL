@@ -44,6 +44,16 @@ class Allomas extends Model
         return $this->hasMany(BelsoEllenorzes::class, "felelos_szerv_egyseg", "nev");
     }
 
+    public function KulsoEllEllSzerv()
+    {
+        return $this->hasMany(KulsoEllenorzes::class, "ell_szerv", "nev");
+    }
+
+    public function KulsoEllFelelosSzervEgys()
+    {
+        return $this->hasMany(KulsoEllenorzes::class, "felelos_szerv_egyseg", "nev");
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class, "vezeto", "IVIR");
