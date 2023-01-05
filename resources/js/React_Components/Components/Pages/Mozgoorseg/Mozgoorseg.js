@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {megyek} from "../../../Utils/data.js";
@@ -6,6 +6,11 @@ import {megyek} from "../../../Utils/data.js";
 function Mozgoorseg(props) {
     const [bevetel, setBevetel] = useState();
     const [kiadas, setKiadas] = useState();
+    const [maradvany, setMaradvany] = useState();
+
+    useEffect(() => {
+        setMaradvany(bevetel - kiadas);
+    }, [bevetel, kiadas]);
         
     return(
         <Form className="p-3 min-vh-100">
@@ -214,7 +219,7 @@ function Mozgoorseg(props) {
                             readOnly 
                             plaintext 
                             type="text"
-                            value={bevetel - kiadas}
+                            value={maradvany || 0}
                         />
                     </Form.Group>
                 </Col>

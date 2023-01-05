@@ -1903,6 +1903,949 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Allashelyek",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/allashely",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"allashely"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/allashely/3",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"allashely",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllashelyek",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/allashely/2",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"allashely",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAllashelyek",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mentoallomas",
+									"value": "Lenti",
+									"type": "text"
+								},
+								{
+									"key": "ev",
+									"value": "2023",
+									"type": "text"
+								},
+								{
+									"key": "ho",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "szakorvos_szervezett",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "szakorvos_betoltott",
+									"value": "101",
+									"type": "text"
+								},
+								{
+									"key": "szakorvos_ures",
+									"value": "102",
+									"type": "text"
+								},
+								{
+									"key": "vezeto_mentotiszt_szervezett",
+									"value": "103",
+									"type": "text"
+								},
+								{
+									"key": "vezeto_mentotiszt_betoltott",
+									"value": "104",
+									"type": "text"
+								},
+								{
+									"key": "vezeto_mentotiszt_ures",
+									"value": "105",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt_szervezett",
+									"value": "106",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt_betoltott",
+									"value": "107",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt_ures",
+									"value": "108",
+									"type": "text"
+								},
+								{
+									"key": "foapolo_szervezett",
+									"value": "109",
+									"type": "text"
+								},
+								{
+									"key": "foapolo_betoltott",
+									"value": "110",
+									"type": "text"
+								},
+								{
+									"key": "foapolo_ures",
+									"value": "111",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_szervezett",
+									"value": "112",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_betoltott",
+									"value": "113",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_ures",
+									"value": "114",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_osszes_szervezett",
+									"value": "115",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_osszes_betoltott",
+									"value": "116",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_osszes_ures",
+									"value": "117",
+									"type": "text"
+								},
+								{
+									"key": "allomasvezeto_szervezett",
+									"value": "118",
+									"type": "text"
+								},
+								{
+									"key": "allomasvezeto_betoltott",
+									"value": "119",
+									"type": "text"
+								},
+								{
+									"key": "allomasvezeto_ures",
+									"value": "120",
+									"type": "text"
+								},
+								{
+									"key": "ICS_vezeto_szervezett",
+									"value": "121",
+									"type": "text"
+								},
+								{
+									"key": "ICS_vezeto_betoltott",
+									"value": "122",
+									"type": "text"
+								},
+								{
+									"key": "ICS_vezeto_ures",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "mentotiszt_szervezett",
+									"value": "124",
+									"type": "text"
+								},
+								{
+									"key": "mentotiszt_betoltott",
+									"value": "125",
+									"type": "text"
+								},
+								{
+									"key": "mentotiszt_ures",
+									"value": "126",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo2_szervezett",
+									"value": "127",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo2_betoltott",
+									"value": "128",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo2_ures",
+									"value": "129",
+									"type": "text"
+								},
+								{
+									"key": "apolo_szervezett",
+									"value": "130",
+									"type": "text"
+								},
+								{
+									"key": "apolo_betoltott",
+									"value": "131",
+									"type": "text"
+								},
+								{
+									"key": "apolo_ures",
+									"value": "132",
+									"type": "text"
+								},
+								{
+									"key": "szolgalatvezeto_szervezett",
+									"value": "133",
+									"type": "text"
+								},
+								{
+									"key": "szolgalatvezeto_betoltott",
+									"value": "134",
+									"type": "text"
+								},
+								{
+									"key": "szolgalatvezeto_ures",
+									"value": "135",
+									"type": "text"
+								},
+								{
+									"key": "apolo2_szervezett",
+									"value": "136",
+									"type": "text"
+								},
+								{
+									"key": "apolo2_betoltott",
+									"value": "137",
+									"type": "text"
+								},
+								{
+									"key": "apolo2_ures",
+									"value": "138",
+									"type": "text"
+								},
+								{
+									"key": "uzemgazdasz_szervezett",
+									"value": "139",
+									"type": "text"
+								},
+								{
+									"key": "uzemgazdasz_betoltott",
+									"value": "140",
+									"type": "text"
+								},
+								{
+									"key": "uzemgazdasz_ures",
+									"value": "141",
+									"type": "text"
+								},
+								{
+									"key": "uzemmernok_szervezett",
+									"value": "142",
+									"type": "text"
+								},
+								{
+									"key": "uzemmernok_betoltott",
+									"value": "143",
+									"type": "text"
+								},
+								{
+									"key": "uzemmernok_ures",
+									"value": "144",
+									"type": "text"
+								},
+								{
+									"key": "oktatas_szervezo_szervezett",
+									"value": "145",
+									"type": "text"
+								},
+								{
+									"key": "oktatas_szervezo_betoltott",
+									"value": "146",
+									"type": "text"
+								},
+								{
+									"key": "oktatas_szervezo_ures",
+									"value": "147",
+									"type": "text"
+								},
+								{
+									"key": "ugyintezo_szervezett",
+									"value": "148",
+									"type": "text"
+								},
+								{
+									"key": "ugyintezo_betoltott",
+									"value": "149",
+									"type": "text"
+								},
+								{
+									"key": "ugyintezo_ures",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "adminisztrator_szervezett",
+									"value": "151",
+									"type": "text"
+								},
+								{
+									"key": "adminisztrator_betoltott",
+									"value": "152",
+									"type": "text"
+								},
+								{
+									"key": "adminisztrator_ures",
+									"value": "153",
+									"type": "text"
+								},
+								{
+									"key": "adatrogzito_szervezett",
+									"value": "154",
+									"type": "text"
+								},
+								{
+									"key": "adatrogzito_betoltott",
+									"value": "155",
+									"type": "text"
+								},
+								{
+									"key": "adatrogzito_ures",
+									"value": "156",
+									"type": "text"
+								},
+								{
+									"key": "autoszerelo_szakmunkas_szervezett",
+									"value": "157",
+									"type": "text"
+								},
+								{
+									"key": "autoszerelo_szakmunkas_betoltott",
+									"value": "158",
+									"type": "text"
+								},
+								{
+									"key": "autoszerelo_szakmunkas_ures",
+									"value": "159",
+									"type": "text"
+								},
+								{
+									"key": "karbantarto_szervezett",
+									"value": "160",
+									"type": "text"
+								},
+								{
+									"key": "karbantarto_betoltott",
+									"value": "161",
+									"type": "text"
+								},
+								{
+									"key": "karbantarto_ures",
+									"value": "162",
+									"type": "text"
+								},
+								{
+									"key": "kazanfuto_szervezett",
+									"value": "163",
+									"type": "text"
+								},
+								{
+									"key": "kazanfuto_betoltott",
+									"value": "164",
+									"type": "text"
+								},
+								{
+									"key": "kazanfuto_ures",
+									"value": "165",
+									"type": "text"
+								},
+								{
+									"key": "mentogepkocsivezeto_szervezett",
+									"value": "166",
+									"type": "text"
+								},
+								{
+									"key": "mentogepkocsivezeto_betoltott",
+									"value": "167",
+									"type": "text"
+								},
+								{
+									"key": "mentogepkocsivezeto_ures",
+									"value": "168",
+									"type": "text"
+								},
+								{
+									"key": "muszaki_gondnok_szervezett",
+									"value": "169",
+									"type": "text"
+								},
+								{
+									"key": "muszaki_gondnok_betoltott",
+									"value": "170",
+									"type": "text"
+								},
+								{
+									"key": "muszaki_gondnok_ures",
+									"value": "171",
+									"type": "text"
+								},
+								{
+									"key": "garazsmester_szervezett",
+									"value": "172",
+									"type": "text"
+								},
+								{
+									"key": "garazsmester_betoltott",
+									"value": "173",
+									"type": "text"
+								},
+								{
+									"key": "garazsmester_ures",
+									"value": "174",
+									"type": "text"
+								},
+								{
+									"key": "szervezett_gkv_osszesen",
+									"value": "175",
+									"type": "text"
+								},
+								{
+									"key": "betoltott_gkv_osszesen",
+									"value": "176",
+									"type": "text"
+								},
+								{
+									"key": "ures_gkv_osszesen",
+									"value": "177",
+									"type": "text"
+								},
+								{
+									"key": "szervezett_allashely_osszesen",
+									"value": "178",
+									"type": "text"
+								},
+								{
+									"key": "betoltott_allashely_osszesen",
+									"value": "179",
+									"type": "text"
+								},
+								{
+									"key": "ures_allashely_osszesen",
+									"value": "180",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/allashely",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"allashely"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAllashelyek",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mentoallomas",
+									"value": "Lövő",
+									"type": "text"
+								},
+								{
+									"key": "ev",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "ho",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "szakorvos_szervezett",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "szakorvos_betoltott",
+									"value": "101",
+									"type": "text"
+								},
+								{
+									"key": "szakorvos_ures",
+									"value": "102",
+									"type": "text"
+								},
+								{
+									"key": "vezeto_mentotiszt_szervezett",
+									"value": "103",
+									"type": "text"
+								},
+								{
+									"key": "vezeto_mentotiszt_betoltott",
+									"value": "104",
+									"type": "text"
+								},
+								{
+									"key": "vezeto_mentotiszt_ures",
+									"value": "105",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt_szervezett",
+									"value": "106",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt_betoltott",
+									"value": "107",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt_ures",
+									"value": "108",
+									"type": "text"
+								},
+								{
+									"key": "foapolo_szervezett",
+									"value": "109",
+									"type": "text"
+								},
+								{
+									"key": "foapolo_betoltott",
+									"value": "110",
+									"type": "text"
+								},
+								{
+									"key": "foapolo_ures",
+									"value": "111",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_szervezett",
+									"value": "112",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_betoltott",
+									"value": "113",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_ures",
+									"value": "114",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_osszes_szervezett",
+									"value": "115",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_osszes_betoltott",
+									"value": "116",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo_osszes_ures",
+									"value": "117",
+									"type": "text"
+								},
+								{
+									"key": "allomasvezeto_szervezett",
+									"value": "118",
+									"type": "text"
+								},
+								{
+									"key": "allomasvezeto_betoltott",
+									"value": "119",
+									"type": "text"
+								},
+								{
+									"key": "allomasvezeto_ures",
+									"value": "120",
+									"type": "text"
+								},
+								{
+									"key": "ICS_vezeto_szervezett",
+									"value": "121",
+									"type": "text"
+								},
+								{
+									"key": "ICS_vezeto_betoltott",
+									"value": "122",
+									"type": "text"
+								},
+								{
+									"key": "ICS_vezeto_ures",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "mentotiszt_szervezett",
+									"value": "124",
+									"type": "text"
+								},
+								{
+									"key": "mentotiszt_betoltott",
+									"value": "125",
+									"type": "text"
+								},
+								{
+									"key": "mentotiszt_ures",
+									"value": "126",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo2_szervezett",
+									"value": "127",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo2_betoltott",
+									"value": "128",
+									"type": "text"
+								},
+								{
+									"key": "mentoapolo2_ures",
+									"value": "129",
+									"type": "text"
+								},
+								{
+									"key": "apolo_szervezett",
+									"value": "130",
+									"type": "text"
+								},
+								{
+									"key": "apolo_betoltott",
+									"value": "131",
+									"type": "text"
+								},
+								{
+									"key": "apolo_ures",
+									"value": "132",
+									"type": "text"
+								},
+								{
+									"key": "szolgalatvezeto_szervezett",
+									"value": "133",
+									"type": "text"
+								},
+								{
+									"key": "szolgalatvezeto_betoltott",
+									"value": "134",
+									"type": "text"
+								},
+								{
+									"key": "szolgalatvezeto_ures",
+									"value": "135",
+									"type": "text"
+								},
+								{
+									"key": "apolo2_szervezett",
+									"value": "136",
+									"type": "text"
+								},
+								{
+									"key": "apolo2_betoltott",
+									"value": "137",
+									"type": "text"
+								},
+								{
+									"key": "apolo2_ures",
+									"value": "138",
+									"type": "text"
+								},
+								{
+									"key": "uzemgazdasz_szervezett",
+									"value": "139",
+									"type": "text"
+								},
+								{
+									"key": "uzemgazdasz_betoltott",
+									"value": "140",
+									"type": "text"
+								},
+								{
+									"key": "uzemgazdasz_ures",
+									"value": "141",
+									"type": "text"
+								},
+								{
+									"key": "uzemmernok_szervezett",
+									"value": "142",
+									"type": "text"
+								},
+								{
+									"key": "uzemmernok_betoltott",
+									"value": "143",
+									"type": "text"
+								},
+								{
+									"key": "uzemmernok_ures",
+									"value": "144",
+									"type": "text"
+								},
+								{
+									"key": "oktatas_szervezo_szervezett",
+									"value": "145",
+									"type": "text"
+								},
+								{
+									"key": "oktatas_szervezo_betoltott",
+									"value": "146",
+									"type": "text"
+								},
+								{
+									"key": "oktatas_szervezo_ures",
+									"value": "147",
+									"type": "text"
+								},
+								{
+									"key": "ugyintezo_szervezett",
+									"value": "148",
+									"type": "text"
+								},
+								{
+									"key": "ugyintezo_betoltott",
+									"value": "149",
+									"type": "text"
+								},
+								{
+									"key": "ugyintezo_ures",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "adminisztrator_szervezett",
+									"value": "151",
+									"type": "text"
+								},
+								{
+									"key": "adminisztrator_betoltott",
+									"value": "152",
+									"type": "text"
+								},
+								{
+									"key": "adminisztrator_ures",
+									"value": "153",
+									"type": "text"
+								},
+								{
+									"key": "adatrogzito_szervezett",
+									"value": "154",
+									"type": "text"
+								},
+								{
+									"key": "adatrogzito_betoltott",
+									"value": "155",
+									"type": "text"
+								},
+								{
+									"key": "adatrogzito_ures",
+									"value": "156",
+									"type": "text"
+								},
+								{
+									"key": "autoszerelo_szakmunkas_szervezett",
+									"value": "157",
+									"type": "text"
+								},
+								{
+									"key": "autoszerelo_szakmunkas_betoltott",
+									"value": "158",
+									"type": "text"
+								},
+								{
+									"key": "autoszerelo_szakmunkas_ures",
+									"value": "159",
+									"type": "text"
+								},
+								{
+									"key": "karbantarto_szervezett",
+									"value": "160",
+									"type": "text"
+								},
+								{
+									"key": "karbantarto_betoltott",
+									"value": "161",
+									"type": "text"
+								},
+								{
+									"key": "karbantarto_ures",
+									"value": "162",
+									"type": "text"
+								},
+								{
+									"key": "kazanfuto_szervezett",
+									"value": "163",
+									"type": "text"
+								},
+								{
+									"key": "kazanfuto_betoltott",
+									"value": "164",
+									"type": "text"
+								},
+								{
+									"key": "kazanfuto_ures",
+									"value": "165",
+									"type": "text"
+								},
+								{
+									"key": "mentogepkocsivezeto_szervezett",
+									"value": "166",
+									"type": "text"
+								},
+								{
+									"key": "mentogepkocsivezeto_betoltott",
+									"value": "167",
+									"type": "text"
+								},
+								{
+									"key": "mentogepkocsivezeto_ures",
+									"value": "168",
+									"type": "text"
+								},
+								{
+									"key": "muszaki_gondnok_szervezett",
+									"value": "169",
+									"type": "text"
+								},
+								{
+									"key": "muszaki_gondnok_betoltott",
+									"value": "170",
+									"type": "text"
+								},
+								{
+									"key": "muszaki_gondnok_ures",
+									"value": "171",
+									"type": "text"
+								},
+								{
+									"key": "garazsmester_szervezett",
+									"value": "172",
+									"type": "text"
+								},
+								{
+									"key": "garazsmester_betoltott",
+									"value": "173",
+									"type": "text"
+								},
+								{
+									"key": "garazsmester_ures",
+									"value": "174",
+									"type": "text"
+								},
+								{
+									"key": "szervezett_gkv_osszesen",
+									"value": "175",
+									"type": "text"
+								},
+								{
+									"key": "betoltott_gkv_osszesen",
+									"value": "176",
+									"type": "text"
+								},
+								{
+									"key": "ures_gkv_osszesen",
+									"value": "177",
+									"type": "text"
+								},
+								{
+									"key": "szervezett_allashely_osszesen",
+									"value": "178",
+									"type": "text"
+								},
+								{
+									"key": "betoltott_allashely_osszesen",
+									"value": "179",
+									"type": "text"
+								},
+								{
+									"key": "ures_allashely_osszesen",
+									"value": "180",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/allashely/3",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"allashely",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [

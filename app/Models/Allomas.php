@@ -34,22 +34,22 @@ class Allomas extends Model
         return $this->hasMany(Dolgozo::class, "IVIR", "vezeto");
     }
 
-    public function BelsoEllEllSzerv()
+    public function belsoEllEllSzerv()
     {
         return $this->hasMany(BelsoEllenorzes::class, "ell_szerv", "nev");
     }
 
-    public function BelsoEllFelelosSzervEgys()
+    public function belsoEllFelelosSzervEgys()
     {
         return $this->hasMany(BelsoEllenorzes::class, "felelos_szerv_egyseg", "nev");
     }
 
-    public function KulsoEllEllSzerv()
+    public function kulsoEllEllSzerv()
     {
         return $this->hasMany(KulsoEllenorzes::class, "ell_szerv", "nev");
     }
 
-    public function KulsoEllFelelosSzervEgys()
+    public function kulsoEllFelelosSzervEgys()
     {
         return $this->hasMany(KulsoEllenorzes::class, "felelos_szerv_egyseg", "nev");
     }
@@ -57,5 +57,10 @@ class Allomas extends Model
     public function user()
     {
         return $this->belongsTo(User::class, "vezeto", "IVIR");
+    }
+
+    public function allashely()
+    {
+        return $this->hasMany(Allashely::class, "mentoallomas", "nev");
     }
 }

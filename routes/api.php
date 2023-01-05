@@ -89,4 +89,12 @@ Route::group(['prefix' => 'ellenor'], function() {
     Route::delete('/{ellenor}', [\App\Http\Controllers\EllenorController::class, 'deleteEllenor'])->name('deleteEllenor');
 });
 
+Route::group(['prefix' => 'allashely'], function() {
+    Route::get("/", [\App\Http\Controllers\AllashelyController::class, 'getAll'])->name("getAllashelyek");
+    Route::get("/{allashely}", [\App\Http\Controllers\AllashelyController::class, 'get'])->name("getAllashely");
+    Route::post("/", [\App\Http\Controllers\AllashelyController::class, 'addAllashely'])->name('addAllashely');
+    Route::put('/{allashely}', [\App\Http\Controllers\AllashelyController::class, 'updateAllashely'])->name('updateAllashely');
+    Route::delete('/{allashely}', [\App\Http\Controllers\AllashelyController::class, 'deleteAllashely'])->name('deleteAllashely');
+});
+
 

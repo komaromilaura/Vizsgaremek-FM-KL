@@ -1,6 +1,5 @@
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { megyek } from "../../../Utils/data.js";
-import { munkakoriCsoportok } from "../../../Utils/data.js";
 
 function Tulora(props) {
         
@@ -90,30 +89,102 @@ function Tulora(props) {
                 </Col>
             </Row>
             <Row>
-                <h2 className="text-center text-decoration-underline p-4">Túlóra/fő (munkaköri csoportos)</h2>
-                {munkakoriCsoportok.map((munkakoriCsoport) => {
-                    return(
-                        <Col lg={4} md={6} className="py-2" key={munkakoriCsoport}>
-                            <Form.Group>
-                                <Form.Label>
-                                    {munkakoriCsoport.charAt(0).toUpperCase() + munkakoriCsoport.substring(1)}
-                                </Form.Label>
-                                <Form.Control 
-                                    type="number" 
-                                    min={0} 
-                                    onKeyDown={(event) => {
-                                        if(event.key == "ArrowRight" || event.key == "ArrowLeft" || event.key == "Backspace" || event.key == "Delete") {
-                                            return;
-                                        }
-                                        if (!/[0-9]/.test(event.key)) {
-                                            event.preventDefault();
-                                        }
-                                    }}
-                                />
-                            </Form.Group>
-                        </Col>
-                    );
-                })}
+                <h2 className="text-center text-decoration-underline p-4">Túlóra/fő (munkaköri csoportos)</h2>        
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Orvos/mentőtiszt
+                        </Form.Label>
+                        <Form.Control 
+                            type="number" 
+                            min={0} 
+                            onKeyDown={(event) => {
+                                if(event.key == "ArrowRight" || event.key == "ArrowLeft" || event.key == "Backspace" || event.key == "Delete") {
+                                    return;
+                                }
+                                if (!/[0-9]/.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }}
+                        />
+                    </Form.Group>
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Ápoló
+                        </Form.Label>
+                        <Form.Control 
+                            type="number" 
+                            min={0} 
+                            onKeyDown={(event) => {
+                                if(event.key == "ArrowRight" || event.key == "ArrowLeft" || event.key == "Backspace" || event.key == "Delete") {
+                                    return;
+                                }
+                                if (!/[0-9]/.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }}
+                        />
+                    </Form.Group>
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Mentésirányításban dolgozó
+                        </Form.Label>
+                        <Form.Control 
+                            type="number" 
+                            min={0} 
+                            onKeyDown={(event) => {
+                                if(event.key == "ArrowRight" || event.key == "ArrowLeft" || event.key == "Backspace" || event.key == "Delete") {
+                                    return;
+                                }
+                                if (!/[0-9]/.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }}
+                        />
+                    </Form.Group>
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Mentőgépkocsivezető
+                        </Form.Label>
+                        <Form.Control 
+                            type="number" 
+                            min={0} 
+                            onKeyDown={(event) => {
+                                if(event.key == "ArrowRight" || event.key == "ArrowLeft" || event.key == "Backspace" || event.key == "Delete") {
+                                    return;
+                                }
+                                if (!/[0-9]/.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }}
+                        />
+                    </Form.Group>
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Betegszállítás irányításban dolgozó
+                        </Form.Label>
+                        <Form.Control 
+                            type="number" 
+                            min={0} 
+                            onKeyDown={(event) => {
+                                if(event.key == "ArrowRight" || event.key == "ArrowLeft" || event.key == "Backspace" || event.key == "Delete") {
+                                    return;
+                                }
+                                if (!/[0-9]/.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }}
+                        />
+                    </Form.Group>
+                </Col>                    
             </Row>
             <Row className="py-4">
                 <Col lg={12} className="justify-content-center d-flex mb-3">
