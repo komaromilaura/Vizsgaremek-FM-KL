@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\DolgozoExport;
 use App\Http\Requests\DolgozoRequest;
 use App\Models\Dolgozo;
 
@@ -9,14 +10,14 @@ class DolgozoController extends Controller
 {
     public function getAll()
     {
-        $dolgozok = Dolgozo::with(["allomas", "munkakor"])->get()->toArray();
+        $dolgozok = Dolgozo::with(["mento_allomas", "munkakor"])->get()->toArray();
 
         return response()->json($dolgozok, 200);
     }
 
     public function get(Dolgozo $dolgozo)
     {
-        return response()->json($dolgozo->load(["allomas", "munkakor"])->toArray(), 200);
+        return response()->json($dolgozo->load(["mento_allomas", "munkakor"])->toArray(), 200);
     }
 
     public function addDolgozo(DolgozoRequest $request){
@@ -70,5 +71,10 @@ class DolgozoController extends Controller
         $dolgozo->delete();
 
         return response()->json("OK", 204);
+    }
+
+    public function fileExport()
+    {
+        return new DolgozoExport;
     }
 }

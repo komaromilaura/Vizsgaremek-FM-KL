@@ -216,7 +216,13 @@ INSERT INTO `belso_ell` (`ell_azon`, `ell_iktszam`, `ell_szerv`, `ell_targya`, `
 -- Struktúra mentése tábla lamafelhasznalok. beszerzesek
 DROP TABLE IF EXISTS `beszerzesek`;
 CREATE TABLE IF NOT EXISTS `beszerzesek` (
-  `partnerID` int NOT NULL,
+  `mentoallomas` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
+  `targy` varchar(300) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
+  `besz_igeny_datum` date NOT NULL,
+  `ajanlat_bekeres` date NOT NULL,
+  `engedelyezesre_kuldve` date NOT NULL,
+  `engedely_beerkezese` date NOT NULL,
+  `megrendelo_kiallitasa` date NOT NULL,
   `megrendelo_szama` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
   `megrend_alairasra_tovabbitva` date NOT NULL,
   `alairt_megrend_beerkezese` date NOT NULL,
@@ -224,22 +230,28 @@ CREATE TABLE IF NOT EXISTS `beszerzesek` (
   `munkalap_kiallitasa` date NOT NULL,
   `szamla_kiallitasa` date NOT NULL,
   `szamla_tovább_pu_nek_utalasra` date NOT NULL,
+  `partnerID` int NOT NULL,
   PRIMARY KEY (`megrendelo_szama`) USING BTREE,
   KEY `FK_beszerzesek_partnerek` (`partnerID`),
+  KEY `FK_beszerzesek_allomasok` (`mentoallomas`) USING BTREE,
+  CONSTRAINT `FK_beszerzesek_allomasok` FOREIGN KEY (`mentoallomas`) REFERENCES `allomasok` (`nev`),
   CONSTRAINT `FK_beszerzesek_partnerek` FOREIGN KEY (`partnerID`) REFERENCES `partnerek` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.beszerzesek: ~9 rows (hozzávetőleg)
-INSERT INTO `beszerzesek` (`partnerID`, `megrendelo_szama`, `megrend_alairasra_tovabbitva`, `alairt_megrend_beerkezese`, `dijbekero_tovabbitasa`, `munkalap_kiallitasa`, `szamla_kiallitasa`, `szamla_tovább_pu_nek_utalasra`) VALUES
-	(1, '1-2022', '2022-12-10', '2022-12-12', '2022-12-13', '2022-12-14', '2022-12-16', '2022-12-17'),
-	(2, '15/2022', '2022-12-27', '2022-12-27', '2022-12-28', '2022-12-28', '2022-12-29', '2022-12-29'),
-	(2, '16/2022', '2022-12-29', '2022-12-29', '2022-12-30', '2022-12-30', '2022-12-31', '2022-12-31'),
-	(1, '2-2022', '2022-12-11', '2022-12-13', '2022-12-13', '2022-12-15', '2022-12-17', '2022-12-18'),
-	(2, '2022/85', '2023-01-25', '2023-01-23', '2023-01-19', '2023-01-27', '2023-01-01', '2023-01-01'),
-	(2, '3-2022', '2022-12-11', '2022-12-14', '2022-12-15', '2022-12-16', '2022-12-16', '2022-12-17'),
-	(2, '4-2022', '2022-12-12', '2022-12-12', '2022-12-13', '2022-12-17', '2022-12-17', '2022-12-19'),
-	(3, '5-2022', '2022-12-18', '2022-12-19', '2022-12-20', '2022-12-20', '2022-12-21', '2022-12-22'),
-	(3, '8491496', '2022-12-30', '2022-12-30', '2023-01-02', '2023-01-03', '2023-01-05', '2023-01-05');
+-- Tábla adatainak mentése lamafelhasznalok.beszerzesek: ~13 rows (hozzávetőleg)
+INSERT INTO `beszerzesek` (`mentoallomas`, `targy`, `besz_igeny_datum`, `ajanlat_bekeres`, `engedelyezesre_kuldve`, `engedely_beerkezese`, `megrendelo_kiallitasa`, `megrendelo_szama`, `megrend_alairasra_tovabbitva`, `alairt_megrend_beerkezese`, `dijbekero_tovabbitasa`, `munkalap_kiallitasa`, `szamla_kiallitasa`, `szamla_tovább_pu_nek_utalasra`, `partnerID`) VALUES
+	('Győr', 'gyógyszer', '2022-12-06', '2022-12-06', '2022-12-08', '2022-12-08', '2022-12-09', '1-2022', '2022-12-10', '2022-12-12', '2022-12-13', '2022-12-14', '2022-12-16', '2022-12-17', 3),
+	('Nagykanizsa', 'gyógyszer, infúzió', '2022-12-28', '2022-12-29', '2022-12-30', '2022-12-31', '2023-01-01', '1-2023', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05', '2023-01-05', '2023-01-06', 3),
+	('Csorna', 'üzemanyag', '2022-12-27', '2022-12-28', '2022-12-29', '2022-12-30', '2022-12-31', '13-2023', '2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05', '2023-01-06', 3),
+	('Mosonmagyaróvár', 'üzemanyag', '2022-12-10', '2022-12-11', '2022-12-12', '2022-12-18', '2022-12-19', '15-2022', '2022-12-27', '2022-12-27', '2022-12-28', '2022-12-28', '2022-12-29', '2022-12-29', 2),
+	('Mosonmagyaróvár', 'fertőtlenítőszer', '2022-12-12', '2022-12-14', '2022-12-16', '2022-12-17', '2022-12-20', '16-2022', '2022-12-29', '2022-12-29', '2022-12-30', '2022-12-30', '2022-12-31', '2022-12-31', 2),
+	('Lövő', 'kötszer', '2022-12-07', '2022-12-08', '2022-12-09', '2022-12-09', '2022-12-10', '2-2022', '2022-12-11', '2022-12-13', '2022-12-13', '2022-12-15', '2022-12-17', '2022-12-18', 1),
+	('Nagykanizsa', 'gyógyszer, infúzió', '2022-12-28', '2022-12-29', '2022-12-30', '2022-12-31', '2023-01-01', '2-2023', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05', '2023-01-06', '2023-01-07', 3),
+	('Nagykanizsa', 'mentőautó', '2022-12-05', '2022-12-06', '2022-12-20', '2022-12-29', '2022-12-31', '2022-85', '2023-01-25', '2023-01-23', '2023-01-19', '2023-01-27', '2023-01-01', '2023-01-01', 2),
+	('Sopron', 'munkaruha', '2022-12-01', '2022-12-06', '2022-12-07', '2022-12-10', '2022-12-15', '23-2022', '2022-12-18', '2022-12-19', '2022-12-20', '2022-12-20', '2022-12-22', '2022-12-23', 3),
+	('Őriszentpéter', 'védőruha', '2022-12-01', '2022-12-02', '2022-12-04', '2022-12-06', '2022-12-07', '3-2022', '2022-12-11', '2022-12-14', '2022-12-15', '2022-12-16', '2022-12-16', '2022-12-17', 2),
+	('Őriszentpéter', 'maszk', '2022-12-01', '2022-12-04', '2022-12-06', '2022-12-08', '2022-12-10', '4-2022', '2022-12-12', '2022-12-12', '2022-12-13', '2022-12-17', '2022-12-17', '2022-12-19', 2),
+	('Lövő', 'kesztyű', '2022-12-10', '2022-12-12', '2022-12-14', '2022-12-15', '2022-12-17', '5-2022', '2022-12-18', '2022-12-19', '2022-12-20', '2022-12-20', '2022-12-21', '2022-12-22', 3);
 
 -- Struktúra mentése tábla lamafelhasznalok. dolgozok
 DROP TABLE IF EXISTS `dolgozok`;
@@ -268,10 +280,10 @@ CREATE TABLE IF NOT EXISTS `dolgozok` (
   CONSTRAINT `FK_dolgozok_munkakorok` FOREIGN KEY (`munkakorID`) REFERENCES `munkakorok` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.dolgozok: ~5 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.dolgozok: ~4 rows (hozzávetőleg)
 INSERT INTO `dolgozok` (`vezetek_nev`, `kereszt_nev`, `IVIR`, `torzsszam`, `adoazonosito`, `ir_szam`, `varos`, `kozterulet`, `kozterulet_jellege`, `hazszam`, `epulet_emelet_ajto`, `ceges_email`, `telefon`, `allomas`, `munkakorID`) VALUES
 	('Takács', 'Zsófia', 123123, 145236789, 8987654321, 9500, 'Celldömölk', 'Dr. Géfin Lajos', 'tér', '20.', '1. em. 3.ajtó', 'zsofia@ceg.hu', '06 70 123 45 97', 'Celldömölk', 5),
-	('Fehér', 'Péter', 222222, 541236947, 8455123789, 9023, 'Győr', 'Kodály Zoltán', 'utca', '12', 'B. ép. 1. em. 15. ajtó', 'peter@ceg.hu', '06 20 478 36 14', 'Győr', 1),
+	('Fehér', 'András', 222222, 541236947, 8455123789, 9023, 'Győr', 'Kodály Zoltán', 'utca', '12', 'B. ép. 1. em. 15. ajtó', 'peter@ceg.hu', '06 20 478 36 14', 'Győr', 1),
 	('Vajda', 'Adrienn', 333332, 271236941, 8451237897, 9700, 'Szombathely', 'Kodály Zoltán', 'utca', '10', NULL, 'adrienn@ceg.hu', '06 30 488 26 99', 'Szombathely', 6),
 	('Szabó', 'Máté', 454545, 154832675, 8156123712, 9600, 'Sárvár', 'Batthyány', 'utca', '18.', NULL, 'mate@ceg.hu', '06 30 145 14 15', 'Sárvár', 5);
 

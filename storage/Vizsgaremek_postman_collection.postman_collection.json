@@ -254,13 +254,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_URL}}/beszerzes/1-2022",
+							"raw": "{{API_URL}}/beszerzes/23-2022",
 							"host": [
 								"{{API_URL}}"
 							],
 							"path": [
 								"beszerzes",
-								"1-2022"
+								"23-2022"
 							]
 						}
 					},
@@ -275,13 +275,43 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "partnerID",
-									"value": "3",
+									"key": "mentoallomas",
+									"value": "Kőszeg",
+									"type": "text"
+								},
+								{
+									"key": "targy",
+									"value": "munkaruha",
+									"type": "text"
+								},
+								{
+									"key": "besz_igeny_datum",
+									"value": "2022-12-05",
+									"type": "text"
+								},
+								{
+									"key": "ajanlat_bekeres",
+									"value": "2022-12-06",
+									"type": "text"
+								},
+								{
+									"key": "engedelyezesre_kuldve",
+									"value": "2022-12-07",
+									"type": "text"
+								},
+								{
+									"key": "engedely_beerkezese",
+									"value": "2022-12-10",
+									"type": "text"
+								},
+								{
+									"key": "megrendelo_kiallitasa",
+									"value": "2022-12-15",
 									"type": "text"
 								},
 								{
 									"key": "megrendelo_szama",
-									"value": "5-2022",
+									"value": "23-2022",
 									"type": "text"
 								},
 								{
@@ -313,6 +343,11 @@
 									"key": "szamla_tovább_pu_nek_utalasra",
 									"value": "2022-12-23",
 									"type": "text"
+								},
+								{
+									"key": "partnerID",
+									"value": "3",
+									"type": "text"
 								}
 							]
 						},
@@ -337,13 +372,43 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
-									"key": "partnerID",
-									"value": "3",
+									"key": "mentoallomas",
+									"value": "Sopron",
+									"type": "text"
+								},
+								{
+									"key": "targy",
+									"value": "munkaruha",
+									"type": "text"
+								},
+								{
+									"key": "besz_igeny_datum",
+									"value": "2022-12-01",
+									"type": "text"
+								},
+								{
+									"key": "ajanlat_bekeres",
+									"value": "2022-12-06",
+									"type": "text"
+								},
+								{
+									"key": "engedelyezesre_kuldve",
+									"value": "2022-12-07",
+									"type": "text"
+								},
+								{
+									"key": "engedely_beerkezese",
+									"value": "2022-12-10",
+									"type": "text"
+								},
+								{
+									"key": "megrendelo_kiallitasa",
+									"value": "2022-12-15",
 									"type": "text"
 								},
 								{
 									"key": "megrendelo_szama",
-									"value": "5-2022",
+									"value": "23-2022",
 									"type": "text"
 								},
 								{
@@ -368,24 +433,29 @@
 								},
 								{
 									"key": "szamla_kiallitasa",
-									"value": "2022-12-21",
+									"value": "2022-12-22",
 									"type": "text"
 								},
 								{
 									"key": "szamla_tovább_pu_nek_utalasra",
-									"value": "2022-12-22",
+									"value": "2022-12-23",
+									"type": "text"
+								},
+								{
+									"key": "partnerID",
+									"value": "3",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{API_URL}}/beszerzes/5-2022",
+							"raw": "{{API_URL}}/beszerzes/23-2022",
 							"host": [
 								"{{API_URL}}"
 							],
 							"path": [
 								"beszerzes",
-								"5-2022"
+								"23-2022"
 							]
 						}
 					},
@@ -397,13 +467,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{API_URL}}/beszerzes/5-2022",
+							"raw": "{{API_URL}}/beszerzes/23-2022",
 							"host": [
 								"{{API_URL}}"
 							],
 							"path": [
 								"beszerzes",
-								"5-2022"
+								"23-2022"
 							]
 						}
 					},
@@ -1980,7 +2050,7 @@
 								},
 								{
 									"key": "ho",
-									"value": "2",
+									"value": "3",
 									"type": "text"
 								},
 								{

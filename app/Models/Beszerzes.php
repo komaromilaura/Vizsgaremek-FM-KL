@@ -18,7 +18,13 @@ class Beszerzes extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'partnerID',
+        'mentoallomas',
+        'targy',
+        'besz_igeny_datum',
+        'ajanlat_bekeres',
+        'engedelyezesre_kuldve',
+        'engedely_beerkezese',
+        'megrendelo_kiallitasa',
         'megrendelo_szama',
         'megrend_alairasra_tovabbitva',
         'alairt_megrend_beerkezese',
@@ -26,10 +32,16 @@ class Beszerzes extends Model
         'munkalap_kiallitasa',
         'szamla_kiallitasa',
         'szamla_tovább_pu_nek_utalasra',
+        'partnerID',
     ];
 
     public function partner()
     {
         return $this->belongsTo(Partner::class, "partnerID", "ID");
+    }
+
+    public function allomas()
+    {
+        return $this->belongsTo(Allomas::class, "mentoallomas", "nev");
     }
 }

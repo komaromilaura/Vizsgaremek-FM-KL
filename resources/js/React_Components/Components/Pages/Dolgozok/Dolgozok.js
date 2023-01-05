@@ -181,7 +181,7 @@ function Dolgozok (props) {
         epulet_emelet_ajto.current.value = dolgozoData.epulet_emelet_ajto;
         ceges_email.current.value = dolgozoData.ceges_email;
         telefon.current.value = dolgozoData.telefon;
-        allomas.current.value = dolgozoData.allomas.nev;
+        allomas.current.value = dolgozoData.mento_allomas.nev;
         munkakorID.current.value = dolgozoData.munkakorID;
     }
 
@@ -455,10 +455,11 @@ function Dolgozok (props) {
                             Mégsem
                         </Button>
                     )}
-                    <Button variant="info" className="text-white text-uppercase fw-bold mx-3">
-                        Dolgozók listázása
-                    </Button>
-                    {/*Adatbázisból xls / csv - be ?? kilistázza a felvitt partnereket.*/}
+                    <Button variant="info" >
+                        <a href="dolgozo/file-export" className="text-white text-uppercase fw-bold mx-3 text-decoration-none">
+                            Adatok exportálása
+                        </a>
+                    </Button>  
                 </Col> 
                 {success && (
                     <Alert variant="success" className="mt-3">
@@ -519,7 +520,7 @@ function Dolgozok (props) {
                                     <td>{dolgozo.epulet_emelet_ajto}</td>
                                     <td>{dolgozo.ceges_email}</td>
                                     <td>{dolgozo.telefon}</td>
-                                    <td>{dolgozo.allomas.nev}</td>
+                                    <td>{dolgozo.mento_allomas.nev}</td>
                                     <td>{dolgozo.munkakor.munkakor}</td>
                                 </tr>
                             )

@@ -8,13 +8,20 @@ function Beszerzes(props){
     const [beszerzesek, setBeszerzesek] = useState([]);
     const [partnerek, setParnerek] = useState([]);
     const [megyek, setMegyek] = useState([]);
+    const [allomasok, setAllomasok] = useState([]);
     const [success, setSuccess] = useState(false);
     const [deleted, setDeleted] = useState(false);
     const [modified, setModified] = useState(false);
     const [mode, setMode] = useState('create');
     const [originalMegrendeloSzam, setOriginalMegrendeloSzam] = useState("");
 
-    const partnerID = useRef();
+    const mentoallomas = useRef();
+    const targy = useRef();
+    const besz_igeny_datum = useRef();
+    const ajanlat_bekeres = useRef();
+    const engedelyezesre_kuldve = useRef();
+    const engedely_beerkezese = useRef();
+    const megrendelo_kiallitasa = useRef();
     const megrendelo_szama = useRef();
     const megrend_alairasra_tovabbitva = useRef();
     const alairt_megrend_beerkezese = useRef();
@@ -22,9 +29,16 @@ function Beszerzes(props){
     const munkalap_kiallitasa = useRef();
     const szamla_kiallitasa = useRef();
     const szamla_tovább_pu_nek_utalasra = useRef();
+    const partnerID = useRef();
 
     const clearForm = () => {
-        partnerID.current.value = "-1";
+        mentoallomas.current.value  = "-1";
+        targy.current.value  = "";
+        besz_igeny_datum.current.value  = "";
+        ajanlat_bekeres.current.value  = "";
+        engedelyezesre_kuldve.current.value  = "";
+        engedely_beerkezese.current.value  = "";
+        megrendelo_kiallitasa.current.value  = "";
         megrendelo_szama.current.value = "";
         megrend_alairasra_tovabbitva.current.value = "";
         alairt_megrend_beerkezese.current.value = "";
@@ -32,12 +46,19 @@ function Beszerzes(props){
         munkalap_kiallitasa.current.value = "";
         szamla_kiallitasa.current.value = "";
         szamla_tovább_pu_nek_utalasra.current.value = "";
+        partnerID.current.value = "-1";
     }
 
     const sendForm = () => {
         if (mode === "create") {                        
             axios.post('/api/beszerzes', {
-                partnerID: partnerID.current.value,
+                mentoallomas: mentoallomas.current.value,
+                targy: targy.current.value,
+                besz_igeny_datum: besz_igeny_datum.current.value,
+                ajanlat_bekeres: ajanlat_bekeres.current.value,
+                engedelyezesre_kuldve: engedelyezesre_kuldve.current.value,
+                engedely_beerkezese: engedely_beerkezese.current.value,
+                megrendelo_kiallitasa: megrendelo_kiallitasa.current.value,
                 megrendelo_szama: megrendelo_szama.current.value,
                 megrend_alairasra_tovabbitva: megrend_alairasra_tovabbitva.current.value,
                 alairt_megrend_beerkezese: alairt_megrend_beerkezese.current.value,
@@ -45,6 +66,7 @@ function Beszerzes(props){
                 munkalap_kiallitasa: munkalap_kiallitasa.current.value,
                 szamla_kiallitasa: szamla_kiallitasa.current.value,
                 szamla_tovább_pu_nek_utalasra: szamla_tovább_pu_nek_utalasra.current.value,
+                partnerID: partnerID.current.value,
             }).then(data => {
                 if (data.status === 201){
                     clearForm();
@@ -63,7 +85,13 @@ function Beszerzes(props){
             })
         }else{
             axios.put('/api/beszerzes/'+originalMegrendeloSzam,{               
-                partnerID: partnerID.current.value,
+                mentoallomas: mentoallomas.current.value,
+                targy: targy.current.value,
+                besz_igeny_datum: besz_igeny_datum.current.value,
+                ajanlat_bekeres: ajanlat_bekeres.current.value,
+                engedelyezesre_kuldve: engedelyezesre_kuldve.current.value,
+                engedely_beerkezese: engedely_beerkezese.current.value,
+                megrendelo_kiallitasa: megrendelo_kiallitasa.current.value,
                 megrendelo_szama: megrendelo_szama.current.value,
                 megrend_alairasra_tovabbitva: megrend_alairasra_tovabbitva.current.value,
                 alairt_megrend_beerkezese: alairt_megrend_beerkezese.current.value,
@@ -71,6 +99,7 @@ function Beszerzes(props){
                 munkalap_kiallitasa: munkalap_kiallitasa.current.value,
                 szamla_kiallitasa: szamla_kiallitasa.current.value,
                 szamla_tovább_pu_nek_utalasra: szamla_tovább_pu_nek_utalasra.current.value,
+                partnerID: partnerID.current.value,
             }).then(data => {
                 if (data.status === 200){
                     clearForm();
@@ -136,19 +165,39 @@ function Beszerzes(props){
         getMegyek();
     }, []);
 
+    const getAllomasok = async() => {
+        const response = await axios.get('/api/allomas');
+        if (response.status === 200) {
+            setAllomasok(response.data);
+        }
+    }
+
+    useEffect(() => {
+        getAllomasok();
+    }, []);
+
+
     const updateBeszerzes = (megrendelo_sz) => {
         const beszerzesData = beszerzesek.find(beszerzes => beszerzes.megrendelo_szama === megrendelo_sz);
         setMode("update");
         resetSucess();
         setOriginalMegrendeloSzam(megrendelo_sz);        
-        partnerID.current.value = beszerzesData.partnerID;
+        
+        mentoallomas.current.value = beszerzesData.mentoallomas;
+        targy.current.value = beszerzesData.targy;
+        besz_igeny_datum.current.value = beszerzesData.besz_igeny_datum;
+        ajanlat_bekeres.current.value = beszerzesData.ajanlat_bekeres;
+        engedelyezesre_kuldve.current.value = beszerzesData.engedelyezesre_kuldve;
+        engedely_beerkezese.current.value = beszerzesData.engedely_beerkezese;
+        megrendelo_kiallitasa.current.value = beszerzesData.megrendelo_kiallitasa;
         megrendelo_szama.current.value = beszerzesData.megrendelo_szama;
         megrend_alairasra_tovabbitva.current.value = beszerzesData.megrend_alairasra_tovabbitva;
         alairt_megrend_beerkezese.current.value = beszerzesData.alairt_megrend_beerkezese;
         dijbekero_tovabbitasa.current.value = beszerzesData.dijbekero_tovabbitasa;
         munkalap_kiallitasa.current.value = beszerzesData.munkalap_kiallitasa;
         szamla_kiallitasa.current.value = beszerzesData.szamla_kiallitasa;
-        szamla_tovább_pu_nek_utalasra.current.value = beszerzesData.szamla_tovább_pu_nek_utalasra;      
+        szamla_tovább_pu_nek_utalasra.current.value = beszerzesData.szamla_tovább_pu_nek_utalasra;
+        partnerID.current.value = beszerzesData.partnerID;      
     }
 
     const cancelUpdate = () => {
@@ -180,27 +229,66 @@ function Beszerzes(props){
                 <Col lg={4} md={6} className="py-2">
                     <Form.Group>
                         <Form.Label>
-                            Partner
+                            Mentőállomás
                         </Form.Label>
-                        <Form.Select defaultValue="-1" ref={partnerID} onChange={resetSucess} >
-                            <option value="-1" disabled>Válasszon partnert!</option>
-                            {partnerek && partnerek.map((partner) => {
+                        <Form.Select defaultValue="-1" ref={mentoallomas} onChange={resetSucess} >
+                            <option value="-1" disabled>Válasszon egy mentőállomást!</option>
+                            {allomasok && allomasok.map((allomas) => {
                                 return(
-                                    <option value={partner.ID} key={partner.ID}>
-                                        {partner.ID}. {partner.nev}
+                                    <option value={allomas.nev} key={allomas.nev}>
+                                        {allomas.sorszam}. {allomas.nev}
                                     </option>
                                 )
-                            })}                         
+                            })}     
                         </Form.Select>
                     </Form.Group>
                 </Col>
-                <Col lg={8} md={6} className="py-2 d-flex align-items-end">
+                <Col lg={4} md={6} className="py-2">
                     <Form.Group>
-                        <Link to="/partner">
-                            <Button variant="info" className="text-white text-uppercase fw-bold">
-                                Új partner felvitele
-                            </Button>
-                        </Link>
+                        <Form.Label>
+                            Beszerzési igény tárgya
+                        </Form.Label>
+                        <Form.Control type="text" ref={targy} onChange={resetSucess} />
+                    </Form.Group>
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Beszerzési igény dátuma
+                        </Form.Label>
+                        <Form.Control type="date" ref={besz_igeny_datum} onChange={resetSucess} />
+                    </Form.Group>
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Árajánlat bekérés
+                        </Form.Label>
+                        <Form.Control type="date" ref={ajanlat_bekeres} onChange={resetSucess} />
+                    </Form.Group>
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Engedélyezésre küldve
+                        </Form.Label>
+                        <Form.Control type="date" ref={engedelyezesre_kuldve} onChange={resetSucess} />
+                    </Form.Group>
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Engedély beérkezése
+                        </Form.Label>
+                        <Form.Control type="date" ref={engedely_beerkezese} onChange={resetSucess} />
+                    </Form.Group>
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Megrendelő kiállítása
+                        </Form.Label>
+                        <Form.Control type="date" ref={megrendelo_kiallitasa} onChange={resetSucess} />
                     </Form.Group>
                 </Col>
                 <Col lg={4} md={6} className="py-2">
@@ -260,6 +348,34 @@ function Beszerzes(props){
                     </Form.Group>
                 </Col>
             </Row>
+            <Row className="pb-3">
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Group>
+                        <Form.Label>
+                            Partner
+                        </Form.Label>
+                        <Form.Select defaultValue="-1" ref={partnerID} onChange={resetSucess} >
+                            <option value="-1" disabled>Válasszon partnert!</option>
+                            {partnerek && partnerek.map((partner) => {
+                                return(
+                                    <option value={partner.ID} key={partner.ID}>
+                                        {partner.ID}. {partner.nev}
+                                    </option>
+                                )
+                            })}                         
+                        </Form.Select>
+                    </Form.Group>
+                </Col>
+                <Col lg={8} md={6} className="py-2 d-flex align-items-end">
+                    <Form.Group>
+                        <Link to="/partner">
+                            <Button variant="info" className="text-white text-uppercase fw-bold">
+                                Új partner felvitele
+                            </Button>
+                        </Link>
+                    </Form.Group>
+                </Col>
+            </Row>
             <Row className="py-4">
                 <Col lg={12} className="justify-content-center d-flex mb-3">
                     <Button 
@@ -278,8 +394,10 @@ function Beszerzes(props){
                             Mégsem
                         </Button>
                     )}
-                    <Button variant="info" className="text-white text-uppercase fw-bold mx-2">
-                        Beszerzések listázása
+                    <Button variant="info" >
+                        <a href="beszerzes/file-export" className="text-white text-uppercase fw-bold mx-3 text-decoration-none">
+                            Adatok exportálása
+                        </a>
                     </Button>
                 </Col>
                 <Col lg={12} className="justify-content-center d-flex mb-3">
@@ -313,7 +431,13 @@ function Beszerzes(props){
                     <thead>
                         <tr className="align-middle text-center">
                             <th></th>
-                            <th>Partner</th>
+                            <th>Állomás</th>
+                            <th>Beszerzési igény tárgya</th>
+                            <th>Beszerzési igény dátuma</th>
+                            <th>Árajánlat bekérés</th>
+                            <th>Engedélyezésre küldve</th>
+                            <th>Engedély beérkezése</th>
+                            <th>Megrendelő kiállítása</th>
                             <th>Megrendelő száma</th>
                             <th>Megrendelő aláírásra továbbítva</th>
                             <th>Aláírt megrendelő beérkezése</th>
@@ -321,6 +445,7 @@ function Beszerzes(props){
                             <th>Munkalap kiállítása</th>
                             <th>Számla kiállítása</th>
                             <th>Számla továbbítása pénzügynek/utalásra</th>
+                            <th>Partner</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -331,7 +456,13 @@ function Beszerzes(props){
                                         <PencilFill onClick={() => {updateBeszerzes(beszerzes.megrendelo_szama)}} style={{cursor: "pointer"}}/>
                                         <Trash3Fill onClick={() => {deleteBeszerzes(beszerzes.megrendelo_szama)}} style={{cursor: "pointer"}}/>
                                     </td>
-                                    <td>{beszerzes.partner.nev}</td>
+                                    <td>{beszerzes.allomas.nev}</td>
+                                    <td>{beszerzes.targy}</td>
+                                    <td>{beszerzes.besz_igeny_datum}</td>
+                                    <td>{beszerzes.ajanlat_bekeres}</td>
+                                    <td>{beszerzes.engedelyezesre_kuldve}</td>
+                                    <td>{beszerzes.engedely_beerkezese}</td>
+                                    <td>{beszerzes.megrendelo_kiallitasa}</td>
                                     <td>{beszerzes.megrendelo_szama}</td>
                                     <td>{beszerzes.megrend_alairasra_tovabbitva}</td>
                                     <td>{beszerzes.alairt_megrend_beerkezese}</td>
@@ -339,6 +470,7 @@ function Beszerzes(props){
                                     <td>{beszerzes.munkalap_kiallitasa}</td>
                                     <td>{beszerzes.szamla_kiallitasa}</td>
                                     <td>{beszerzes.szamla_tovább_pu_nek_utalasra}</td>
+                                    <td>{beszerzes.partner.nev}</td>
                                 </tr>
                             )
                         })}

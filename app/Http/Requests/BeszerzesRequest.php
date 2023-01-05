@@ -24,7 +24,13 @@ class BeszerzesRequest extends FormRequest
     public function rules()
     {
         return [
-            'partnerID' => 'required|numeric|min:1',
+            'mentoallomas' => 'required|string',
+            'targy' => 'required|string',
+            'besz_igeny_datum'=> 'required|date',
+            'ajanlat_bekeres'=> 'required|date',
+            'engedelyezesre_kuldve'=> 'required|date',
+            'engedely_beerkezese'=> 'required|date',
+            'megrendelo_kiallitasa'=> 'required|date',            
             'megrendelo_szama' => 'required|string',
             'megrend_alairasra_tovabbitva' => 'required|date',
             'alairt_megrend_beerkezese' => 'required|date',
@@ -32,6 +38,7 @@ class BeszerzesRequest extends FormRequest
             'munkalap_kiallitasa' => 'required|date',
             'szamla_kiallitasa' => 'required|date',
             'szamla_tovább_pu_nek_utalasra' => 'required|date',
+            'partnerID' => 'required|numeric|min:1',
         ];
     }
 }

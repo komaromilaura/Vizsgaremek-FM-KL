@@ -13,13 +13,9 @@ use Maatwebsite\Excel\Excel;
 
 class EllenorExport implements FromCollection, Responsable, WithStrictNullComparison, ShouldAutoSize, WithHeadings
 {
-    /**
-    * @return \Illuminate\Support\Collection
-    */
-
     use Exportable;
 
-    private $fileName = 'partnerek.xlsx';
+    private $fileName = 'ellenorok.xlsx';
 
     private $writerType = Excel::XLSX;
 

@@ -34,7 +34,7 @@ class Dolgozo extends Model
         'munkakorID',
     ];
 
-    public function allomas()
+    public function mento_allomas()
     {
         return $this->belongsTo(Allomas::class, "allomas", "nev");
     }

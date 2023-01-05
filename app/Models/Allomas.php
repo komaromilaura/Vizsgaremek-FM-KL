@@ -63,4 +63,9 @@ class Allomas extends Model
     {
         return $this->hasMany(Allashely::class, "mentoallomas", "nev");
     }
+
+    public function beszerzes()
+    {
+        return $this->hasMany(Beszerzes::class, "mentoallomas", "nev");
+    }
 }
