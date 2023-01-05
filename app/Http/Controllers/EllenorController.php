@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\EllenorExport;
 use App\Http\Requests\EllenorRequest;
 use App\Models\Ellenor;
 
@@ -62,5 +63,10 @@ class EllenorController extends Controller
         $ellenor->delete();
 
         return response()->json("OK", 204);
+    }
+
+    public function fileExport() 
+    {
+        return new EllenorExport;
     }
 }

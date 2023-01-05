@@ -335,10 +335,11 @@ function Partner(props){
                             Mégsem
                         </Button>
                     )}
-                    <Button variant="info" className="text-white text-uppercase fw-bold mx-3">
-                        Partnerek listázása
-                    </Button>
-                    {/*Adatbázisból xls / csv - be ?? kilistázza a felvitt partnereket.*/}
+                    <Button variant="info" >
+                        <a href="partner/file-export" className="text-white text-uppercase fw-bold mx-3 text-decoration-none">
+                            Adatok exportálása
+                        </a>
+                    </Button>                    
                 </Col>
                 {success && (
                     <Alert variant="success" className="mt-3">

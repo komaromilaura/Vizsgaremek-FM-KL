@@ -300,10 +300,11 @@ function Ellenorzo (props) {
                             Mégsem
                         </Button>
                     )}
-                    <Button variant="info" className="text-white text-uppercase fw-bold mx-3">
-                        Ellenőrzést végző szervek listázása
-                    </Button>
-                    {/*Adatbázisból xls / csv / pdf - be ?? kilistázza a felvitt ellenőrző szerveket.*/}
+                    <Button variant="info" >
+                        <a href="ellenor/file-export" className="text-white text-uppercase fw-bold mx-3 text-decoration-none">
+                            Adatok exportálása
+                        </a>
+                    </Button>  
                 </Col> 
                 {success && (
                     <Alert variant="success" className="mt-3">

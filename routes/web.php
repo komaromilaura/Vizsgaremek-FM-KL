@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/partner/file-export', [\App\Http\Controllers\PartnerController::class, 'fileExport'])->name('file-export');
+Route::get('/ellenor/file-export', [\App\Http\Controllers\EllenorController::class, 'fileExport'])->name('file-export');
+
 Route::get('/{routes?}', function () {
     return view('welcome');
 })->where("routes", '^((?!api).)*$');
