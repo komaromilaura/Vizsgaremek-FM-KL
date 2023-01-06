@@ -492,7 +492,7 @@ function Allashely(props) {
                 <Col md={4} className="py-2">
                     <Form.Group>
                         <Form.Label>
-                            <strong>Mentőápoló betöltött</strong>
+                            <strong>Mentőápoló összes betöltött</strong>
                         </Form.Label>
                         <Form.Control
                             readOnly
@@ -690,9 +690,11 @@ function Allashely(props) {
                             Mégsem
                         </Button>
                     )}
-                    <Button variant="info" className="text-white text-uppercase fw-bold mx-2">
-                        Álláshelyek listázása
-                    </Button>
+                    <Button variant="info" >
+                        <a href="allashely/file-export" className="text-white text-uppercase fw-bold mx-3 text-decoration-none">
+                            Adatok exportálása
+                        </a>
+                    </Button> 
                 </Col>
                 <Col lg={12} className="justify-content-center d-flex mb-3">
                     {/*Adatbázisból xls / csv - be ?? kilistázza a felvitt ellenőrzéseket.*/}                           
@@ -739,7 +741,7 @@ function Allashely(props) {
                                 )
                             })}
                             <th>Mentőápoló összes szervezett</th>
-                            <th>Mentőápoló betöltött</th>
+                            <th>Mentőápoló összes betöltött</th>
                             <th>Mentőápoló összes üres álláshely</th>
                             <th>Szolgálatvezető összesen szervezett</th>
                             <th>Szolgálatvezető összesen betöltött</th>
@@ -749,7 +751,7 @@ function Allashely(props) {
                             <th>Gkv összesen üres álláshely</th>
                             <th>Összesen szervezett</th>
                             <th>Összesen betöltött</th>
-                            <th>Összesen üres</th>
+                            <th>Összesen üres álláshely</th>
                             
                         </tr>
                     </thead>
@@ -762,7 +764,7 @@ function Allashely(props) {
                                         <Trash3Fill onClick={() => {deleteAllashely(allashely.ID)}} style={{cursor: "pointer"}}/>
                                     </td>
                                     <td>{allashely.ID}</td>
-                                    <td>{allashely.mentoallomas}</td>
+                                    <td>{allashely.allomas.nev}</td>
                                     <td>{allashely.ev}</td>
                                     <td>{allashely.ho}</td>
                                     <td>{allashely.szakorvos_szervezett}</td>

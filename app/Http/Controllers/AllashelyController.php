@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\AllashelyExport;
 use App\Http\Requests\AllashelyRequest;
 use App\Models\Allashely;
 
@@ -208,5 +209,10 @@ class AllashelyController extends Controller
         $allashely->delete();
 
         return response()->json("OK", 204);
+    }
+
+    public function fileExport()
+    {
+        return new AllashelyExport;
     }
 }

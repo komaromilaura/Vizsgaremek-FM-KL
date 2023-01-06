@@ -262,9 +262,11 @@ function Migrans(props) {
                             Mégsem
                         </Button>
                     )}
-                    <Button variant="info" className="text-white text-uppercase fw-bold mx-2">
-                        Migránsellátások listázása
-                    </Button>
+                    <Button variant="info" >
+                        <a href="migrans/file-export" className="text-white text-uppercase fw-bold mx-3 text-decoration-none">
+                            Adatok exportálása
+                        </a>
+                    </Button> 
                 </Col>
                 <Col lg={12} className="justify-content-center d-flex mb-3">
                     {/*Adatbázisból xls / csv - be ?? kilistázza a felvitt migránsellátásokat.*/}                           

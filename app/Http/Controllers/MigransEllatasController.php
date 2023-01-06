@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\MigransElllatasExport;
 use App\Http\Requests\MigransEllatasRequest;
 use App\Models\MigransEllatas;
 
@@ -50,5 +51,10 @@ class MigransEllatasController extends Controller
         $migransEllatas->delete();
 
         return response()->json("OK", 204);
+    }
+
+    public function fileExport()
+    {
+        return new MigransElllatasExport;
     }
 }
