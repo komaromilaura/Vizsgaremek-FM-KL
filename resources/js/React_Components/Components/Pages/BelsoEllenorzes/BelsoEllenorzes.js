@@ -547,9 +547,11 @@ function BelsoEllenorzes(props) {
                             Mégsem
                         </Button>
                     )}
-                    <Button variant="info" className="text-white text-uppercase fw-bold mx-2">
-                        Belső ellenőrzések listázása
-                    </Button>                    
+                    <Button variant="info" >
+                        <a href="belso_ell/file-export" className="text-white text-uppercase fw-bold mx-3 text-decoration-none">
+                            Adatok exportálása
+                        </a>
+                    </Button>                  
                 </Col>
                 <Col lg={12} className="justify-content-center d-flex mb-3">
                     {/*Adatbázisból xls / csv - be ?? kilistázza a felvitt ellenőrzéseket.*/}                           
@@ -597,7 +599,7 @@ function BelsoEllenorzes(props) {
                             <th>Határidő módosítás (igen / nem)</th>
                             <th>Határidő módosítás (dátum)</th>
                             <th>Feladat módosítás (igen / nem)</th>
-                            <th>Feladat módosítás (dátum)</th>
+                            <th>Feladat módosítás</th>
                             <th>Az intézkedés teljesítése (igen / nem)</th>
                             <th>Az intézkedés teljesítése (dátum)</th>
                             <th>Megtett intézkedések rövid leírása</th>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\BelsoEllenorzesExport;
 use App\Http\Requests\BelsoEllenorzesRequest;
 use App\Models\BelsoEllenorzes;
 
@@ -84,5 +85,10 @@ class BelsoEllenorzesController extends Controller
         $belsoEllenorzes->delete();
 
         return response()->json("OK", 204);
+    }
+
+    public function fileExport()
+    {
+        return new BelsoEllenorzesExport;
     }
 }

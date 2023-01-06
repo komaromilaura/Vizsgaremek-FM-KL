@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\KulsoEllenorzesExport;
 use App\Http\Requests\KulsoEllenorzesRequest;
 use App\Models\KulsoEllenorzes;
 
@@ -91,5 +92,10 @@ class KulsoEllenorzesController extends Controller
         $kulsoEllenorzes->delete();
 
         return response()->json("OK", 204);
+    }
+
+    public function fileExport()
+    {
+        return new KulsoEllenorzesExport;
     }
 }
