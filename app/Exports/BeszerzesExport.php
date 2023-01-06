@@ -22,7 +22,7 @@ class BeszerzesExport implements FromCollection, Responsable, WithStrictNullComp
     
     public function collection()
     {
-        return Beszerzes::with("partner")->get();
+        return Beszerzes::with(["partner", "allomas"])->get();
     }
 
     public function headings(): array

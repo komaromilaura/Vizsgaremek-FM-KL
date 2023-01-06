@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\BelsoEllenorzesExport;
+use App\Exports\BelsoEllenorzesMegyenkentExport;
 use App\Http\Requests\BelsoEllenorzesRequest;
 use App\Models\BelsoEllenorzes;
 
@@ -90,5 +91,10 @@ class BelsoEllenorzesController extends Controller
     public function fileExport()
     {
         return new BelsoEllenorzesExport;
+    }
+
+    public function fileExportMegyenkent($megye)
+    {
+        return new BelsoEllenorzesMegyenkentExport($megye);
     }
 }

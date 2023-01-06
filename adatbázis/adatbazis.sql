@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   PRIMARY KEY (`IVIR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.admin: ~0 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.admin: ~1 rows (hozzávetőleg)
 INSERT INTO `admin` (`IVIR`, `Password`, `Admin`) VALUES
 	(101301, '1212', 1);
 
@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `allashelyek` (
   CONSTRAINT `FK_allashelyek_allomasok` FOREIGN KEY (`mentoallomas`) REFERENCES `allomasok` (`nev`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.allashelyek: ~3 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.allashelyek: ~4 rows (hozzávetőleg)
 INSERT INTO `allashelyek` (`ID`, `mentoallomas`, `ev`, `ho`, `szakorvos_szervezett`, `szakorvos_betoltott`, `szakorvos_ures`, `vezeto_mentotiszt_szervezett`, `vezeto_mentotiszt_betoltott`, `vezeto_mentotiszt_ures`, `orvos_mentotiszt_szervezett`, `orvos_mentotiszt_betoltott`, `orvos_mentotiszt_ures`, `foapolo_szervezett`, `foapolo_betoltott`, `foapolo_ures`, `mentoapolo_szervezett`, `mentoapolo_betoltott`, `mentoapolo_ures`, `mentoapolo_osszes_szervezett`, `mentoapolo_osszes_betoltott`, `mentoapolo_osszes_ures`, `allomasvezeto_szervezett`, `allomasvezeto_betoltott`, `allomasvezeto_ures`, `ICS_vezeto_szervezett`, `ICS_vezeto_betoltott`, `ICS_vezeto_ures`, `mentotiszt_szervezett`, `mentotiszt_betoltott`, `mentotiszt_ures`, `mentoapolo2_szervezett`, `mentoapolo2_betoltott`, `mentoapolo2_ures`, `apolo_szervezett`, `apolo_betoltott`, `apolo_ures`, `szolgalatvezeto_szervezett`, `szolgalatvezeto_betoltott`, `szolgalatvezeto_ures`, `apolo2_szervezett`, `apolo2_betoltott`, `apolo2_ures`, `uzemgazdasz_szervezett`, `uzemgazdasz_betoltott`, `uzemgazdasz_ures`, `uzemmernok_szervezett`, `uzemmernok_betoltott`, `uzemmernok_ures`, `oktatas_szervezo_szervezett`, `oktatas_szervezo_betoltott`, `oktatas_szervezo_ures`, `ugyintezo_szervezett`, `ugyintezo_betoltott`, `ugyintezo_ures`, `adminisztrator_szervezett`, `adminisztrator_betoltott`, `adminisztrator_ures`, `adatrogzito_szervezett`, `adatrogzito_betoltott`, `adatrogzito_ures`, `autoszerelo_szakmunkas_szervezett`, `autoszerelo_szakmunkas_betoltott`, `autoszerelo_szakmunkas_ures`, `karbantarto_szervezett`, `karbantarto_betoltott`, `karbantarto_ures`, `kazanfuto_szervezett`, `kazanfuto_betoltott`, `kazanfuto_ures`, `mentogepkocsivezeto_szervezett`, `mentogepkocsivezeto_betoltott`, `mentogepkocsivezeto_ures`, `muszaki_gondnok_szervezett`, `muszaki_gondnok_betoltott`, `muszaki_gondnok_ures`, `garazsmester_szervezett`, `garazsmester_betoltott`, `garazsmester_ures`, `szervezett_gkv_osszesen`, `betoltott_gkv_osszesen`, `ures_gkv_osszesen`, `szervezett_allashely_osszesen`, `betoltott_allashely_osszesen`, `ures_allashely_osszesen`) VALUES
 	(1, 'Bük', '2022', 1, 1, 2, -1, 4, 5, -1, 7.03, 8, -0.97, 15, 11, 4, 13, 14.8, -1.8, 28, 25.8, 2.2, 19.84, 20, -0.16, 28, 23, 5, 25, 25.89, -0.89, 31, 29, 2, 31, 31.99, -0.99, 115, 109.88, 5.12, 37, 38, -1, 40, 41, -1, 43, 44, -1, 46, 47, -1, 49, 50, -1, 52, 53, -1, 55, 56, -1, 58, 59, -1, 61, 62, -1, 64, 65, -1, 67, 68, -1, 70, 71, -1, 73, 74, -1, 210, 213, -3, 265.87, 268.8, -2.93),
 	(3, 'Lövő', '2022', 2, 100, 100.99, -0.99, 103, 104, -1, 106, 107, -1, 109, 110, -1, 112, 113, -1, 221, 223, -2, 118, 119, -1, 121, 122, -1, 124, 125, -1, 127, 128, -1, 130, 131, -1, 502, 506, -4, 136, 137, -1, 139, 140, -1, 142, 143, -1, 145, 146, -1, 148, 149, -1, 151, 152, -1, 154, 155, -1, 157, 158, -1, 160, 161, -1, 163, 164, -1, 166, 167, -1, 169, 170, -1, 172, 173, -1, 507, 510, -3, 1052, 1059.99, -7.99),
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `allomasok` (
   CONSTRAINT `vezeto_ivir` FOREIGN KEY (`vezeto`) REFERENCES `users` (`IVIR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.allomasok: ~23 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.allomasok: ~26 rows (hozzávetőleg)
 INSERT INTO `allomasok` (`sorszam`, `nev`, `megye_id`, `vezeto`) VALUES
 	(9, 'Bük', 1, 121313),
 	(10, 'Celldömölk', 1, 123456),
@@ -208,10 +208,12 @@ CREATE TABLE IF NOT EXISTS `belso_ell` (
   CONSTRAINT `FK_FK_belso_ell_allomasok_(felelos)` FOREIGN KEY (`felelos_szerv_egyseg`) REFERENCES `allomasok` (`nev`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.belso_ell: ~2 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.belso_ell: ~4 rows (hozzávetőleg)
 INSERT INTO `belso_ell` (`ell_azon`, `ell_iktszam`, `ell_szerv`, `ell_targya`, `intezkedest_igenylo_megall`, `ell_javaslat`, `javaslat_alapjan_eloirt_int`, `int_terv_iktszama`, `int_terv_jovahagyas_datuma`, `felelos_beosztas`, `felelos_szerv_egyseg`, `int_vegrehajt_hatarido`, `hatarido_mod_1`, `hatarido_mod_2`, `feladat_mod_1`, `feladat_mod_2`, `int_teljesites_1`, `int_teljesites_2`, `megtett_int`, `hatidoben_vegre_nem_hajt_int_oka`, `nem_telj_kapcsan_tett_lepesek`, `megjegyzes`) VALUES
 	('2022-1', '1-1/2022', 'Szombathely', 'teszt tárgy', 'teszt megállapítás', 'teszt javaslat', 'teszt intézkedés', '1-2/2022', '2022-04-05', 'állomásvezető', 'Szombathely', '2022-06-30', 1, '2022-08-31', 1, 'teszt módosítás', 1, '2022-08-25', 'teszt intézkedések', NULL, NULL, 'teszt megjegyzés'),
-	('2022-2', '2-1/2022', 'Celldömölk', 'teszt2 tárgy', 'teszt2 megállapítás', 'teszt2 javaslat', 'teszt2 intézkedés', '2-2/2022', '2022-04-27', 'vezető', 'Celldömölk', '2022-07-02', 0, NULL, 1, 'teszt2 feladat módosítás', 0, NULL, 'teszt2 intézkedések', NULL, NULL, 'teszt2 megjegyzések');
+	('2022-2', '2-1/2022', 'Celldömölk', 'teszt2 tárgy', 'teszt2 megállapítás', 'teszt2 javaslat', 'teszt2 intézkedés', '2-2/2022', '2022-04-27', 'vezető', 'Celldömölk', '2022-07-02', 0, NULL, 1, 'teszt2 feladat módosítás', 0, NULL, 'teszt2 intézkedések', NULL, NULL, 'teszt2 megjegyzések'),
+	('2022-3', '3-1/2022', 'Zalaegerszeg', 'teszt2 tárgy', 'teszt2 megállapítás', 'teszt2 javaslat', 'teszt2 intézkedés', '3-2/2022', '2022-04-30', 'vezető', 'Zalaegerszeg', '2022-06-29', 0, NULL, 1, 'teszt2 feladat módosítás', 0, NULL, 'teszt2 intézkedések', NULL, NULL, 'teszt2 megjegyzések'),
+	('2022-4', '4-1/2022', 'Mosonmagyaróvár', 'teszt tárgy', 'teszt megállapítás', 'teszt javaslat', 'teszt intézkedés', '1-2/2022', '2022-05-03', 'állomásvezető', 'Mosonmagyaróvár', '2022-07-10', 1, '2022-09-01', 0, '', 1, '2022-08-22', 'teszt intézkedések', NULL, NULL, 'teszt megjegyzés');
 
 -- Struktúra mentése tábla lamafelhasznalok. beszerzesek
 DROP TABLE IF EXISTS `beszerzesek`;
@@ -238,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `beszerzesek` (
   CONSTRAINT `FK_beszerzesek_partnerek` FOREIGN KEY (`partnerID`) REFERENCES `partnerek` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.beszerzesek: ~13 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.beszerzesek: ~12 rows (hozzávetőleg)
 INSERT INTO `beszerzesek` (`mentoallomas`, `targy`, `besz_igeny_datum`, `ajanlat_bekeres`, `engedelyezesre_kuldve`, `engedely_beerkezese`, `megrendelo_kiallitasa`, `megrendelo_szama`, `megrend_alairasra_tovabbitva`, `alairt_megrend_beerkezese`, `dijbekero_tovabbitasa`, `munkalap_kiallitasa`, `szamla_kiallitasa`, `szamla_tovább_pu_nek_utalasra`, `partnerID`) VALUES
 	('Győr', 'gyógyszer', '2022-12-06', '2022-12-06', '2022-12-08', '2022-12-08', '2022-12-09', '1-2022', '2022-12-10', '2022-12-12', '2022-12-13', '2022-12-14', '2022-12-16', '2022-12-17', 3),
 	('Nagykanizsa', 'gyógyszer, infúzió', '2022-12-28', '2022-12-29', '2022-12-30', '2022-12-31', '2023-01-01', '1-2023', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05', '2023-01-05', '2023-01-06', 3),
@@ -343,7 +345,7 @@ CREATE TABLE IF NOT EXISTS `kulso_ell` (
 -- Tábla adatainak mentése lamafelhasznalok.kulso_ell: ~2 rows (hozzávetőleg)
 INSERT INTO `kulso_ell` (`ellenorzest_vegzoID`, `ell_azon`, `ell_iktszam`, `ell_szerv`, `kapcsolattarto_neve`, `kapcsolattarto_tel`, `ell_targya`, `intezkedest_igenylo_megall`, `ell_javaslat`, `javaslat_alapjan_eloirt_int`, `int_terv_iktszama`, `int_terv_jovahagyas_datuma`, `felelos_beosztas`, `felelos_szerv_egyseg`, `int_vegrehajt_hatarido`, `hatarido_mod_1`, `hatarido_mod_2`, `feladat_mod_1`, `feladat_mod_2`, `int_teljesites_1`, `int_teljesites_2`, `megtett_int`, `hatidoben_vegre_nem_hajt_int_oka`, `nem_telj_kapcsan_tett_lepesek`, `megjegyzes`) VALUES
 	(1, '2022-1', '1-1/2022', 'Győr', 'Oszkó Dominik', '06 94 415 257', 'teszt tárgy', 'teszt megállapítás', 'teszt javaslat', 'teszt intézkedés', '1-2/2022', '2022-04-05', 'állomásvezető', 'Győr', '2022-06-30', 1, '2022-08-31', 1, 'teszt módosítás', 1, '2022-08-25', 'teszt intézkedés', NULL, NULL, 'teszt megjegyzés'),
-	(3, '2022-2', '2-1/2022', 'Pacsa', 'Kiss Zoé', '06 92 125 599', 'cím', 'megállapítás', 'javaslat', 'intézkedés', '2-2/2022', '2022-01-19', 'vezető', 'Pacsa', '2022-04-13', 1, '2022-04-30', 1, 'feladat módosítás', 1, '2022-04-27', 'megtett intézkedések', 'ok', NULL, 'megjegyzés');
+	(3, '2022-2', '2-1/2022', 'Pacsa', 'Kiss Zoé', '06 92 125 599', 'cím', 'megállapítás', 'javaslat', 'intézkedés', '2-2/2022', '2022-01-19', 'vezető', 'Pacsa', '2022-04-13', 0, NULL, 1, 'feladat módosítás', 1, '2022-04-27', 'megtett intézkedések', 'ok', NULL, 'megjegyzés');
 
 -- Struktúra mentése tábla lamafelhasznalok. kulso_ellenorok
 DROP TABLE IF EXISTS `kulso_ellenorok`;
@@ -573,7 +575,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`IVIR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.users: ~3 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.users: ~4 rows (hozzávetőleg)
 INSERT INTO `users` (`IVIR`, `Vezetek_nev`, `Kereszt_nev`, `Jelszo`, `Vas`, `Gyor`, `Zala`, `Admin`) VALUES
 	(121212, 'Horváth', 'Máté', 'sf', 0, 1, 0, 0),
 	(121313, 'Kovács', 'Anita', 'cvv', 1, 0, 0, 1),

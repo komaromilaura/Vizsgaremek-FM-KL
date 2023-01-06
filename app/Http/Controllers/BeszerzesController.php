@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\BeszerzesExport;
+use App\Exports\BeszerzesMegyenkentExport;
 use App\Http\Requests\BeszerzesRequest;
 use App\Models\Beszerzes;
 
@@ -73,6 +74,11 @@ class BeszerzesController extends Controller
 
     public function fileExport()
     {
-        return new BeszerzesExport;
+        return new BeszerzesExport();
+    }
+
+    public function fileExportMegyenkent($megye)
+    {
+        return new BeszerzesMegyenkentExport($megye);
     }
 }

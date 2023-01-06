@@ -557,8 +557,10 @@ function BelsoEllenorzes(props) {
                     {/*Adatbázisból xls / csv - be ?? kilistázza a felvitt ellenőrzéseket.*/}                           
                     {megyek && megyek.map((megye) => {
                         return(
-                            <Button variant="info" className="text-white text-uppercase fw-bold mx-2" key={megye.ID}>
-                                {megye.megye_nev} megye adatai
+                            <Button variant="info" key={megye.ID} className="mx-1">
+                                <a href={"belso_ell/file-export/"+megye.ID} className="text-white text-uppercase fw-bold text-decoration-none">
+                                    {megye.megye_nev} megye adatai
+                                </a>                                
                             </Button>
                         )
                     })}                                 

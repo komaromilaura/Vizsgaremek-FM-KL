@@ -400,12 +400,13 @@ function Beszerzes(props){
                         </a>
                     </Button>
                 </Col>
-                <Col lg={12} className="justify-content-center d-flex mb-3">
-                    {/*Adatbázisból xls / csv - be ?? kilistázza a felvitt beszerzéseket.*/}                           
+                <Col lg={12} className="justify-content-center d-flex mb-3">                                           
                     {megyek && megyek.map((megye) => {
                         return(
-                            <Button variant="info" className="text-white text-uppercase fw-bold mx-2" key={megye.ID}>
-                                {megye.megye_nev} megye adatai
+                            <Button variant="info" key={megye.ID} className="mx-1">
+                                <a href={"beszerzes/file-export/"+megye.ID} className="text-white text-uppercase fw-bold text-decoration-none">
+                                    {megye.megye_nev} megye adatai
+                                </a>                                
                             </Button>
                         )
                     })}                                  
