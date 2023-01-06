@@ -68,6 +68,6 @@ class PartnerController extends Controller
 
     public function fileExport() 
     {
-        return new PartnerExport;
+        return new PartnerExport();
     }
 }

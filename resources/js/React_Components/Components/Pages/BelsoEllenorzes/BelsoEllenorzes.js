@@ -554,7 +554,6 @@ function BelsoEllenorzes(props) {
                     </Button>                  
                 </Col>
                 <Col lg={12} className="justify-content-center d-flex mb-3">
-                    {/*Adatbázisból xls / csv - be ?? kilistázza a felvitt ellenőrzéseket.*/}                           
                     {megyek && megyek.map((megye) => {
                         return(
                             <Button variant="info" key={megye.ID} className="mx-1">

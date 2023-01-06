@@ -67,6 +67,6 @@ class EllenorController extends Controller
 
     public function fileExport() 
     {
-        return new EllenorExport;
+        return new EllenorExport();
     }
 }

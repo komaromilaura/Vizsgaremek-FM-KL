@@ -29,8 +29,7 @@ class BelsoEllenorzesMegyenkentExport implements FromCollection, Responsable, Wi
         ->with(["allomasEllSzerv", "allomasFelelosSzervEgyseg"])
         ->join('allomasok', 'belso_ell.ell_szerv', '=', 'allomasok.nev' )
         ->where('allomasok.megye_id', $this->megye)
-        ->get()
-        ;
+        ->get();
     }
 
     public function headings(): array

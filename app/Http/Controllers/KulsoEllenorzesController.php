@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\KulsoEllenorzesExport;
+use App\Exports\KulsoEllenorzesMegyenkentExport;
 use App\Http\Requests\KulsoEllenorzesRequest;
 use App\Models\KulsoEllenorzes;
 
@@ -93,9 +94,13 @@ class KulsoEllenorzesController extends Controller
 
         return response()->json("OK", 204);
     }
-
     public function fileExport()
     {
-        return new KulsoEllenorzesExport;
+        return new KulsoEllenorzesExport();
     }
+
+    public function fileExportMegyenkent($megye)
+    {
+        return new KulsoEllenorzesMegyenkentExport($megye);
+    }    
 }

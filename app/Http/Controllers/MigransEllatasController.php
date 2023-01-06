@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\MigransEllatasMegyenkentExport;
 use App\Exports\MigransElllatasExport;
 use App\Http\Requests\MigransEllatasRequest;
 use App\Models\MigransEllatas;
@@ -57,4 +58,9 @@ class MigransEllatasController extends Controller
     {
         return new MigransElllatasExport;
     }
+
+    public function fileExportMegyenkent($megye)
+    {
+        return new MigransEllatasMegyenkentExport($megye);
+    }    
 }

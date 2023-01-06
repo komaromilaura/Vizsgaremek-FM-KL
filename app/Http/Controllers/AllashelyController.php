@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\AllashelyExport;
+use App\Exports\AllashelyMegyenkentExport;
 use App\Http\Requests\AllashelyRequest;
 use App\Models\Allashely;
 
@@ -215,4 +216,9 @@ class AllashelyController extends Controller
     {
         return new AllashelyExport;
     }
+
+    public function fileExportMegyenkent($megye)
+    {
+        return new AllashelyMegyenkentExport($megye);
+    }    
 }

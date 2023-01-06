@@ -90,7 +90,7 @@ class BelsoEllenorzesController extends Controller
 
     public function fileExport()
     {
-        return new BelsoEllenorzesExport;
+        return new BelsoEllenorzesExport();
     }
 
     public function fileExportMegyenkent($megye)

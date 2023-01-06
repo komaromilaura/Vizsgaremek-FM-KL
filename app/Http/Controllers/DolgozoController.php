@@ -75,6 +75,6 @@ class DolgozoController extends Controller
 
     public function fileExport()
     {
-        return new DolgozoExport;
+        return new DolgozoExport();
     }
 }
