@@ -828,6 +828,11 @@
 									"key": "Admin",
 									"value": "1",
 									"type": "text"
+								},
+								{
+									"key": "Aktiv",
+									"value": "1",
+									"type": "text"
 								}
 							]
 						},

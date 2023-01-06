@@ -11,7 +11,8 @@ const INITIAL_STATE = {
         Vas: "",
         Gyor: "",
         Zala: "",
-        Admin: ""
+        Admin: "",
+        Aktiv: ""
     },
 }
 
@@ -133,7 +134,16 @@ function User (props) {
                         checked={user.Admin}
                         
                     />
-                </Col>               
+                </Col>
+                <Col lg={4} md={6} className="py-2">
+                    <Form.Check
+                        type="switch"                        
+                        label="Aktív"
+                        disabled
+                        checked={user.Aktiv}
+                        
+                    />
+                </Col>                    
             </Row>
             <Row className="p-4">
                 <Col lg={12} className="justify-content-center d-flex">

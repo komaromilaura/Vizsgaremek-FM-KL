@@ -27,6 +27,7 @@ class User extends Model
         'Gyor',
         'Zala',
         'Admin',
+        'Aktiv'
     ];
 
     public function allomas()

@@ -32,6 +32,7 @@ class UserRequest extends FormRequest
             'Gyor' => "required|boolean",
             'Zala' => "required|boolean",
             'Admin' => "required|boolean",            
+            'Admin' => "nullable|boolean",            
         ];
     }
 }

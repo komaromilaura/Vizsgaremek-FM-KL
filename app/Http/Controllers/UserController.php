@@ -23,6 +23,7 @@ class UserController extends Controller
         $user->Gyor = $request->get("Gyor");
         $user->Zala = $request->get("Zala");
         $user->Admin = $request->get("Admin");
+        $user->Aktiv = $request->get("Aktiv");
 
         $user->save();
 

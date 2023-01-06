@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-//using Microsoft.Office;
+using Microsoft.Office;
 
 namespace LaMa_app
 {
@@ -74,7 +74,7 @@ namespace LaMa_app
                     break;
 
                 case "allomas":
-                    tablazatL.Text = "Állomások:";
+                    tablazatL.Text = "Állomások:";
                     try
                     {
                         dataGridView1.ColumnCount = 5;
@@ -183,7 +183,7 @@ namespace LaMa_app
 
         private void excelB_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
                 Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
@@ -211,7 +211,7 @@ namespace LaMa_app
             catch (Exception ex)
             {
                 MessageBox.Show("Hiba történt!\n{0}", Convert.ToString(ex));
-            }*/
+            }
         }
 
         private void modositB_Click(object sender, EventArgs e)
@@ -271,7 +271,7 @@ namespace LaMa_app
                     
                     break;
                 case "allomas":
-                    tablazatL.Text = "Állomások:";
+                    tablazatL.Text = "Ăllomások:";
                     int ssz = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
                     string nev = Convert.ToString(dataGridView1.SelectedRows[0].Cells[1].Value);
                     int megye_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[2].Value);
