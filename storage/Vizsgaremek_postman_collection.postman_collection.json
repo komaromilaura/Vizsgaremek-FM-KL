@@ -2921,6 +2921,685 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Tulora",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/tulora",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"tulora"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/tulora/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"tulora",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTulora",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mentoallomas",
+									"value": "Győr",
+									"type": "text"
+								},
+								{
+									"key": "ev",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "honap",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ment_fel_miatti_tulora",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "egyeb_tulora",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "apolo",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "mentesiranyitasban_dolg",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "mentogkvezeto",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "betegszall_iranyitasban_dolg",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/tulora",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"tulora"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTulora",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mentoallomas",
+									"value": "Őriszentpéter",
+									"type": "text"
+								},
+								{
+									"key": "ev",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "honap",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ment_fel_miatti_tulora",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "egyeb_tulora",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "apolo",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "mentesiranyitasban_dolg",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "mentogkvezeto",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "betegszall_iranyitasban_dolg",
+									"value": "7.5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/tulora/2",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"tulora",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTulora",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/tulora/3",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"tulora",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Letszam",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/letszam",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"letszam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/letszam/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"letszam",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addLetszam",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mentoallomas",
+									"value": "Szombathely",
+									"type": "text"
+								},
+								{
+									"key": "ev",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "negyedev",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "kivon_all_szevezett",
+									"value": "22.5",
+									"type": "text"
+								},
+								{
+									"key": "kivon_all_betoltott",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "mentesiranyitas_szervezett",
+									"value": "24.1",
+									"type": "text"
+								},
+								{
+									"key": "mentesiranyitas_betoltott",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "betegszall_szervezett",
+									"value": "12.5",
+									"type": "text"
+								},
+								{
+									"key": "betegszall_betoltott",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "apolo",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "mentesiranyitasban_dolg",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "mentogkvezeto",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "betegszall_iranyitasban_dolg",
+									"value": "4.5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/letszam",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"letszam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLetszam",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/letszam/2",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"letszam",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateLetszam",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mentoallomas",
+									"value": "Sárvár",
+									"type": "text"
+								},
+								{
+									"key": "ev",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "negyedev",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "kivon_all_szevezett",
+									"value": "22.5",
+									"type": "text"
+								},
+								{
+									"key": "kivon_all_betoltott",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "mentesiranyitas_szervezett",
+									"value": "24.1",
+									"type": "text"
+								},
+								{
+									"key": "mentesiranyitas_betoltott",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "betegszall_szervezett",
+									"value": "12.5",
+									"type": "text"
+								},
+								{
+									"key": "betegszall_betoltott",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "orvos_mentotiszt",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "apolo",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "mentesiranyitasban_dolg",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "mentogkvezeto",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "betegszall_iranyitasban_dolg",
+									"value": "4.5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/letszam/3",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"letszam",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mozgoorseg",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/mozgoorseg",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"mozgoorseg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/mozgoorseg/SZ-2",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"mozgoorseg",
+								"SZ-2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMozgoorseg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "megrendeloID",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "szerzodesszam",
+									"value": "SZ-1",
+									"type": "text"
+								},
+								{
+									"key": "rendezveny_neve",
+									"value": "Augusztus 20-ai ünnepség",
+									"type": "text"
+								},
+								{
+									"key": "rendezveny_datuma",
+									"value": "2022-08-20",
+									"type": "text"
+								},
+								{
+									"key": "rendezveny_helye",
+									"value": "Szombathely, Főtér",
+									"type": "text"
+								},
+								{
+									"key": "mentoallomas",
+									"value": "Szombathely",
+									"type": "text"
+								},
+								{
+									"key": "roko",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "eset",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "mentogk",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "gyalogorseg",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "bevetel",
+									"value": "500000",
+									"type": "text"
+								},
+								{
+									"key": "koltseg",
+									"value": "300000",
+									"type": "text"
+								},
+								{
+									"key": "maradvany",
+									"value": "200000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/mozgoorseg",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"mozgoorseg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMozgoorseg",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "megrendeloID",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "szerzodesszam",
+									"value": "SZ-1",
+									"type": "text"
+								},
+								{
+									"key": "rendezveny_neve",
+									"value": "Augusztus 20-ai ünnepség",
+									"type": "text"
+								},
+								{
+									"key": "rendezveny_datuma",
+									"value": "2022-08-20",
+									"type": "text"
+								},
+								{
+									"key": "rendezveny_helye",
+									"value": "Szombathely, Főtér",
+									"type": "text"
+								},
+								{
+									"key": "mentoallomas",
+									"value": "Szombathely",
+									"type": "text"
+								},
+								{
+									"key": "roko",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "eset",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "mentogk",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "gyalogorseg",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "bevetel",
+									"value": "600000",
+									"type": "text"
+								},
+								{
+									"key": "koltseg",
+									"value": "300000",
+									"type": "text"
+								},
+								{
+									"key": "maradvany",
+									"value": "300000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/mozgoorseg/SZ-1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"mozgoorseg",
+								"SZ-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMozgoorseg",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/mozgoorseg/SZ-1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"mozgoorseg",
+								"SZ-1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [

@@ -64,8 +64,23 @@ class Allomas extends Model
         return $this->hasMany(Allashely::class, "mentoallomas", "nev");
     }
 
+    public function tulora()
+    {
+        return $this->hasMany(Tulora::class, "mentoallomas", "nev");
+    }
+
+    public function letszam()
+    {
+        return $this->hasMany(Letszam::class, "mentoallomas", "nev");
+    }
+
     public function beszerzes()
     {
         return $this->hasMany(Beszerzes::class, "mentoallomas", "nev");
+    }
+
+    public function mozgoorseg()
+    {
+        return $this->hasMany(Mozgoorseg::class, "mentoallomas", "nev");
     }
 }

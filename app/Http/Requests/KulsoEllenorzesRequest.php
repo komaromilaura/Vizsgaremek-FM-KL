@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class KulsoEllenorzesRequest extends FormRequest
 {
@@ -25,7 +26,13 @@ class KulsoEllenorzesRequest extends FormRequest
     {
         return [
             'ellenorzest_vegzoID' => 'required|numeric',
-            'ell_azon' => 'required|string',
+            'ell_azon' => [
+                'required',
+                'string',
+                $this->kulsoEllenorzes !== null ?
+                Rule::unique('kulso_ell')->ignoreModel($this->kulsoEllenorzes) :
+                Rule::unique('kulso_ell')
+            ],
             'ell_iktszam' => 'nullable|string',
             'ell_szerv' => 'required|string',
             'kapcsolattarto_neve' => 'required|string',

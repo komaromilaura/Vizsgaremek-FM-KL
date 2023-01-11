@@ -18,7 +18,7 @@ class UserController extends Controller
         $user->Vezetek_nev = $request->get("Vezetek_nev");
         $user->Vezetek_nev = $request->get("Vezetek_nev");
         $user->Kereszt_nev = $request->get("Kereszt_nev");
-        $user->Jelszo = $request->get("Jelszo");
+        $user->Jelszo = base64_encode($request->get("Jelszo"));
         $user->Vas = $request->get("Vas");
         $user->Gyor = $request->get("Gyor");
         $user->Zala = $request->get("Zala");

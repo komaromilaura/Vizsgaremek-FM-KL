@@ -139,7 +139,7 @@ return [
     'starts_with' => 'The :attribute must start with one of the following: :values.',
     'string' => 'A(z) :attribute mező szöveg kell, hogy legyen.',
     'timezone' => 'The :attribute must be a valid timezone.',
-    'unique' => 'The :attribute has already been taken.',
+    'unique' => 'A(z) :attribute mezőnek egyedinek kell lennie az adatbázisban.',
     'uploaded' => 'The :attribute failed to upload.',
     'uppercase' => 'The :attribute must be uppercase.',
     'url' => 'The :attribute must be a valid URL.',

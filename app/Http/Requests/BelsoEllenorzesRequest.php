@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class BelsoEllenorzesRequest extends FormRequest
 {
@@ -24,7 +25,13 @@ class BelsoEllenorzesRequest extends FormRequest
     public function rules()
     {
         return [
-            'ell_azon' => 'required|string',
+            'ell_azon' => [
+                'required',
+                'string',
+                $this->belsoEllenorzes !== null ?
+                Rule::unique('belso_ell')->ignoreModel($this->belsoEllenorzes) :
+                Rule::unique('belso_ell')
+            ],
             'ell_iktszam' => 'nullable|string',
             'ell_szerv' => 'required|string',
             'ell_targya' => 'required|string',

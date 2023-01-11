@@ -37,7 +37,7 @@ function User (props) {
                 })
                 alert(errorsString);
             } 
-            getUser();           
+            getUser();        
         })
     }    
 
@@ -99,7 +99,11 @@ function User (props) {
                         <Form.Label>
                             Jelszó
                         </Form.Label>
-                        <Form.Control type="text" value={user.Jelszo} onChange={(event) => {changePassWord(event)}} />
+                        <Form.Control 
+                            type="password" 
+                            value={user.Jelszo} 
+                            onChange={(event) => {changePassWord(event)}} 
+                            />
                     </Form.Group>
                 </Col>         
                 <Col lg={4} md={6} className="py-2 align-items-center d-flex">

@@ -264,18 +264,7 @@ function Dolgozok (props) {
                         <Form.Label>
                             Törzsszám
                         </Form.Label>
-                        <Form.Control 
-                            type="text"
-                            onKeyDown={(event) => {
-                                if(event.key == "ArrowRight" || event.key == "ArrowLeft" || event.key == "Backspace" || event.key == "Delete") {
-                                    return;
-                                }
-                                if (!/[0-9]/.test(event.key)) {
-                                    event.preventDefault();
-                                }
-                            }} 
-                            ref={torzsszam} 
-                            onChange={resetSucess} 
+                        <Form.Control type="text" ref={torzsszam} onChange={resetSucess} 
                         />
                     </Form.Group>
                 </Col>

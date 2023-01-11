@@ -34,4 +34,9 @@ class Partner extends Model
     {
         return $this->hasMany(Beszerzes::class, "partnerID", "ID");
     }
+
+    public function mozgoorseg()
+    {
+        return $this->hasMany(Mozgoorseg::class, "megrendeloID", "ID");
+    }
 }

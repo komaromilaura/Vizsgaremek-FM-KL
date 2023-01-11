@@ -26,6 +26,12 @@ Route::get('/migrans/file-export', [\App\Http\Controllers\MigransEllatasControll
 Route::get('/migrans/file-export/{megye}', [\App\Http\Controllers\MigransEllatasController::class, 'fileExportMegyenkent'])->name('file-export-megyenkent');
 Route::get('/allashely/file-export', [\App\Http\Controllers\AllashelyController::class, 'fileExport'])->name('file-export');
 Route::get('/allashely/file-export/{megye}', [\App\Http\Controllers\AllashelyController::class, 'fileExportMegyenkent'])->name('file-export-megyenkent');
+Route::get('/tulora/file-export', [\App\Http\Controllers\TuloraController::class, 'fileExport'])->name('file-export');
+Route::get('/tulora/file-export/{megye}', [\App\Http\Controllers\TuloraController::class, 'fileExportMegyenkent'])->name('file-export-megyenkent');
+Route::get('/letszam/file-export', [\App\Http\Controllers\LetszamController::class, 'fileExport'])->name('file-export');
+Route::get('/letszam/file-export/{megye}', [\App\Http\Controllers\LetszamController::class, 'fileExportMegyenkent'])->name('file-export-megyenkent');
+Route::get('/mozgoorseg/file-export', [\App\Http\Controllers\MozgoorsegController::class, 'fileExport'])->name('file-export');
+Route::get('/mozgoorseg/file-export/{megye}', [\App\Http\Controllers\MozgoorsegController::class, 'fileExportMegyenkent'])->name('file-export-megyenkent');
 
 Route::get('/{routes?}', function () {
     return view('welcome');

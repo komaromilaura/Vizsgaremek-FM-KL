@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UserRequest extends FormRequest
 {
@@ -24,7 +25,15 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'IVIR' => 'required|numeric|min:100000|max:999999',
+            'IVIR' => [
+                'required',
+                'numeric',
+                'min:100000',
+                'max:999999',
+                $this->user !== null ?
+                Rule::unique('users')->ignoreModel($this->user) :
+                Rule::unique('users')
+            ],
             'Vezetek_nev' => 'required|string',
             'Kereszt_nev' => 'required|string',
             'Jelszo' => 'required|string',

@@ -13,7 +13,6 @@ import LogOut from "../Pages/Log out/LogOut";
 import Migrans from "../Pages/Migrans/Migrans";
 import Mozgoorseg from "../Pages/Mozgoorseg/Mozgoorseg";
 import Partner from "../Pages/Partner/Partner";
-import Rendezvenyek from "../Pages/Rendezvenyek/Rendezvenyek";
 import Tulora from "../Pages/Tulora/Tulora";
 import User from "../Pages/User/User";
 import Sidebar from "../Sidebar/Sidebar";
@@ -48,7 +47,6 @@ class Dashboard extends Component {
                                 <Route path="/migrans" element={<Migrans />}/> 
                                 <Route path="/mozgoorseg" element={<Mozgoorseg />} /> 
                                 <Route path="/allashely" element={<Allashely />} /> 
-                                <Route path="/rendezvenyek" element={<Rendezvenyek />}/> 
                                 <Route path="/tulora" element={<Tulora />}/> 
                                 <Route path="/letszam" element={<Letszam />}/> 
                                 <Route />

@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class PartnerRequest extends FormRequest
 {
@@ -34,7 +35,14 @@ class PartnerRequest extends FormRequest
             'helyrazi_szam' => 'nullable|string',
             'email' => 'nullable|email',
             'telefon' => 'nullable|string',
-            'adoszam' => 'required|string|size:13',
+            'adoszam' => [
+                'required',
+                'string',
+                'size:13',
+                $this->partner !== null ?
+                Rule::unique('partnerek')->ignoreModel($this->partner) :
+                Rule::unique('partnerek')
+            ],
         ];
     }
 }

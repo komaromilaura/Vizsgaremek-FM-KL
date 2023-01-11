@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class BeszerzesRequest extends FormRequest
 {
@@ -31,7 +32,13 @@ class BeszerzesRequest extends FormRequest
             'engedelyezesre_kuldve'=> 'required|date',
             'engedely_beerkezese'=> 'required|date',
             'megrendelo_kiallitasa'=> 'required|date',            
-            'megrendelo_szama' => 'required|string',
+            'megrendelo_szama'=> [
+                'required',
+                'string',
+                $this->beszerzes !== null ?
+                Rule::unique('beszerzesek')->ignoreModel($this->beszerzes) :
+                Rule::unique('beszerzesek')
+            ],
             'megrend_alairasra_tovabbitva' => 'required|date',
             'alairt_megrend_beerkezese' => 'required|date',
             'dijbekero_tovabbitasa' => 'required|date',

@@ -37,10 +37,6 @@ module.exports = {
             link: "/allashely"
         },
         {
-            name: "Térítés nélküli rendezvények egészségügyi biztosításának költségei",
-            link: "/rendezvenyek"
-        },
-        {
             name: "Túlórák",
             link: "/tulora"
         },
@@ -48,14 +44,6 @@ module.exports = {
             name: "Létszám jelentés",
             link: "/letszam"
         },
-        {
-            name: "11. táblázat",
-            link: "/11"
-        },
-        {
-            name: "12. táblázat",
-            link: "/12"
-        }
     ],
     
     topMenu: [
@@ -164,57 +152,5 @@ module.exports = {
             name: "garázsmester",
             db: "garazsmester"
         }
-    ],
-
-    oraBerek: [
-        {
-            munkakor: "orvos",
-            ber: 4300
-        },
-        {
-            munkakor: "szakorvos",
-            ber: 5000
-        },
-        {
-            munkakor: "mentőtiszt",
-            ber: 3100
-        },
-        {
-            munkakor: "mentőápoló",
-            ber: 2500
-        },
-        {
-            munkakor: "mentőgépkocsivezető",
-            ber: 2500
-        }
-    ],
-
-    gkTipusok: [
-        {
-            tipus: "Eset",
-            ktg: 300
-        },
-        {
-            tipus: "Roko",
-            ktg: 300
-        },
-        {
-            tipus: "Mgk",
-            ktg: 250
-        },
-        {
-            tipus: "MOK",
-            ktg: 220
-        },
-        {
-            tipus: "TBE",
-            ktg: 300
-        }
-    ],
-
-    megyek: [
-        "Győr-Moson-Sopron",
-        "Vas",
-        "Zala"
-    ],
+    ]    
 }

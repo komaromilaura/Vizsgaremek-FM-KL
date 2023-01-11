@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Exports\PartnerExport;
 use App\Http\Requests\PartnerRequest;
 use App\Models\Partner;
-use Maatwebsite\Excel\Facades\Excel;
 
 class PartnerController extends Controller
 {

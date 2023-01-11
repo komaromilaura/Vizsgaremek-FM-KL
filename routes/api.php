@@ -97,4 +97,26 @@ Route::group(['prefix' => 'allashely'], function() {
     Route::delete('/{allashely}', [\App\Http\Controllers\AllashelyController::class, 'deleteAllashely'])->name('deleteAllashely');
 });
 
+Route::group(['prefix' => 'tulora'], function() {
+    Route::get("/", [\App\Http\Controllers\TuloraController::class, 'getAll'])->name("getTulorak");
+    Route::get("/{tulora}", [\App\Http\Controllers\TuloraController::class, 'get'])->name("getTulora");
+    Route::post("/", [\App\Http\Controllers\TuloraController::class, 'addTulora'])->name('addTulora');
+    Route::put('/{tulora}', [\App\Http\Controllers\TuloraController::class, 'updateTulora'])->name('updateTulora');
+    Route::delete('/{tulora}', [\App\Http\Controllers\TuloraController::class, 'deleteTulora'])->name('deleteTulora');
+});
 
+Route::group(['prefix' => 'letszam'], function() {
+    Route::get("/", [\App\Http\Controllers\LetszamController::class, 'getAll'])->name("getLetszamok");
+    Route::get("/{letszam}", [\App\Http\Controllers\LetszamController::class, 'get'])->name("getLetszam");
+    Route::post("/", [\App\Http\Controllers\LetszamController::class, 'addLetszam'])->name('addLetszam');
+    Route::put('/{letszam}', [\App\Http\Controllers\LetszamController::class, 'updateLetszam'])->name('updateLetszam');
+    Route::delete('/{letszam}', [\App\Http\Controllers\LetszamController::class, 'deleteLetszam'])->name('deleteLetszam');
+});
+
+Route::group(['prefix' => 'mozgoorseg'], function() {
+    Route::get("/", [\App\Http\Controllers\MozgoorsegController::class, 'getAll'])->name("getMozgoorsegek");
+    Route::get("/{mozgoorseg}", [\App\Http\Controllers\MozgoorsegController::class, 'get'])->name("getMozgoorseg");
+    Route::post("/", [\App\Http\Controllers\MozgoorsegController::class, 'addMozgoorseg'])->name('addMozgoorseg');
+    Route::put('/{mozgoorseg}', [\App\Http\Controllers\MozgoorsegController::class, 'updateMozgoorseg'])->name('updateMozgoorseg');
+    Route::delete('/{mozgoorseg}', [\App\Http\Controllers\MozgoorsegController::class, 'deleteMozgoorseg'])->name('deleteMozgoorseg');
+});
