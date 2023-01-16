@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `allashelyek` (
   PRIMARY KEY (`ID`),
   UNIQUE KEY `mentoallomas` (`mentoallomas`,`ev`,`ho`),
   CONSTRAINT `FK_allashelyek_allomasok` FOREIGN KEY (`mentoallomas`) REFERENCES `allomasok` (`nev`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
 -- Tábla adatainak mentése lamafelhasznalok.allashelyek: ~3 rows (hozzávetőleg)
 INSERT INTO `allashelyek` (`ID`, `mentoallomas`, `ev`, `ho`, `szakorvos_szervezett`, `szakorvos_betoltott`, `szakorvos_ures`, `vezeto_mentotiszt_szervezett`, `vezeto_mentotiszt_betoltott`, `vezeto_mentotiszt_ures`, `orvos_mentotiszt_szervezett`, `orvos_mentotiszt_betoltott`, `orvos_mentotiszt_ures`, `foapolo_szervezett`, `foapolo_betoltott`, `foapolo_ures`, `mentoapolo_szervezett`, `mentoapolo_betoltott`, `mentoapolo_ures`, `mentoapolo_osszes_szervezett`, `mentoapolo_osszes_betoltott`, `mentoapolo_osszes_ures`, `allomasvezeto_szervezett`, `allomasvezeto_betoltott`, `allomasvezeto_ures`, `ICS_vezeto_szervezett`, `ICS_vezeto_betoltott`, `ICS_vezeto_ures`, `mentotiszt_szervezett`, `mentotiszt_betoltott`, `mentotiszt_ures`, `mentoapolo2_szervezett`, `mentoapolo2_betoltott`, `mentoapolo2_ures`, `apolo_szervezett`, `apolo_betoltott`, `apolo_ures`, `szolgalatvezeto_szervezett`, `szolgalatvezeto_betoltott`, `szolgalatvezeto_ures`, `apolo2_szervezett`, `apolo2_betoltott`, `apolo2_ures`, `uzemgazdasz_szervezett`, `uzemgazdasz_betoltott`, `uzemgazdasz_ures`, `uzemmernok_szervezett`, `uzemmernok_betoltott`, `uzemmernok_ures`, `oktatas_szervezo_szervezett`, `oktatas_szervezo_betoltott`, `oktatas_szervezo_ures`, `ugyintezo_szervezett`, `ugyintezo_betoltott`, `ugyintezo_ures`, `adminisztrator_szervezett`, `adminisztrator_betoltott`, `adminisztrator_ures`, `adatrogzito_szervezett`, `adatrogzito_betoltott`, `adatrogzito_ures`, `autoszerelo_szakmunkas_szervezett`, `autoszerelo_szakmunkas_betoltott`, `autoszerelo_szakmunkas_ures`, `karbantarto_szervezett`, `karbantarto_betoltott`, `karbantarto_ures`, `kazanfuto_szervezett`, `kazanfuto_betoltott`, `kazanfuto_ures`, `mentogepkocsivezeto_szervezett`, `mentogepkocsivezeto_betoltott`, `mentogepkocsivezeto_ures`, `muszaki_gondnok_szervezett`, `muszaki_gondnok_betoltott`, `muszaki_gondnok_ures`, `garazsmester_szervezett`, `garazsmester_betoltott`, `garazsmester_ures`, `szervezett_gkv_osszesen`, `betoltott_gkv_osszesen`, `ures_gkv_osszesen`, `szervezett_allashely_osszesen`, `betoltott_allashely_osszesen`, `ures_allashely_osszesen`) VALUES
@@ -350,7 +350,7 @@ CREATE TABLE IF NOT EXISTS `kulso_ellenorok` (
   `telefon` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci DEFAULT NULL,
   `kontakt_szemely` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
 -- Tábla adatainak mentése lamafelhasznalok.kulso_ellenorok: ~2 rows (hozzávetőleg)
 INSERT INTO `kulso_ellenorok` (`ID`, `nev`, `ir_szam`, `varos`, `kozterulet`, `kozt_jellege`, `hazszam`, `epulet_emelet_ajto`, `helyrazi_szam`, `email`, `telefon`, `kontakt_szemely`) VALUES
@@ -378,9 +378,9 @@ CREATE TABLE IF NOT EXISTS `letszam` (
   PRIMARY KEY (`ID`),
   UNIQUE KEY `mentoallomas` (`mentoallomas`,`ev`,`negyedev`),
   CONSTRAINT `FK_letszam_allomasok` FOREIGN KEY (`mentoallomas`) REFERENCES `allomasok` (`nev`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
--- Tábla adatainak mentése lamafelhasznalok.letszam: ~5 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.letszam: ~4 rows (hozzávetőleg)
 INSERT INTO `letszam` (`ID`, `mentoallomas`, `ev`, `negyedev`, `kivon_all_szevezett`, `kivon_all_betoltott`, `mentesiranyitas_szervezett`, `mentesiranyitas_betoltott`, `betegszall_szervezett`, `betegszall_betoltott`, `orvos_mentotiszt`, `apolo`, `mentesiranyitasban_dolg`, `mentogkvezeto`, `betegszall_iranyitasban_dolg`) VALUES
 	(1, 'Kapuvár', '2022', 1, 22.2, 22, 35, 33.4, 24.5, 21, 21, 25, 12.4, 14, 15),
 	(3, 'Sárvár', '2022', 2, 22.5, 22, 24.1, 22, 12.5, 11, 14, 18, 10, 8, 4.5),
@@ -414,7 +414,7 @@ CREATE TABLE IF NOT EXISTS `migransellatas` (
   PRIMARY KEY (`ID`),
   UNIQUE KEY `megyeID` (`megyeID`,`ev`,`honap`),
   CONSTRAINT `FK_migrans_ellatas_megyek` FOREIGN KEY (`megyeID`) REFERENCES `megyek` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
 -- Tábla adatainak mentése lamafelhasznalok.migransellatas: ~9 rows (hozzávetőleg)
 INSERT INTO `migransellatas` (`ID`, `megyeID`, `ev`, `honap`, `fo`, `megtett_km`) VALUES
@@ -495,9 +495,9 @@ CREATE TABLE IF NOT EXISTS `partnerek` (
   `adoszam` varchar(13) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `adoszam` (`adoszam`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb3;
 
--- Tábla adatainak mentése lamafelhasznalok.partnerek: ~6 rows (hozzávetőleg)
+-- Tábla adatainak mentése lamafelhasznalok.partnerek: ~5 rows (hozzávetőleg)
 INSERT INTO `partnerek` (`ID`, `nev`, `ir_szam`, `varos`, `kozterulet`, `kozt_jellege`, `hazszam`, `epulet_emelet_ajto`, `helyrazi_szam`, `email`, `telefon`, `adoszam`) VALUES
 	(1, 'TESCO-GLOBAL Áruházak Zrt.', 2040, 'Budaörs', 'Kinizsi', 'út', '1-3.', NULL, NULL, 'tescoglobalzrt@hu.tesco-europe.com', NULL, '10307078-2-44'),
 	(2, 'ALDI Magyarország Élelmiszer Bt.', 2051, 'Biatorbágy', 'Mészárosok ', 'útja', '2.', NULL, NULL, 'ugyvezetes@aldi.hu', '06 23 504 680', '22234663-2-44'),
@@ -523,14 +523,15 @@ CREATE TABLE IF NOT EXISTS `tulorak` (
   PRIMARY KEY (`ID`),
   UNIQUE KEY `mentoallomas` (`mentoallomas`,`ev`,`honap`),
   CONSTRAINT `FK_tulorak_allomasok` FOREIGN KEY (`mentoallomas`) REFERENCES `allomasok` (`nev`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
 -- Tábla adatainak mentése lamafelhasznalok.tulorak: ~4 rows (hozzávetőleg)
 INSERT INTO `tulorak` (`ID`, `mentoallomas`, `ev`, `honap`, `ment_fel_miatti_tulora`, `egyeb_tulora`, `orvos_mentotiszt`, `apolo`, `mentesiranyitasban_dolg`, `mentogkvezeto`, `betegszall_iranyitasban_dolg`) VALUES
 	(1, 'Celldömölk', '2022', 2, 50.5, 14.5, 12, 20, 13.5, 10.4, 15.9),
 	(2, 'Őriszentpéter', '2022', 2, 1, 2, 3, 4, 5, 6, 7.48),
 	(4, 'Nagykanizsa', '2022', 1, 14, 17.11, 14, 12, 15, 17, 17.99),
-	(8, 'Csorna', '2022', 1, 12.5, 7.99, 16, 24, 16, 8, 6.5);
+	(8, 'Csorna', '2022', 1, 12.5, 7.99, 16, 24, 16, 8, 8.5),
+	(9, 'Őriszentpéter', '2022', 3, 20, 8, 4, 6, 1, 2, 12);
 
 -- Struktúra mentése tábla lamafelhasznalok. users
 DROP TABLE IF EXISTS `users`;
@@ -538,7 +539,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `IVIR` int unsigned NOT NULL,
   `Vezetek_nev` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL DEFAULT '',
   `Kereszt_nev` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL DEFAULT '',
-  `Jelszo` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL DEFAULT '',
+  `password` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_hungarian_ci NOT NULL DEFAULT '',
   `Vas` int NOT NULL DEFAULT '0',
   `Gyor` int NOT NULL DEFAULT '0',
   `Zala` int NOT NULL DEFAULT '0',
@@ -548,11 +549,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_hungarian_ci;
 
 -- Tábla adatainak mentése lamafelhasznalok.users: ~6 rows (hozzávetőleg)
-INSERT INTO `users` (`IVIR`, `Vezetek_nev`, `Kereszt_nev`, `Jelszo`, `Vas`, `Gyor`, `Zala`, `Admin`, `Aktiv`) VALUES
-	(22222, 'Szalai', 'Nóra', 'MTIxMg==', 0, 0, 1, 1, 1),
+INSERT INTO `users` (`IVIR`, `Vezetek_nev`, `Kereszt_nev`, `password`, `Vas`, `Gyor`, `Zala`, `Admin`, `Aktiv`) VALUES
 	(121212, 'Horváth', 'Máté', 'MTIxMg==', 0, 1, 0, 0, 1),
 	(121313, 'Kovács', 'Anita', 'MTIxMg==', 1, 0, 0, 1, 1),
 	(123456, 'Szabó', 'Dominik', 'MTIxMg==', 1, 0, 0, 1, 1),
+	(222221, 'Szalai', 'Nóra', 'MTIxMg==', 0, 0, 1, 1, 1),
 	(222222, 'Gaál', 'Bence', 'MTIxMg==', 1, 0, 0, 0, 1),
 	(654321, 'Nagy', 'Hanna', 'MTIxMg==', 0, 0, 1, 1, 1);
 
