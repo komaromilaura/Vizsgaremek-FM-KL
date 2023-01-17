@@ -10,7 +10,7 @@ function Topbar (props) {
     const { user, logout } = useAuthContext();
 
     return(
-        <Navbar className={style.navbar} expand="md">
+        <Navbar sticky="top" className={style.navbar} expand="md">
         <Container fluid>
             <Navbar.Brand>
             <img src={logo} alt="Országos Mentőszolgálat logója" width="65rem"/>
