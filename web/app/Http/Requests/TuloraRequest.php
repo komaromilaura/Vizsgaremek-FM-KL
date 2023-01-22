@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class TuloraRequest extends FormRequest
 {
@@ -24,7 +25,11 @@ class TuloraRequest extends FormRequest
     public function rules()
     {
         return [
-            'mentoallomas' => 'required|string',
+            'mentoallomas' => [
+                'required',
+                'string',
+                Rule::notIn(['-1']),
+            ],
             'ev' => 'required|numeric|min:2000|max:2050',
             'honap' => 'required|numeric|min:1|max:12',
             'ment_fel_miatti_tulora' => 'required|numeric|min:0',

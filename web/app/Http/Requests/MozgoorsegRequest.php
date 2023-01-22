@@ -25,7 +25,11 @@ class MozgoorsegRequest extends FormRequest
     public function rules()
     {
         return [
-            'megrendeloID' => 'required|numeric|min:1',
+            'megrendeloID' => [
+                'required',
+                'numeric',
+                Rule::notIn(['-1'])
+            ],
             'szerzodesszam'=> [
                 'required',
                 'string',
@@ -36,7 +40,11 @@ class MozgoorsegRequest extends FormRequest
             'rendezveny_neve' => 'required|string',
             'rendezveny_datuma' => 'required|date',
             'rendezveny_helye' => 'required|string',
-            'mentoallomas' => 'required|string',
+            'mentoallomas' => [
+                'required',
+                'string',
+                Rule::notIn(['-1']),
+            ],
             'roko' => 'required|numeric|min:0',
             'eset' => 'required|numeric|min:0',
             'mentogk' => 'required|numeric|min:0',

@@ -25,7 +25,11 @@ class BeszerzesRequest extends FormRequest
     public function rules()
     {
         return [
-            'mentoallomas' => 'required|string',
+            'mentoallomas' => [
+                'required',
+                'string',
+                Rule::notIn(['-1']),
+            ],
             'targy' => 'required|string',
             'besz_igeny_datum'=> 'required|date',
             'ajanlat_bekeres'=> 'required|date',
@@ -45,7 +49,11 @@ class BeszerzesRequest extends FormRequest
             'munkalap_kiallitasa' => 'required|date',
             'szamla_kiallitasa' => 'required|date',
             'szamla_tovább_pu_nek_utalasra' => 'required|date',
-            'partnerID' => 'required|numeric|min:1',
+            'partnerID' => [
+                'required',
+                'numeric',
+                Rule::notIn(['-1'])
+            ],
         ];
     }
 }

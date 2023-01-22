@@ -25,7 +25,11 @@ class KulsoEllenorzesRequest extends FormRequest
     public function rules()
     {
         return [
-            'ellenorzest_vegzoID' => 'required|numeric',
+            'ellenorzest_vegzoID' => [
+                'required',
+                'numeric',
+                Rule::notIn(['-1'])
+            ],
             'ell_azon' => [
                 'required',
                 'string',
@@ -34,7 +38,11 @@ class KulsoEllenorzesRequest extends FormRequest
                 Rule::unique('kulso_ell')
             ],
             'ell_iktszam' => 'nullable|string',
-            'ell_szerv' => 'required|string',
+            'ell_szerv' => [
+                'required',
+                'string',
+                Rule::notIn(['-1']),
+            ],
             'kapcsolattarto_neve' => 'required|string',
             'kapcsolattarto_tel' => 'required|string',
             'ell_targya' => 'required|string',
@@ -44,7 +52,11 @@ class KulsoEllenorzesRequest extends FormRequest
             'int_terv_iktszama' => 'required|string',
             'int_terv_jovahagyas_datuma' => 'required|date',
             'felelos_beosztas' => 'required|string',
-            'felelos_szerv_egyseg' => 'required|string',
+            'felelos_szerv_egyseg' => [
+                'required',
+                'string',
+                Rule::notIn(['-1']),
+            ],
             'int_vegrehajt_hatarido' => 'required|date',
             'hatarido_mod_1' => 'required|boolean',
             'hatarido_mod_2' => 'nullable|date',

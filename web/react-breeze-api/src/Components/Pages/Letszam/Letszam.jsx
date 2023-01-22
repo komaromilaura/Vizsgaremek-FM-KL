@@ -393,7 +393,7 @@ function Letszam(props) {
                 </Col>
             </Row>
             <Row>
-                <h2 className="text-center text-decoration-underline p-4">Túlóra/fő (munkaköri csoportos)</h2>        
+                <hr className="mt-4"/>        
                 <Col lg={4} md={6} className="py-2">
                     <Form.Group>
                         <Form.Label>

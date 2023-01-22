@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class MigransEllatasRequest extends FormRequest
 {
@@ -24,7 +25,11 @@ class MigransEllatasRequest extends FormRequest
     public function rules()
     {
         return [
-            'megyeID' => 'required|numeric|min:1',
+            'megyeID' => [
+                'required',
+                'numeric',
+                Rule::notIn(['-1'])
+            ],
             'ev' => 'required|numeric|min:2000|max:2050',
             'honap' => 'required|numeric|min:1|max:12',
             'fo' => 'required|numeric|min:0',

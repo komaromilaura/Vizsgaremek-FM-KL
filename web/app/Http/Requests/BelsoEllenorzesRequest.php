@@ -33,7 +33,11 @@ class BelsoEllenorzesRequest extends FormRequest
                 Rule::unique('belso_ell')
             ],
             'ell_iktszam' => 'nullable|string',
-            'ell_szerv' => 'required|string',
+            'ell_szerv' => [
+                'required',
+                'string',
+                Rule::notIn(['-1']),
+            ],
             'ell_targya' => 'required|string',
             'intezkedest_igenylo_megall' => 'required|string',
             'ell_javaslat' => 'required|string',
@@ -41,7 +45,11 @@ class BelsoEllenorzesRequest extends FormRequest
             'int_terv_iktszama' => 'required|string',
             'int_terv_jovahagyas_datuma' => 'required|date',
             'felelos_beosztas' => 'required|string',
-            'felelos_szerv_egyseg' => 'required|string',
+            'felelos_szerv_egyseg' => [
+                'required',
+                'string',
+                Rule::notIn(['-1']),
+            ],
             'int_vegrehajt_hatarido' => 'required|date',
             'hatarido_mod_1' => 'required|boolean',
             'hatarido_mod_2' => 'nullable|date',

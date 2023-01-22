@@ -104,7 +104,7 @@ return [
     ],
     'min_digits' => 'The :attribute must have at least :min digits.',
     'multiple_of' => 'The :attribute must be a multiple of :value.',
-    'not_in' => 'The selected :attribute is invalid.',
+    'not_in' => 'A(z) kiválasztott :attribute érvénytelen.',
     'not_regex' => 'The :attribute format is invalid.',
     'numeric' => 'A(z) :attribute mező szám kell, hogy legyen.',
     'password' => [

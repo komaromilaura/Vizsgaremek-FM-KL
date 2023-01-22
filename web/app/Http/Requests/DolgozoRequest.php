@@ -60,8 +60,16 @@ class DolgozoRequest extends FormRequest
             'epulet_emelet_ajto' => 'nullable|string',
             'ceges_email' => 'required|email',
             'telefon' => 'required|string',
-            'allomas' => 'required|string',
-            'munkakorID' => 'required|numeric',            
+            'allomas' => [
+                'required',
+                'string',
+                Rule::notIn(['-1']),
+            ],
+            'munkakorID' => [
+                'required',
+                'numeric',
+                Rule::notIn(['-1']),
+            ],            
         ];
     }
 }
