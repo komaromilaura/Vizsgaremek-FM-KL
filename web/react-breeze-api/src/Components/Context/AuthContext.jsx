@@ -15,7 +15,12 @@ export const AuthProvider = ({ children }) => {
     const getUser = async () => {
         try{
             const {data} = await axios.get('/api/user');
-            setUser(data);
+            if(data.Aktiv === 1){
+                setUser(data);
+            }else {
+                alert("A felhasználó inaktív, nem engedélyezett a belépés.");
+                logout();
+            }            
         }catch(error){
             console.log("Az oldal tartalmának megtekintéséhez bejelentkezés szükséges.");
         }        

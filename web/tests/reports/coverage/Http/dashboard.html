@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for E:\laragon\www\vizsgaremek 2022.01.17\web\app\Http</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">E:\laragon\www\vizsgaremek 2022.01.17\web\app</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Http</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controllers/Auth/AuthenticatedSessionController.php.html#11">App\Http\Controllers\Auth\AuthenticatedSessionController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/EnsureEmailIsVerified.php.html#10">App\Http\Middleware\EnsureEmailIsVerified</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#10">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/TrustHosts.php.html#7">App\Http\Middleware\TrustHosts</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Requests/Auth/LoginRequest.php.html#12">App\Http\Requests\Auth\LoginRequest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Requests/UserRequest.php.html#8">App\Http\Requests\UserRequest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#8">App\Http\Controllers\UserController</a></td><td class="text-right">25%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Requests/Auth/LoginRequest.php.html#12">App\Http\Requests\Auth\LoginRequest</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Middleware/EnsureEmailIsVerified.php.html#10">App\Http\Middleware\EnsureEmailIsVerified</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#10">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controllers/AllashelyController.php.html#215"><abbr title="App\Http\Controllers\AllashelyController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AllashelyController.php.html#220"><abbr title="App\Http\Controllers\AllashelyController::fileExportMegyenkent">fileExportMegyenkent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/AuthenticatedSessionController.php.html#16"><abbr title="App\Http\Controllers\Auth\AuthenticatedSessionController::store">store</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/AuthenticatedSessionController.php.html#28"><abbr title="App\Http\Controllers\Auth\AuthenticatedSessionController::destroy">destroy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BelsoEllenorzesController.php.html#91"><abbr title="App\Http\Controllers\BelsoEllenorzesController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BelsoEllenorzesController.php.html#96"><abbr title="App\Http\Controllers\BelsoEllenorzesController::fileExportMegyenkent">fileExportMegyenkent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BeszerzesController.php.html#75"><abbr title="App\Http\Controllers\BeszerzesController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BeszerzesController.php.html#80"><abbr title="App\Http\Controllers\BeszerzesController::fileExportMegyenkent">fileExportMegyenkent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/DolgozoController.php.html#76"><abbr title="App\Http\Controllers\DolgozoController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/EllenorController.php.html#68"><abbr title="App\Http\Controllers\EllenorController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/KulsoEllenorzesController.php.html#97"><abbr title="App\Http\Controllers\KulsoEllenorzesController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/KulsoEllenorzesController.php.html#102"><abbr title="App\Http\Controllers\KulsoEllenorzesController::fileExportMegyenkent">fileExportMegyenkent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/LetszamController.php.html#75"><abbr title="App\Http\Controllers\LetszamController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/LetszamController.php.html#80"><abbr title="App\Http\Controllers\LetszamController::fileExportMegyenkent">fileExportMegyenkent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/MigransEllatasController.php.html#57"><abbr title="App\Http\Controllers\MigransEllatasController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/MigransEllatasController.php.html#62"><abbr title="App\Http\Controllers\MigransEllatasController::fileExportMegyenkent">fileExportMegyenkent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/MozgoorsegController.php.html#73"><abbr title="App\Http\Controllers\MozgoorsegController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/MozgoorsegController.php.html#78"><abbr title="App\Http\Controllers\MozgoorsegController::fileExportMegyenkent">fileExportMegyenkent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/PartnerController.php.html#68"><abbr title="App\Http\Controllers\PartnerController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/TuloraController.php.html#67"><abbr title="App\Http\Controllers\TuloraController::fileExport">fileExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/TuloraController.php.html#72"><abbr title="App\Http\Controllers\TuloraController::fileExportMegyenkent">fileExportMegyenkent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UserController.php.html#15"><abbr title="App\Http\Controllers\UserController::updatePassword">updatePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#15"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/EnsureEmailIsVerified.php.html#17"><abbr title="App\Http\Middleware\EnsureEmailIsVerified::handle">handle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#20"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/TrustHosts.php.html#14"><abbr title="App\Http\Middleware\TrustHosts::hosts">hosts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Requests/Auth/LoginRequest.php.html#17"><abbr title="App\Http\Requests\Auth\LoginRequest::authorize">authorize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Requests/Auth/LoginRequest.php.html#27"><abbr title="App\Http\Requests\Auth\LoginRequest::rules">rules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Requests/Auth/LoginRequest.php.html#46"><abbr title="App\Http\Requests\Auth\LoginRequest::authenticate">authenticate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Requests/Auth/LoginRequest.php.html#66"><abbr title="App\Http\Requests\Auth\LoginRequest::ensureIsNotRateLimited">ensureIsNotRateLimited</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Requests/Auth/LoginRequest.php.html#87"><abbr title="App\Http\Requests\Auth\LoginRequest::throttleKey">throttleKey</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Requests/UserRequest.php.html#15"><abbr title="App\Http\Requests\UserRequest::authorize">authorize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Requests/UserRequest.php.html#25"><abbr title="App\Http\Requests\UserRequest::rules">rules</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Middleware/EnsureEmailIsVerified.php.html#17"><abbr title="App\Http\Middleware\EnsureEmailIsVerified::handle">handle</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#20"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#15"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Requests/Auth/LoginRequest.php.html#46"><abbr title="App\Http\Requests\Auth\LoginRequest::authenticate">authenticate</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Requests/Auth/LoginRequest.php.html#66"><abbr title="App\Http\Requests\Auth\LoginRequest::ensureIsNotRateLimited">ensureIsNotRateLimited</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.23</a> using <a href="https://secure.php.net/" target="_top">PHP 8.1.10</a> and <a href="https://phpunit.de/">PHPUnit 9.5.28</a> at Sun Jan 22 22:51:13 CET 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([7,0,0,1,0,0,0,0,0,0,11,22], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([33,0,0,0,0,0,0,0,0,0,0,84], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[98.88888888888889,7,"<a href=\"Controllers\/AllashelyController.php.html#10\">App\\Http\\Controllers\\AllashelyController<\/a>"],[100,2,"<a href=\"Controllers\/AllomasController.php.html#7\">App\\Http\\Controllers\\AllomasController<\/a>"],[0,2,"<a href=\"Controllers\/Auth\/AuthenticatedSessionController.php.html#11\">App\\Http\\Controllers\\Auth\\AuthenticatedSessionController<\/a>"],[96.42857142857143,7,"<a href=\"Controllers\/BelsoEllenorzesController.php.html#10\">App\\Http\\Controllers\\BelsoEllenorzesController<\/a>"],[95.23809523809523,7,"<a href=\"Controllers\/BeszerzesController.php.html#10\">App\\Http\\Controllers\\BeszerzesController<\/a>"],[100,0,"<a href=\"Controllers\/Controller.php.html#10\">App\\Http\\Controllers\\Controller<\/a>"],[97.5609756097561,6,"<a href=\"Controllers\/DolgozoController.php.html#9\">App\\Http\\Controllers\\DolgozoController<\/a>"],[96.96969696969697,6,"<a href=\"Controllers\/EllenorController.php.html#9\">App\\Http\\Controllers\\EllenorController<\/a>"],[96.7741935483871,7,"<a href=\"Controllers\/KulsoEllenorzesController.php.html#10\">App\\Http\\Controllers\\KulsoEllenorzesController<\/a>"],[95,7,"<a href=\"Controllers\/LetszamController.php.html#10\">App\\Http\\Controllers\\LetszamController<\/a>"],[100,2,"<a href=\"Controllers\/MegyeController.php.html#7\">App\\Http\\Controllers\\MegyeController<\/a>"],[90.9090909090909,7,"<a href=\"Controllers\/MigransEllatasController.php.html#10\">App\\Http\\Controllers\\MigransEllatasController<\/a>"],[94.73684210526315,7,"<a href=\"Controllers\/MozgoorsegController.php.html#10\">App\\Http\\Controllers\\MozgoorsegController<\/a>"],[100,2,"<a href=\"Controllers\/MunkakorController.php.html#7\">App\\Http\\Controllers\\MunkakorController<\/a>"],[96.96969696969697,6,"<a href=\"Controllers\/PartnerController.php.html#9\">App\\Http\\Controllers\\PartnerController<\/a>"],[93.75,7,"<a href=\"Controllers\/TuloraController.php.html#10\">App\\Http\\Controllers\\TuloraController<\/a>"],[25,2,"<a href=\"Controllers\/UserController.php.html#8\">App\\Http\\Controllers\\UserController<\/a>"],[100,0,"<a href=\"Kernel.php.html#7\">App\\Http\\Kernel<\/a>"],[0,2,"<a href=\"Middleware\/Authenticate.php.html#7\">App\\Http\\Middleware\\Authenticate<\/a>"],[100,0,"<a href=\"Middleware\/EncryptCookies.php.html#7\">App\\Http\\Middleware\\EncryptCookies<\/a>"],[0,4,"<a href=\"Middleware\/EnsureEmailIsVerified.php.html#10\">App\\Http\\Middleware\\EnsureEmailIsVerified<\/a>"],[100,0,"<a href=\"Middleware\/PreventRequestsDuringMaintenance.php.html#7\">App\\Http\\Middleware\\PreventRequestsDuringMaintenance<\/a>"],[0,4,"<a href=\"Middleware\/RedirectIfAuthenticated.php.html#10\">App\\Http\\Middleware\\RedirectIfAuthenticated<\/a>"],[100,0,"<a href=\"Middleware\/TrimStrings.php.html#7\">App\\Http\\Middleware\\TrimStrings<\/a>"],[0,1,"<a href=\"Middleware\/TrustHosts.php.html#7\">App\\Http\\Middleware\\TrustHosts<\/a>"],[100,0,"<a href=\"Middleware\/TrustProxies.php.html#8\">App\\Http\\Middleware\\TrustProxies<\/a>"],[100,0,"<a href=\"Middleware\/ValidateSignature.php.html#7\">App\\Http\\Middleware\\ValidateSignature<\/a>"],[100,0,"<a href=\"Middleware\/VerifyCsrfToken.php.html#7\">App\\Http\\Middleware\\VerifyCsrfToken<\/a>"],[100,2,"<a href=\"Requests\/AllashelyRequest.php.html#7\">App\\Http\\Requests\\AllashelyRequest<\/a>"],[0,7,"<a href=\"Requests\/Auth\/LoginRequest.php.html#12\">App\\Http\\Requests\\Auth\\LoginRequest<\/a>"],[100,3,"<a href=\"Requests\/BelsoEllenorzesRequest.php.html#8\">App\\Http\\Requests\\BelsoEllenorzesRequest<\/a>"],[100,3,"<a href=\"Requests\/BeszerzesRequest.php.html#8\">App\\Http\\Requests\\BeszerzesRequest<\/a>"],[100,5,"<a href=\"Requests\/DolgozoRequest.php.html#8\">App\\Http\\Requests\\DolgozoRequest<\/a>"],[100,2,"<a href=\"Requests\/EllenorRequest.php.html#7\">App\\Http\\Requests\\EllenorRequest<\/a>"],[100,3,"<a href=\"Requests\/KulsoEllenorzesRequest.php.html#8\">App\\Http\\Requests\\KulsoEllenorzesRequest<\/a>"],[100,2,"<a href=\"Requests\/LetszamRequest.php.html#8\">App\\Http\\Requests\\LetszamRequest<\/a>"],[100,2,"<a href=\"Requests\/MigransEllatasRequest.php.html#8\">App\\Http\\Requests\\MigransEllatasRequest<\/a>"],[100,3,"<a href=\"Requests\/MozgoorsegRequest.php.html#8\">App\\Http\\Requests\\MozgoorsegRequest<\/a>"],[100,3,"<a href=\"Requests\/PartnerRequest.php.html#8\">App\\Http\\Requests\\PartnerRequest<\/a>"],[100,2,"<a href=\"Requests\/TuloraRequest.php.html#8\">App\\Http\\Requests\\TuloraRequest<\/a>"],[0,2,"<a href=\"Requests\/UserRequest.php.html#8\">App\\Http\\Requests\\UserRequest<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Controllers\/AllashelyController.php.html#12\">App\\Http\\Controllers\\AllashelyController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/AllashelyController.php.html#19\">App\\Http\\Controllers\\AllashelyController::get<\/a>"],[100,1,"<a href=\"Controllers\/AllashelyController.php.html#24\">App\\Http\\Controllers\\AllashelyController::addAllashely<\/a>"],[100,1,"<a href=\"Controllers\/AllashelyController.php.html#116\">App\\Http\\Controllers\\AllashelyController::updateAllashely<\/a>"],[100,1,"<a href=\"Controllers\/AllashelyController.php.html#208\">App\\Http\\Controllers\\AllashelyController::deleteAllashely<\/a>"],[0,1,"<a href=\"Controllers\/AllashelyController.php.html#215\">App\\Http\\Controllers\\AllashelyController::fileExport<\/a>"],[0,1,"<a href=\"Controllers\/AllashelyController.php.html#220\">App\\Http\\Controllers\\AllashelyController::fileExportMegyenkent<\/a>"],[100,1,"<a href=\"Controllers\/AllomasController.php.html#9\">App\\Http\\Controllers\\AllomasController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/AllomasController.php.html#15\">App\\Http\\Controllers\\AllomasController::get<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/AuthenticatedSessionController.php.html#16\">App\\Http\\Controllers\\Auth\\AuthenticatedSessionController::store<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/AuthenticatedSessionController.php.html#28\">App\\Http\\Controllers\\Auth\\AuthenticatedSessionController::destroy<\/a>"],[100,1,"<a href=\"Controllers\/BelsoEllenorzesController.php.html#12\">App\\Http\\Controllers\\BelsoEllenorzesController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/BelsoEllenorzesController.php.html#19\">App\\Http\\Controllers\\BelsoEllenorzesController::get<\/a>"],[100,1,"<a href=\"Controllers\/BelsoEllenorzesController.php.html#24\">App\\Http\\Controllers\\BelsoEllenorzesController::addBelsoEllenorzes<\/a>"],[100,1,"<a href=\"Controllers\/BelsoEllenorzesController.php.html#54\">App\\Http\\Controllers\\BelsoEllenorzesController::updateBelsoEllenorzes<\/a>"],[100,1,"<a href=\"Controllers\/BelsoEllenorzesController.php.html#84\">App\\Http\\Controllers\\BelsoEllenorzesController::deleteBelsoEllenorzes<\/a>"],[0,1,"<a href=\"Controllers\/BelsoEllenorzesController.php.html#91\">App\\Http\\Controllers\\BelsoEllenorzesController::fileExport<\/a>"],[0,1,"<a href=\"Controllers\/BelsoEllenorzesController.php.html#96\">App\\Http\\Controllers\\BelsoEllenorzesController::fileExportMegyenkent<\/a>"],[100,1,"<a href=\"Controllers\/BeszerzesController.php.html#12\">App\\Http\\Controllers\\BeszerzesController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/BeszerzesController.php.html#18\">App\\Http\\Controllers\\BeszerzesController::get<\/a>"],[100,1,"<a href=\"Controllers\/BeszerzesController.php.html#22\">App\\Http\\Controllers\\BeszerzesController::addBeszerzes<\/a>"],[100,1,"<a href=\"Controllers\/BeszerzesController.php.html#46\">App\\Http\\Controllers\\BeszerzesController::updateBeszerzes<\/a>"],[100,1,"<a href=\"Controllers\/BeszerzesController.php.html#68\">App\\Http\\Controllers\\BeszerzesController::deleteBeszerzes<\/a>"],[0,1,"<a href=\"Controllers\/BeszerzesController.php.html#75\">App\\Http\\Controllers\\BeszerzesController::fileExport<\/a>"],[0,1,"<a href=\"Controllers\/BeszerzesController.php.html#80\">App\\Http\\Controllers\\BeszerzesController::fileExportMegyenkent<\/a>"],[100,1,"<a href=\"Controllers\/DolgozoController.php.html#11\">App\\Http\\Controllers\\DolgozoController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/DolgozoController.php.html#18\">App\\Http\\Controllers\\DolgozoController::get<\/a>"],[100,1,"<a href=\"Controllers\/DolgozoController.php.html#23\">App\\Http\\Controllers\\DolgozoController::addDolgozo<\/a>"],[100,1,"<a href=\"Controllers\/DolgozoController.php.html#46\">App\\Http\\Controllers\\DolgozoController::updateDolgozo<\/a>"],[100,1,"<a href=\"Controllers\/DolgozoController.php.html#69\">App\\Http\\Controllers\\DolgozoController::deleteDolgozo<\/a>"],[0,1,"<a href=\"Controllers\/DolgozoController.php.html#76\">App\\Http\\Controllers\\DolgozoController::fileExport<\/a>"],[100,1,"<a href=\"Controllers\/EllenorController.php.html#11\">App\\Http\\Controllers\\EllenorController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/EllenorController.php.html#18\">App\\Http\\Controllers\\EllenorController::get<\/a>"],[100,1,"<a href=\"Controllers\/EllenorController.php.html#23\">App\\Http\\Controllers\\EllenorController::addEllenor<\/a>"],[100,1,"<a href=\"Controllers\/EllenorController.php.html#42\">App\\Http\\Controllers\\EllenorController::updateEllenor<\/a>"],[100,1,"<a href=\"Controllers\/EllenorController.php.html#61\">App\\Http\\Controllers\\EllenorController::deleteEllenor<\/a>"],[0,1,"<a href=\"Controllers\/EllenorController.php.html#68\">App\\Http\\Controllers\\EllenorController::fileExport<\/a>"],[100,1,"<a href=\"Controllers\/KulsoEllenorzesController.php.html#12\">App\\Http\\Controllers\\KulsoEllenorzesController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/KulsoEllenorzesController.php.html#19\">App\\Http\\Controllers\\KulsoEllenorzesController::get<\/a>"],[100,1,"<a href=\"Controllers\/KulsoEllenorzesController.php.html#24\">App\\Http\\Controllers\\KulsoEllenorzesController::addkulsoEllenorzes<\/a>"],[100,1,"<a href=\"Controllers\/KulsoEllenorzesController.php.html#57\">App\\Http\\Controllers\\KulsoEllenorzesController::updatekulsoEllenorzes<\/a>"],[100,1,"<a href=\"Controllers\/KulsoEllenorzesController.php.html#91\">App\\Http\\Controllers\\KulsoEllenorzesController::deletekulsoEllenorzes<\/a>"],[0,1,"<a href=\"Controllers\/KulsoEllenorzesController.php.html#97\">App\\Http\\Controllers\\KulsoEllenorzesController::fileExport<\/a>"],[0,1,"<a href=\"Controllers\/KulsoEllenorzesController.php.html#102\">App\\Http\\Controllers\\KulsoEllenorzesController::fileExportMegyenkent<\/a>"],[100,1,"<a href=\"Controllers\/LetszamController.php.html#12\">App\\Http\\Controllers\\LetszamController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/LetszamController.php.html#18\">App\\Http\\Controllers\\LetszamController::get<\/a>"],[100,1,"<a href=\"Controllers\/LetszamController.php.html#22\">App\\Http\\Controllers\\LetszamController::addLetszam<\/a>"],[100,1,"<a href=\"Controllers\/LetszamController.php.html#46\">App\\Http\\Controllers\\LetszamController::updateLetszam<\/a>"],[100,1,"<a href=\"Controllers\/LetszamController.php.html#68\">App\\Http\\Controllers\\LetszamController::deleteLetszam<\/a>"],[0,1,"<a href=\"Controllers\/LetszamController.php.html#75\">App\\Http\\Controllers\\LetszamController::fileExport<\/a>"],[0,1,"<a href=\"Controllers\/LetszamController.php.html#80\">App\\Http\\Controllers\\LetszamController::fileExportMegyenkent<\/a>"],[100,1,"<a href=\"Controllers\/MegyeController.php.html#9\">App\\Http\\Controllers\\MegyeController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/MegyeController.php.html#15\">App\\Http\\Controllers\\MegyeController::get<\/a>"],[100,1,"<a href=\"Controllers\/MigransEllatasController.php.html#12\">App\\Http\\Controllers\\MigransEllatasController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/MigransEllatasController.php.html#18\">App\\Http\\Controllers\\MigransEllatasController::get<\/a>"],[100,1,"<a href=\"Controllers\/MigransEllatasController.php.html#22\">App\\Http\\Controllers\\MigransEllatasController::addMigransEllatas<\/a>"],[100,1,"<a href=\"Controllers\/MigransEllatasController.php.html#37\">App\\Http\\Controllers\\MigransEllatasController::updateMigransEllatas<\/a>"],[100,1,"<a href=\"Controllers\/MigransEllatasController.php.html#50\">App\\Http\\Controllers\\MigransEllatasController::deleteMigransEllatas<\/a>"],[0,1,"<a href=\"Controllers\/MigransEllatasController.php.html#57\">App\\Http\\Controllers\\MigransEllatasController::fileExport<\/a>"],[0,1,"<a href=\"Controllers\/MigransEllatasController.php.html#62\">App\\Http\\Controllers\\MigransEllatasController::fileExportMegyenkent<\/a>"],[100,1,"<a href=\"Controllers\/MozgoorsegController.php.html#12\">App\\Http\\Controllers\\MozgoorsegController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/MozgoorsegController.php.html#18\">App\\Http\\Controllers\\MozgoorsegController::get<\/a>"],[100,1,"<a href=\"Controllers\/MozgoorsegController.php.html#22\">App\\Http\\Controllers\\MozgoorsegController::addMozgoorseg<\/a>"],[100,1,"<a href=\"Controllers\/MozgoorsegController.php.html#45\">App\\Http\\Controllers\\MozgoorsegController::updateMozgoorseg<\/a>"],[100,1,"<a href=\"Controllers\/MozgoorsegController.php.html#66\">App\\Http\\Controllers\\MozgoorsegController::deleteMozgoorseg<\/a>"],[0,1,"<a href=\"Controllers\/MozgoorsegController.php.html#73\">App\\Http\\Controllers\\MozgoorsegController::fileExport<\/a>"],[0,1,"<a href=\"Controllers\/MozgoorsegController.php.html#78\">App\\Http\\Controllers\\MozgoorsegController::fileExportMegyenkent<\/a>"],[100,1,"<a href=\"Controllers\/MunkakorController.php.html#9\">App\\Http\\Controllers\\MunkakorController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/MunkakorController.php.html#15\">App\\Http\\Controllers\\MunkakorController::get<\/a>"],[100,1,"<a href=\"Controllers\/PartnerController.php.html#11\">App\\Http\\Controllers\\PartnerController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/PartnerController.php.html#18\">App\\Http\\Controllers\\PartnerController::get<\/a>"],[100,1,"<a href=\"Controllers\/PartnerController.php.html#23\">App\\Http\\Controllers\\PartnerController::addPartner<\/a>"],[100,1,"<a href=\"Controllers\/PartnerController.php.html#42\">App\\Http\\Controllers\\PartnerController::updatePartner<\/a>"],[100,1,"<a href=\"Controllers\/PartnerController.php.html#61\">App\\Http\\Controllers\\PartnerController::deletePartner<\/a>"],[0,1,"<a href=\"Controllers\/PartnerController.php.html#68\">App\\Http\\Controllers\\PartnerController::fileExport<\/a>"],[100,1,"<a href=\"Controllers\/TuloraController.php.html#12\">App\\Http\\Controllers\\TuloraController::getAll<\/a>"],[100,1,"<a href=\"Controllers\/TuloraController.php.html#18\">App\\Http\\Controllers\\TuloraController::get<\/a>"],[100,1,"<a href=\"Controllers\/TuloraController.php.html#22\">App\\Http\\Controllers\\TuloraController::addTulora<\/a>"],[100,1,"<a href=\"Controllers\/TuloraController.php.html#42\">App\\Http\\Controllers\\TuloraController::updateTulora<\/a>"],[100,1,"<a href=\"Controllers\/TuloraController.php.html#60\">App\\Http\\Controllers\\TuloraController::deleteTulora<\/a>"],[0,1,"<a href=\"Controllers\/TuloraController.php.html#67\">App\\Http\\Controllers\\TuloraController::fileExport<\/a>"],[0,1,"<a href=\"Controllers\/TuloraController.php.html#72\">App\\Http\\Controllers\\TuloraController::fileExportMegyenkent<\/a>"],[100,1,"<a href=\"Controllers\/UserController.php.html#10\">App\\Http\\Controllers\\UserController::get<\/a>"],[0,1,"<a href=\"Controllers\/UserController.php.html#15\">App\\Http\\Controllers\\UserController::updatePassword<\/a>"],[0,2,"<a href=\"Middleware\/Authenticate.php.html#15\">App\\Http\\Middleware\\Authenticate::redirectTo<\/a>"],[0,4,"<a href=\"Middleware\/EnsureEmailIsVerified.php.html#17\">App\\Http\\Middleware\\EnsureEmailIsVerified::handle<\/a>"],[0,4,"<a href=\"Middleware\/RedirectIfAuthenticated.php.html#20\">App\\Http\\Middleware\\RedirectIfAuthenticated::handle<\/a>"],[0,1,"<a href=\"Middleware\/TrustHosts.php.html#14\">App\\Http\\Middleware\\TrustHosts::hosts<\/a>"],[100,1,"<a href=\"Requests\/AllashelyRequest.php.html#14\">App\\Http\\Requests\\AllashelyRequest::authorize<\/a>"],[100,1,"<a href=\"Requests\/AllashelyRequest.php.html#24\">App\\Http\\Requests\\AllashelyRequest::rules<\/a>"],[0,1,"<a href=\"Requests\/Auth\/LoginRequest.php.html#17\">App\\Http\\Requests\\Auth\\LoginRequest::authorize<\/a>"],[0,1,"<a href=\"Requests\/Auth\/LoginRequest.php.html#27\">App\\Http\\Requests\\Auth\\LoginRequest::rules<\/a>"],[0,2,"<a href=\"Requests\/Auth\/LoginRequest.php.html#46\">App\\Http\\Requests\\Auth\\LoginRequest::authenticate<\/a>"],[0,2,"<a href=\"Requests\/Auth\/LoginRequest.php.html#66\">App\\Http\\Requests\\Auth\\LoginRequest::ensureIsNotRateLimited<\/a>"],[0,1,"<a href=\"Requests\/Auth\/LoginRequest.php.html#87\">App\\Http\\Requests\\Auth\\LoginRequest::throttleKey<\/a>"],[100,1,"<a href=\"Requests\/BelsoEllenorzesRequest.php.html#15\">App\\Http\\Requests\\BelsoEllenorzesRequest::authorize<\/a>"],[100,2,"<a href=\"Requests\/BelsoEllenorzesRequest.php.html#25\">App\\Http\\Requests\\BelsoEllenorzesRequest::rules<\/a>"],[100,1,"<a href=\"Requests\/BeszerzesRequest.php.html#15\">App\\Http\\Requests\\BeszerzesRequest::authorize<\/a>"],[100,2,"<a href=\"Requests\/BeszerzesRequest.php.html#25\">App\\Http\\Requests\\BeszerzesRequest::rules<\/a>"],[100,1,"<a href=\"Requests\/DolgozoRequest.php.html#15\">App\\Http\\Requests\\DolgozoRequest::authorize<\/a>"],[100,4,"<a href=\"Requests\/DolgozoRequest.php.html#25\">App\\Http\\Requests\\DolgozoRequest::rules<\/a>"],[100,1,"<a href=\"Requests\/EllenorRequest.php.html#14\">App\\Http\\Requests\\EllenorRequest::authorize<\/a>"],[100,1,"<a href=\"Requests\/EllenorRequest.php.html#24\">App\\Http\\Requests\\EllenorRequest::rules<\/a>"],[100,1,"<a href=\"Requests\/KulsoEllenorzesRequest.php.html#15\">App\\Http\\Requests\\KulsoEllenorzesRequest::authorize<\/a>"],[100,2,"<a href=\"Requests\/KulsoEllenorzesRequest.php.html#25\">App\\Http\\Requests\\KulsoEllenorzesRequest::rules<\/a>"],[100,1,"<a href=\"Requests\/LetszamRequest.php.html#15\">App\\Http\\Requests\\LetszamRequest::authorize<\/a>"],[100,1,"<a href=\"Requests\/LetszamRequest.php.html#25\">App\\Http\\Requests\\LetszamRequest::rules<\/a>"],[100,1,"<a href=\"Requests\/MigransEllatasRequest.php.html#15\">App\\Http\\Requests\\MigransEllatasRequest::authorize<\/a>"],[100,1,"<a href=\"Requests\/MigransEllatasRequest.php.html#25\">App\\Http\\Requests\\MigransEllatasRequest::rules<\/a>"],[100,1,"<a href=\"Requests\/MozgoorsegRequest.php.html#15\">App\\Http\\Requests\\MozgoorsegRequest::authorize<\/a>"],[100,2,"<a href=\"Requests\/MozgoorsegRequest.php.html#25\">App\\Http\\Requests\\MozgoorsegRequest::rules<\/a>"],[100,1,"<a href=\"Requests\/PartnerRequest.php.html#15\">App\\Http\\Requests\\PartnerRequest::authorize<\/a>"],[100,2,"<a href=\"Requests\/PartnerRequest.php.html#25\">App\\Http\\Requests\\PartnerRequest::rules<\/a>"],[100,1,"<a href=\"Requests\/TuloraRequest.php.html#15\">App\\Http\\Requests\\TuloraRequest::authorize<\/a>"],[100,1,"<a href=\"Requests\/TuloraRequest.php.html#25\">App\\Http\\Requests\\TuloraRequest::rules<\/a>"],[0,1,"<a href=\"Requests\/UserRequest.php.html#15\">App\\Http\\Requests\\UserRequest::authorize<\/a>"],[0,1,"<a href=\"Requests\/UserRequest.php.html#25\">App\\Http\\Requests\\UserRequest::rules<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
