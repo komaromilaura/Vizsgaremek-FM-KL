@@ -1,0 +1,202 @@
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.exe
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.deps.json
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.json
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.dev.json
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.AssemblyReference.cache
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.GenerateResource.cache
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.GeneratedMSBuildEditorConfig.editorconfig
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfoInputs.cache
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfo.cs
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CoreCompileInputs.cache
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.genruntimeconfig.cache
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Properties.Resources.resources
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.adminSingInF.resources
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\MySql.Data.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\ZstdNet.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CopyComplete
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form2.resources
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form3.resources
+E:\Vizsgaremek\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.ResolveComReference.cache
+E:\Vizsgaremek\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form4.resources
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.exe
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.deps.json
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.json
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.dev.json
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\MySql.Data.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\ZstdNet.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.AssemblyReference.cache
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.ResolveComReference.cache
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.adminSingInF.resources
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form2.resources
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form3.resources
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form4.resources
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Properties.Resources.resources
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.GenerateResource.cache
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.GeneratedMSBuildEditorConfig.editorconfig
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfoInputs.cache
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfo.cs
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CoreCompileInputs.cache
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CopyComplete
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.dll
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.genruntimeconfig.cache
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form5.resources
+E:\Vizsgaremek_v3\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form6.resources
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.exe
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.deps.json
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.json
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.dev.json
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\MySql.Data.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\ZstdNet.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.AssemblyReference.cache
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.ResolveComReference.cache
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.adminSingInF.resources
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form2.resources
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form3.resources
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form4.resources
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form5.resources
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form6.resources
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Properties.Resources.resources
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.GenerateResource.cache
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.GeneratedMSBuildEditorConfig.editorconfig
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfoInputs.cache
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfo.cs
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CoreCompileInputs.cache
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CopyComplete
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.dll
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\Vizsgaremek_v3\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.genruntimeconfig.cache
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.exe
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.deps.json
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.json
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.dev.json
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\MySql.Data.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\ZstdNet.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.AssemblyReference.cache
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.ResolveComReference.cache
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.adminSingInF.resources
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form2.resources
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form3.resources
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form4.resources
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form5.resources
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form6.resources
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Properties.Resources.resources
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.GenerateResource.cache
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.GeneratedMSBuildEditorConfig.editorconfig
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfoInputs.cache
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfo.cs
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CoreCompileInputs.cache
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CopyComplete
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.dll
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.genruntimeconfig.cache
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.exe
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.deps.json
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.json
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.dev.json
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\MySql.Data.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\ZstdNet.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.AssemblyReference.cache
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.ResolveComReference.cache
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.adminSingInF.resources
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form2.resources
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form3.resources
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form4.resources
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form5.resources
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form6.resources
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Properties.Resources.resources
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.GenerateResource.cache
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.GeneratedMSBuildEditorConfig.editorconfig
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfoInputs.cache
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfo.cs
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CoreCompileInputs.cache
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CopyComplete
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.dll
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.pdb
+E:\laragon\www\vizsgaremek 2022.01.17\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.genruntimeconfig.cache
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.exe
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.deps.json
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.json
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.dev.json
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.pdb
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\ZstdNet.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.AssemblyReference.cache
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.ResolveComReference.cache
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.adminSingInF.resources
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form2.resources
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form3.resources
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form4.resources
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form5.resources
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Form6.resources
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.Properties.Resources.resources
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.GenerateResource.cache
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.GeneratedMSBuildEditorConfig.editorconfig
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfoInputs.cache
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.AssemblyInfo.cs
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CoreCompileInputs.cache
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.csproj.CopyComplete
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.dll
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.pdb
+C:\laragon\www\vizsgaremek\Vizsgaremek_FM_KL_\asztali alkalmazás\LaMa_app\LaMa_app\obj\Debug\netcoreapp3.1\LaMa_app.genruntimeconfig.cache

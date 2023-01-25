@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>LaMa_app</id>
+    <version>1.0.0</version>
+    <authors>LaMa_app</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="MySql.Data" version="8.0.31" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.runtimeconfig.json" target="lib\netcoreapp3.1\LaMa_app.runtimeconfig.json" />
+    <file src="E:\Vizsgaremek_FM_KL\LaMa_app\LaMa_app\bin\Debug\netcoreapp3.1\LaMa_app.dll" target="lib\netcoreapp3.1\LaMa_app.dll" />
+  </files>
+</package>
